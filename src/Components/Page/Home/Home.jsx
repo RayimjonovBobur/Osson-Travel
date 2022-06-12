@@ -218,11 +218,11 @@ const Home = () => {
                   <div class="intro_date">May 25th - June 01st</div>
                   <div class="button intro_button">
                     <div class="button_bcg"></div>
-                    <a href="#">
+                    <Link to="/">
                       see more<span></span>
                       <span></span>
                       <span></span>
-                    </a>
+                    </Link>
                   </div>
                   <div class="intro_center text-center">
                     <h1>Mauritius</h1>

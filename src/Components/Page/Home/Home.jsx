@@ -1,5 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Home.css";
+import bus from "../../../assets/Images/bus.png";
+import diving from "../../../assets/Images/diving.png";
+import island from "../../../assets/Images/island.png";
+import departure from "../../../assets/Images/departure.png";
+import suitcase from "../../../assets/Images/suitcase.png";
+import cruise from "../../../assets/Images/cruise.png";
+import home_slider from "../../../assets/Images/home_slider.jpg";
+import intro_1 from "../../../assets/Images/intro_1.jpg";
+import intro_2 from "../../../assets/Images/intro_2.jpg";
+import intro_3 from "../../../assets/Images/intro_3.jpg";
 
 const Home = () => {
   return (
@@ -10,7 +21,7 @@ const Home = () => {
             <div class="owl-item home_slider_item">
               <div
                 class="home_slider_background"
-                style={{ backgroundImage: "url(images/home_slider.jpg)" }}
+                style={{ backgroundImage: `url(${home_slider})` }}
               ></div>
 
               <div class="home_slider_content text-center">
@@ -33,7 +44,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div class="owl-item home_slider_item">
+            {/* <div class="owl-item home_slider_item">
               <div
                 class="home_slider_background"
                 style={{ backgroundImage: "url(images/home_slider.jpg)" }}
@@ -83,7 +94,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div class="home_slider_nav home_slider_prev">
@@ -170,6 +181,133 @@ const Home = () => {
                 <div></div>03.
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="intro_title text-center">We have the best tours</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <div class="intro_text text-center">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam eu convallis tortor. Suspendisse potenti. In faucibus
+                  massa arcu, vitae cursus mi hendrerit nec.{" "}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row intro_items">
+            {/* <!-- Intro Item --> */}
+
+            <div class="col-lg-4 intro_col">
+              <div class="intro_item">
+                <div class="intro_item_overlay"></div>
+                {/* <!-- Image by https://unsplash.com/@dnevozhai --> */}
+                <div
+                  class="intro_item_background"
+                  style={{ backgroundImage: `url(${intro_1})` }}
+                ></div>
+                <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                  <div class="intro_date">May 25th - June 01st</div>
+                  <div class="button intro_button">
+                    <div class="button_bcg"></div>
+                    <Link to="/">
+                      see more<span></span>
+                      <span></span>
+                      <span></span>
+                    </Link>
+                  </div>
+                  <div class="intro_center text-center">
+                    <h1>Mauritius</h1>
+                    <div class="intro_price">From $1450</div>
+                    <div class="rating rating_4">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Intro Item --> */}
+
+            <div class="col-lg-4 intro_col">
+              <div class="intro_item">
+                <div class="intro_item_overlay"></div>
+                {/* <!-- Image by https://unsplash.com/@hellolightbulb --> */}
+                <div
+                  class="intro_item_background"
+                  style={{ backgroundImage: `url(${intro_2})` }}
+                ></div>
+                <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                  <div class="intro_date">May 25th - June 01st</div>
+                  <div class="button intro_button">
+                    <div class="button_bcg"></div>
+                    <a href="/">
+                      see more<span></span>
+                      <span></span>
+                      <span></span>
+                    </a>
+                  </div>
+                  <div class="intro_center text-center">
+                    <h1>Greece</h1>
+                    <div class="intro_price">From $1450</div>
+                    <div class="rating rating_4">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* <!-- Intro Item --> */}
+
+            <div class="col-lg-4 intro_col">
+              <div class="intro_item">
+                <div class="intro_item_overlay"></div>
+                {/* <!-- Image by https://unsplash.com/@willianjusten --> */}
+                <div
+                  class="intro_item_background"
+                  style={{ backgroundImage: `url(${intro_3})` }}
+                ></div>
+                <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                  <div class="intro_date">May 25th - June 01st</div>
+                  <div class="button intro_button">
+                    <div class="button_bcg"></div>
+                    <a href="#">
+                      see more<span></span>
+                      <span></span>
+                      <span></span>
+                    </a>
+                  </div>
+                  <div class="intro_center text-center">
+                    <h1>Scotland</h1>
+                    <div class="intro_price">From $1450</div>
+                    <div class="rating rating_4">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

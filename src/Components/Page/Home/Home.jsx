@@ -208,7 +208,6 @@ const Home = () => {
         </div>
       </div>
       <div class="search">
-        {/* Search Contents */}
 
         <div class="container fill_height">
           <div class="row fill_height">

@@ -166,10 +166,10 @@ const Header = () => {
               <a href="/">about us</a>
             </li>
             <li className="menu_item">
-              <a href="offers.html">offers</a>
+              <Link to="/offers">offers</Link>
             </li>
             <li className="menu_item">
-              <a href="blog.html">news</a>
+              <Link to="/news">news</Link>
             </li>
             <li className="menu_item">
               <a href="contact.html">contact</a>

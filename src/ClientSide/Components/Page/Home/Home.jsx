@@ -1103,7 +1103,7 @@ const Home = () => {
                       <a href="offers.html">offers</a>
                     </li>
                     <li class="footer_nav_item">
-                      <a href="blog.html">news</a>
+                      <Link to="/news">news</Link>
                     </li>
                     <li class="footer_nav_item">
                       <a href="contact.html">contact</a>

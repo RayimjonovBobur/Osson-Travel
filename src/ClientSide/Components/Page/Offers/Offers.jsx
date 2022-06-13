@@ -18,32 +18,32 @@ const Offers = () => {
                 <div class="social">
                   <ul class="social_list">
                     <li class="social_list_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-pinterest" aria-hidden="true"></i>
                       </Link>
                     </li>
                     <li class="social_list_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                       </Link>
                     </li>
                     <li class="social_list_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                       </Link>
                     </li>
                     <li class="social_list_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-dribbble" aria-hidden="true"></i>
                       </Link>
                     </li>
                     <li class="social_list_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-behance" aria-hidden="true"></i>
                       </Link>
                     </li>
                     <li class="social_list_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                       </Link>
                     </li>
@@ -51,10 +51,10 @@ const Offers = () => {
                 </div>
                 <div class="user_box ml-auto">
                   <div class="user_box_login user_box_link">
-                    <Link>login</Link>
+                    <Link to="/">login</Link>
                   </div>
                   <div class="user_box_register user_box_link">
-                    <Link>register</Link>
+                    <Link to="/">register</Link>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Offers = () => {
               <div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                 <div class="logo_container">
                   <div class="logo">
-                    <Link>
+                    <Link to="/">
                       <img src="images/logo.png" alt="" />
                       travelix
                     </Link>
@@ -82,7 +82,7 @@ const Offers = () => {
                       <a href="about.html">about us</a>
                     </li>
                     <li class="main_nav_item">
-                      <Link>offers</Link>
+                      <Link to="/">offers</Link>
                     </li>
                     <li class="main_nav_item">
                       <a href="blog.html">news</a>
@@ -154,7 +154,7 @@ const Offers = () => {
             <div class="menu_close"></div>
           </div>
           <div class="logo menu_logo">
-            <Link>
+            <Link to="/">
               <img src="images/logo.png" alt="" />
             </Link>
           </div>
@@ -166,7 +166,7 @@ const Offers = () => {
               <a href="about.html">about us</a>
             </li>
             <li class="menu_item">
-              <Link>offers</Link>
+              <Link to="/">offers</Link>
             </li>
             <li class="menu_item">
               <a href="blog.html">news</a>
@@ -370,7 +370,7 @@ const Offers = () => {
                       </div>
                       <div class="more_options">
                         <div class="more_options_trigger">
-                          <Link>load more options</Link>
+                          <Link to="/">load more options</Link>
                         </div>
                         <ul class="more_options_list clearfix">
                           <li class="more_options_item">
@@ -941,7 +941,7 @@ const Offers = () => {
                           </ul>
                         </div>
                         <div class="button book_button">
-                          <Link>
+                          <Link to="/">
                             book<span></span>
                             <span></span>
                             <span></span>
@@ -1014,7 +1014,7 @@ const Offers = () => {
                           </ul>
                         </div>
                         <div class="button book_button">
-                          <Link>
+                          <Link to="/">
                             book<span></span>
                             <span></span>
                             <span></span>
@@ -1087,7 +1087,7 @@ const Offers = () => {
                           </ul>
                         </div>
                         <div class="button book_button">
-                          <Link>
+                          <Link to="/">
                             book<span></span>
                             <span></span>
                             <span></span>
@@ -1160,7 +1160,7 @@ const Offers = () => {
                           </ul>
                         </div>
                         <div class="button book_button">
-                          <Link>
+                          <Link to="/">
                             book<span></span>
                             <span></span>
                             <span></span>
@@ -1194,7 +1194,7 @@ const Offers = () => {
                 <div class="footer_content footer_about">
                   <div class="logo_container footer_logo">
                     <div class="logo">
-                      <Link>
+                      <Link to="/">
                         <img src="images/logo.png" alt="" />
                         travelix
                       </Link>
@@ -1208,27 +1208,27 @@ const Offers = () => {
                   </p>
                   <ul class="footer_social_list">
                     <li class="footer_social_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-pinterest"></i>
                       </Link>
                     </li>
                     <li class="footer_social_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-facebook-f"></i>
                       </Link>
                     </li>
                     <li class="footer_social_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-twitter"></i>
                       </Link>
                     </li>
                     <li class="footer_social_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-dribbble"></i>
                       </Link>
                     </li>
                     <li class="footer_social_item">
-                      <Link>
+                      <Link to="/">
                         <i class="fa fa-behance"></i>
                       </Link>
                     </li>
@@ -1291,28 +1291,28 @@ const Offers = () => {
                 <div class="footer_content footer_tags">
                   <ul class="tags_list clearfix">
                     <li class="tag_item">
-                      <Link>design</Link>
+                      <Link to="/">design</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>fashion</Link>
+                      <Link to="/">fashion</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>music</Link>
+                      <Link to="/">music</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>video</Link>
+                      <Link to="/">video</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>party</Link>
+                      <Link to="/">party</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>photography</Link>
+                      <Link to="/">photography</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>adventure</Link>
+                      <Link to="/">adventure</Link>
                     </li>
                     <li class="tag_item">
-                      <Link>travel</Link>
+                      <Link to="/">travel</Link>
                     </li>
                   </ul>
                 </div>
@@ -1401,7 +1401,7 @@ const Offers = () => {
                       <a href="about.html">about us</a>
                     </li>
                     <li class="footer_nav_item">
-                      <Link>offers</Link>
+                      <Link to="/">offers</Link>
                     </li>
                     <li class="footer_nav_item">
                       <a href="blog.html">news</a>

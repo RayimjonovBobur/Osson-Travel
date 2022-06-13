@@ -208,11 +208,9 @@ const Home = () => {
         </div>
       </div>
       <div class="search">
-
         <div class="container fill_height">
           <div class="row fill_height">
             <div class="col fill_height">
-
               <div class="search_tabs_container">
                 <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
                   <div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">

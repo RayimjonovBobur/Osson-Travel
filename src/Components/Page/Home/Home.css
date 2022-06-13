@@ -177,6 +177,7 @@
 }
 .search_tabs {
   height: 94px;
+  display: flex;
 }
 .search_tab {
   font-size: 14px;

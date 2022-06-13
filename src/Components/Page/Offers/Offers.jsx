@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import offer_1 from "../../../assets/Images/offer_1";
+import offer_5 from "../../../assets/Images/offer_5";
+import offer_6 from "../../../assets/Images/offer_6";
+import offer_7 from "../../../assets/Images/offer_7";
+import offer_8 from "../../../assets/Images/offer_8";
 
 const Offers = () => {
   return (
@@ -820,7 +825,7 @@ const Offers = () => {
                       <div class="offers_image_container">
                         <div
                           class="offers_image_background"
-                          style="background-image:url(images/offer_1.jpg)"
+                          style={{ backgroundImage: `url(${offer_1})` }}
                         ></div>
                         <div class="offer_name">
                           <a href="single_listing.html">grand castle</a>
@@ -892,7 +897,7 @@ const Offers = () => {
                       <div class="offers_image_container">
                         <div
                           class="offers_image_background"
-                          style="background-image:url(images/offer_5.jpg)"
+                          style={{ backgroundImage: `url(${offer_5})` }}
                         ></div>
                         <div class="offer_name">
                           <a href="single_listing.html">eurostar hotel</a>
@@ -965,7 +970,7 @@ const Offers = () => {
                       <div class="offers_image_container">
                         <div
                           class="offers_image_background"
-                          style="background-image:url(images/offer_6.jpg)"
+                          style={{ backgroundImage: `url(${offer_6})` }}
                         ></div>
                         <div class="offer_name">
                           <a href="single_listing.html">grand castle</a>
@@ -1038,7 +1043,7 @@ const Offers = () => {
                       <div class="offers_image_container">
                         <div
                           class="offers_image_background"
-                          style="background-image:url(images/offer_7.jpg)"
+                          style={{ backgroundImage: `url(${offer_7})` }}
                         ></div>
                         <div class="offer_name">
                           <a href="single_listing.html">eurostar hotel</a>
@@ -1111,7 +1116,7 @@ const Offers = () => {
                       <div class="offers_image_container">
                         <div
                           class="offers_image_background"
-                          style="background-image:url(images/offer_8.jpg)"
+                          style={{ backgroundImage: `url(${offer_8})` }}
                         ></div>
                         <div class="offer_name">
                           <a href="single_listing.html">grand castle</a>

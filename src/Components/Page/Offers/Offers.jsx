@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import offer_1 from "../../../assets/Images/offer_1";
-import offer_5 from "../../../assets/Images/offer_5";
-import offer_6 from "../../../assets/Images/offer_6";
-import offer_7 from "../../../assets/Images/offer_7";
-import offer_8 from "../../../assets/Images/offer_8";
+import offer_1 from "../../../assets/Images/offer_1.jpg";
+import offer_5 from "../../../assets/Images/offer_5.jpg";
+import offer_6 from "../../../assets/Images/offer_6.jpg";
+import offer_7 from "../../../assets/Images/offer_7.jpg";
+import offer_8 from "../../../assets/Images/offer_8.jpg";
 
 const Offers = () => {
   return (
@@ -96,15 +96,15 @@ const Offers = () => {
                   <svg
                     version="1.1"
                     id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    // xmlns="http://www.w3.org/2000/svg"
+                    // xmlns:xlink="http://www.w3.org/1999/xlink"
                     x="0px"
                     y="0px"
                     width="17px"
                     height="17px"
                     viewBox="0 0 512 512"
-                    enable-background="new 0 0 512 512"
-                    xml:space="preserve"
+                    // enable-background="new 0 0 512 512"
+                    // xml:space="preserve"
                   >
                     <g>
                       <g>
@@ -1384,9 +1384,9 @@ const Offers = () => {
                   <script>document.write(new Date().getFullYear());</script> All
                   rights reserved | This template is made with{" "}
                   <i class="fa fa-heart-o" aria-hidden="true"></i> by{" "}
-                  <a href="https://colorlib.com" target="_blank">
+                  <Link to="/">
                     Colorlib
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

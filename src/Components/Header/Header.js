@@ -69,7 +69,9 @@ const Header = () => {
               <div className="col main_nav_col d-flex flex-row align-items-center justify-content-start">
                 <div className="logo_container">
                   <div className="logo">
-                    <Link to="/"><img src={Logo} alt="" /></Link>
+                    <Link to="/">
+                      <img src={Logo} alt="" />
+                    </Link>
                   </div>
                 </div>
                 <div className="main_nav_container ml-auto">
@@ -103,7 +105,7 @@ const Header = () => {
                     height="17px"
                     viewBox="0 0 512 512"
                     enableBackground="new 0 0 512 512"
-                  // xml:space="preserve"
+                    // xml:space="preserve"
                   >
                     <g>
                       <g>

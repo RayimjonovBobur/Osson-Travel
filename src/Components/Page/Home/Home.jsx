@@ -213,7 +213,6 @@ const Home = () => {
         <div class="container fill_height">
           <div class="row fill_height">
             <div class="col fill_height">
-              {/* <Search Tabs */}
 
               <div class="search_tabs_container">
                 <div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">

@@ -167,6 +167,7 @@
   height: 192px;
   background: linear-gradient(to right, #fa9e1b, #8d4fff);
   z-index: 10;
+  margin-top: 680px;
 }
 .search_tabs_container {
   position: absolute;
@@ -890,71 +891,59 @@
   fill: url(#test_grad_next);
 }
 
-
 /*********************************
 11. Trending
 *********************************/
 
-.trending
-{
-	width: 100%;
-	padding-top: 105px;
-	padding-bottom: 50px;
+.trending {
+  width: 100%;
+  padding-top: 105px;
+  padding-bottom: 50px;
 }
-.trending_container
-{
-	margin-top: 90px;
+.trending_container {
+  margin-top: 90px;
 }
-.trending_item
-{
-	margin-bottom: 55px;
+.trending_item {
+  margin-bottom: 55px;
 }
-.trending_image
-{
-	width: 82px;
-	height: 76px;
-	float: left;
+.trending_image {
+  width: 82px;
+  height: 76px;
+  float: left;
 }
-.trending_image img
-{
-	width: 100%;
+.trending_image img {
+  width: 100%;
 }
-.trending_content
-{
-	padding-left: 94px;
+.trending_content {
+  padding-left: 94px;
 }
-.trending_title
-{
-	margin-top: -5px;
+.trending_title {
+  margin-top: -5px;
 }
-.trending_title a
-{
-	font-size: 16px;
-	font-weight: 700;
-	color: #2d2c2c;
-	text-transform: uppercase;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+.trending_title a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d2c2c;
+  text-transform: uppercase;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
-.trending_title a:hover
-{
-	color: #fa9e1b;
+.trending_title a:hover {
+  color: #fa9e1b;
 }
-.trending_price
-{
-	font-size: 14px;
-	font-weight: 700;
-	color: #fa9e1b;
-	margin-top: 2px;
+.trending_price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fa9e1b;
+  margin-top: 2px;
 }
-.trending_location
-{
-	font-size: 14px;
-	font-weight: 400;
-	color: #929191;
-	text-transform: uppercase;
-	margin-top: 5px;
+.trending_location {
+  font-size: 14px;
+  font-weight: 400;
+  color: #929191;
+  text-transform: uppercase;
+  margin-top: 5px;
 }

@@ -7,6 +7,60 @@ const Header = () => {
   return (
     <div className="contaisner">
       <header className="header">
+        {/* Top Bar  */}
+
+        <div className="top_bar">
+          <div className="container">
+            <div className="row">
+              <div className="col d-flex flex-row">
+                <div className="phone">+998 91 679 2002</div>
+                <div className="social">
+                  <ul className="social_list">
+                    <li className="social_list_item">
+                      <a href="/">
+                        <i className="fa-brands fa-pinterest" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li className="social_list_item">
+                      <a href="/">
+                        <i className="fa-brands fa-facebook" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li className="social_list_item">
+                      <a href="/">
+                        <i className="fa-brands fa-twitter" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li className="social_list_item">
+                      <a href="/">
+                        <i className="fa-brands fa-dribbble" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li className="social_list_item">
+                      <a href="/">
+                        <i className="fa-brands fa-behance" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li className="social_list_item">
+                      <a href="/">
+                        <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div className="user_box ml-auto">
+                  <div className="user_box_login user_box_link">
+                    <a href="/">login</a>
+                  </div>
+                  <div className="user_box_register user_box_link">
+                    <a href="/">register</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Main Navigation  */}
 
         <nav className="main_nav">
@@ -23,19 +77,19 @@ const Header = () => {
                 <div className="main_nav_container ml-auto">
                   <ul className="main_nav_list">
                     <li className="main_nav_item">
-                      <Link to="/">home</Link>
+                      <Link to="/">Asosiy</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/about">about us</Link>
+                      <Link to="/about">Biz haqimizda</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/offers">offers</Link>
+                      <Link to="/offers">Barcha turlar</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/news">news</Link>
+                      <Link to="/news">Yangiliklar</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/contact">contact</Link>
+                      <Link to="/contact">A'loqa</Link>
                     </li>
                   </ul>
                 </div>
@@ -106,19 +160,19 @@ const Header = () => {
           </div>
           <ul>
             <li className="menu_item">
-              <a href="index.html">home</a>
+              <a href="index.html">Asosiy</a>
             </li>
             <li className="menu_item">
-              <a href="/">about us</a>
+              <a href="/">Biz haqimizda</a>
             </li>
             <li className="menu_item">
-              <Link to="/offers">offers</Link>
+              <Link to="/offers">Barcha turlar</Link>
             </li>
             <li className="menu_item">
-              <Link to="/news">news</Link>
+              <Link to="/news">Yangiliklar</Link>
             </li>
             <li className="menu_item">
-              <a href="contact.html">contact</a>
+              <a href="contact.html">A'loqa</a>
             </li>
           </ul>
         </div>

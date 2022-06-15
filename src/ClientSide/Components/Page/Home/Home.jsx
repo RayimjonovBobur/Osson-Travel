@@ -53,11 +53,11 @@ const Home = () => {
                   data-animation-out="animate-out fadeOut"
                 >
                   <h1>osson</h1>
-                  <h1>Travel</h1>
+                  <h1>travel</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                     <Link to="/">
-                      explore now<span></span>
+                      ba'tafsil<span></span>
                       <span></span>
                       <span></span>
                     </Link>
@@ -212,16 +212,19 @@ const Home = () => {
         <div class="container">
           <div class="row">
             <div class="col">
-              <h2 class="intro_title text-center">We have the best tours</h2>
+              <h2 class="intro_title text-center">
+                SAYOHATNI BIZ BILAN MAZMUNLI O'TKAZING!
+              </h2>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-10 offset-lg-1">
               <div class="intro_text text-center">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam eu convallis tortor. Suspendisse potenti. In faucibus
-                  massa arcu, vitae cursus mi hendrerit nec.{" "}
+                  Har bir mehmon bizning do'stimiz va hamkorimiz! Biz
+                  mehmonlarimizga ularning talablari va ehtiyojlariga to'liq
+                  javob beradigan yuqori sifatli turistik mahsulotni taklif
+                  etamiz.{" "}
                 </p>
               </div>
             </div>
@@ -238,18 +241,18 @@ const Home = () => {
                   style={{ backgroundImage: `url(${intro_1})` }}
                 ></div>
                 <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div class="intro_date">May 25th - June 01st</div>
+                  <div class="intro_date">Iyun 5 - Iyun 15</div>
                   <div class="button intro_button">
                     <div class="button_bcg"></div>
                     <Link to="/">
-                      see more<span></span>
+                      Ba'tafsil<span></span>
                       <span></span>
                       <span></span>
                     </Link>
                   </div>
                   <div class="intro_center text-center">
-                    <h1>Mauritius</h1>
-                    <div class="intro_price">From $1450</div>
+                    <h1>Turkiya</h1>
+                    <div class="intro_price">Narxi $1150</div>
                     <div class="rating rating_4">
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
@@ -273,18 +276,18 @@ const Home = () => {
                   style={{ backgroundImage: `url(${intro_2})` }}
                 ></div>
                 <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div class="intro_date">May 25th - June 01st</div>
+                  <div class="intro_date">Iyun 25 - Iyul 5</div>
                   <div class="button intro_button">
                     <div class="button_bcg"></div>
                     <Link to="/">
-                      see more<span></span>
+                      Ba'tafsil<span></span>
                       <span></span>
                       <span></span>
                     </Link>
                   </div>
                   <div class="intro_center text-center">
-                    <h1>Greece</h1>
-                    <div class="intro_price">From $1450</div>
+                    <h1>Gretsiya</h1>
+                    <div class="intro_price">Narxi $1050</div>
                     <div class="rating rating_4">
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
@@ -308,18 +311,18 @@ const Home = () => {
                   style={{ backgroundImage: `url(${intro_3})` }}
                 ></div>
                 <div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div class="intro_date">May 25th - June 01st</div>
+                  <div class="intro_date">Avgust 7- Avgust 17</div>
                   <div class="button intro_button">
                     <div class="button_bcg"></div>
                     <Link to="/">
-                      see more<span></span>
+                      Ba'tafsil<span></span>
                       <span></span>
                       <span></span>
                     </Link>
                   </div>
                   <div class="intro_center text-center">
-                    <h1>Scotland</h1>
-                    <div class="intro_price">From $1450</div>
+                    <h1>Dubay</h1>
+                    <div class="intro_price">Narxi $1450</div>
                     <div class="rating rating_4">
                       <i class="fa fa-star"></i>
                       <i class="fa fa-star"></i>
@@ -347,7 +350,7 @@ const Home = () => {
               <div class="cta_slider_container">
                 <div class="owl-carousel owl-theme cta_slider">
                   <div class="owl-item cta_item text-center">
-                    <div class="cta_title">maldives deluxe package</div>
+                    <div class="cta_title">Bizning xizmatlar</div>
                     <div class="rating_r rating_r_4">
                       <i></i>
                       <i></i>
@@ -454,7 +457,9 @@ const Home = () => {
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section_title">the best offers with rooms</h2>
+              <h2 class="section_title">
+                Eng yaxshilari ichidan tanlash qoldi...
+              </h2>
             </div>
           </div>
           <div class="row offers_items">
@@ -513,7 +518,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
             <div class="col-lg-6 offers_col">
               <div class="offers_item">
                 <div class="row">
@@ -569,7 +573,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
             <div class="col-lg-6 offers_col">
               <div class="offers_item">
                 <div class="row">
@@ -625,7 +628,116 @@ const Home = () => {
                 </div>
               </div>
             </div>
-
+            <div class="col-lg-6 offers_col">
+              <div class="offers_item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="offers_image_container">
+                      <div
+                        class="offers_image_background"
+                        style={{ backgroundImage: `url(${offer_4})` }}
+                      ></div>
+                      <div class="offer_name">
+                        <a href="#">travel light</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="offers_content">
+                      <div class="offers_price">
+                        $30<span>per night</span>
+                      </div>
+                      <div class="rating_r rating_r_4 offers_rating">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                      </div>
+                      <p class="offers_text">
+                        Suspendisse potenti. In faucibus massa. Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Nullam eu
+                        convallis tortor.
+                      </p>
+                      <div class="offers_icons">
+                        <ul class="offers_icons_list">
+                          <li class="offers_icons_item">
+                            <img src={post} alt="" />
+                          </li>
+                          <li class="offers_icons_item">
+                            <img src={compass} alt="" />
+                          </li>
+                          <li class="offers_icons_item">
+                            <img src={bicycle} alt="" />
+                          </li>
+                          <li class="offers_icons_item">
+                            <img src={sailboat} alt="" />
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offers_link">
+                        <a href="offers.html">read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
+            <div class="col-lg-6 offers_col">
+              <div class="offers_item">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="offers_image_container">
+                      <div
+                        class="offers_image_background"
+                        style={{ backgroundImage: `url(${offer_4})` }}
+                      ></div>
+                      <div class="offer_name">
+                        <a href="#">travel light</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="offers_content">
+                      <div class="offers_price">
+                        $30<span>per night</span>
+                      </div>
+                      <div class="rating_r rating_r_4 offers_rating">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                      </div>
+                      <p class="offers_text">
+                        Suspendisse potenti. In faucibus massa. Lorem ipsum
+                        dolor sit amet, consectetur adipiscing elit. Nullam eu
+                        convallis tortor.
+                      </p>
+                      <div class="offers_icons">
+                        <ul class="offers_icons_list">
+                          <li class="offers_icons_item">
+                            <img src={post} alt="" />
+                          </li>
+                          <li class="offers_icons_item">
+                            <img src={compass} alt="" />
+                          </li>
+                          <li class="offers_icons_item">
+                            <img src={bicycle} alt="" />
+                          </li>
+                          <li class="offers_icons_item">
+                            <img src={sailboat} alt="" />
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="offers_link">
+                        <a href="offers.html">read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>{" "}
             <div class="col-lg-6 offers_col">
               <div class="offers_item">
                 <div class="row">
@@ -689,7 +801,7 @@ const Home = () => {
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section_title">trending now</h2>
+              <h2 class="section_title">BIZ BILAN KO'PROQ!</h2>
             </div>
           </div>
           <div class="row trending_container">
@@ -832,7 +944,7 @@ const Home = () => {
             </div>
             <div class="col-lg-7">
               <div class="contact_form_container">
-                <div class="contact_title">get in touch</div>
+                <div class="contact_title">Buyurtma qilish</div>
                 <form action="#" id="contact_form" class="contact_form">
                   <input
                     type="text"

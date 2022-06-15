@@ -51,8 +51,8 @@ const Home = () => {
                   data-animation-in="flipInX"
                   data-animation-out="animate-out fadeOut"
                 >
-                  <h1>discover</h1>
-                  <h1>the world</h1>
+                  <h1>osson</h1>
+                  <h1>the Travel</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                     <Link to="/">

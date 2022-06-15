@@ -1,9 +1,9 @@
-.home {
+.news {
   width: 100%;
   height: 465px;
   background: transparent;
 }
-.home_background {
+.news_background {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
   background-size: cover;
   background-position: center center;
 }
-.home_content {
+.news_content {
   position: absolute;
   bottom: 106px;
   left: 50%;
@@ -23,7 +23,7 @@
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.home_title {
+.news_title {
   font-size: 72px;
   font-weight: 800;
   color: #ffffff;

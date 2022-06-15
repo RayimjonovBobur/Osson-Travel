@@ -20,14 +20,14 @@ import Footer from "../../Footer/Footer";
 const News = () => {
   return (
     <div className="super-container">
-      <div class="home">
+      <div class="news">
         <div
-          class="home_background parallax-window"
+          class="news_background parallax-window"
           data-parallax="scroll"
           style={{ backgroundImage: `url(${blog_background})` }}
         ></div>
-        <div class="home_content">
-          <div class="home_title">the blog</div>
+        <div class="news_content">
+          <div class="news_title">the blog</div>
         </div>
       </div>
 

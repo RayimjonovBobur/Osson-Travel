@@ -5,6 +5,7 @@ import offer_5 from "../../../assets/Images/offer_5.jpg";
 import offer_6 from "../../../assets/Images/offer_6.jpg";
 import offer_7 from "../../../assets/Images/offer_7.jpg";
 import offer_8 from "../../../assets/Images/offer_8.jpg";
+import Footer from "../../Footer/Footer";
 import Search from "../../Search/Search";
 import "./Offers.css";
 
@@ -485,6 +486,7 @@ const Offers = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

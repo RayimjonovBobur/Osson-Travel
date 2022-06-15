@@ -1,54 +1,221 @@
-.contact_form_section {
-  padding-top: 105px;
+.offers {
+  width: 100%;
+  padding-top: 115px;
+  padding-bottom: 115px;
 }
-.contact_form_container {
-  padding-top: 74px;
-  padding-left: 98px;
-  padding-right: 98px;
-  padding-bottom: 88px;
-  background: linear-gradient(to top right, #fa9e1b, #8d4fff);
+
+.offers_sorting {
+  display: inline-block;
 }
-.contact_title {
-  font-size: 30px;
+.offers_sorting > li {
+  display: inline-block;
+  position: relative;
+  width: 166px;
+  height: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #2d2c2c;
+  text-transform: uppercase;
+  line-height: 50px;
+  cursor: pointer;
+  border: solid 2px #dadada;
+  padding-left: 25px;
+  padding-right: 14px;
+  margin-right: 16px;
+}
+.distance_item {
+  width: 234px !important;
+}
+.offers_sorting li i {
+  float: right;
+  line-height: 48px;
+  color: #929191;
+}
+.offers_sorting li ul {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 120%;
+  margin: 0;
+  width: 100%;
+  background: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  box-shadow: 0 15px 25px rgba(63, 78, 100, 0.15);
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.offers_sorting > li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: calc(100% + 1px);
+}
+.offers_sorting li ul li {
+  display: block;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.offers_sorting li ul li span {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: solid 1px #dddddd;
+  color: #51545f;
+  text-align: left;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
+}
+.offers_sorting li ul li span:hover {
+  color: #b5aec4;
+}
+.offers_sorting li ul li:last-child span {
+  border-bottom: none;
+}
+.offers_sorting li span:nth-child(2) {
+  margin-left: 71px;
+}
+
+.offers_grid {
+  width: 100%;
+  margin-top: 66px;
+}
+.offers_item {
+  width: 100%;
+  margin-bottom: 46px;
+}
+.offers_item:last-child {
+  margin-bottom: 0px;
+}
+.offers_image img {
+  width: 100%;
+}
+.offers_image_container {
+  width: 100%;
+  height: 100%;
+}
+.offers_image_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.offer_name {
+  position: absolute;
+  left: 0;
+  bottom: 27px;
+  width: 180px;
+  height: 33px;
+  background: #fa9e1b;
+  overflow: hidden;
+}
+.offer_name a {
+  display: block;
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
+  line-height: 35px;
+  padding-left: 22px;
 }
-.contact_form {
-  margin-top: 52px;
-  font-size: 0px;
+.offers_content {
 }
-.input_field {
-  height: 48px;
-  font-size: 12px;
+.offers_price {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 700;
+  color: #eda84a;
+  line-height: 25px;
+}
+.offers_price span {
+  font-size: 14px;
   font-weight: 400;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #ffffff;
-  border-bottom: solid 2px #e1e1e1;
+  color: #929191;
+  margin-left: 12px;
 }
-.contact_form_name {
-  width: calc((100% - 30px) / 2);
-  margin-right: 30px;
+.offers_rating {
 }
-.contact_form_email {
-  width: calc((100% - 30px) / 2);
+.offers_rating i::before {
+  font-size: 13px;
+  margin-right: 2px;
 }
-.contact_form_subject {
-  width: 100%;
-  margin-top: 11px;
-}
-.contact_form_message {
-  height: 126px;
-  width: 100%;
-  border: none;
-  outline: none;
-  margin-top: 19px;
-  background: transparent;
-  font-size: 12px;
+.offers_text {
+  font-size: 14px;
   font-weight: 400;
+  color: #929191;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+.offers_icons {
+  margin-top: 21px;
+}
+.offers_icons_item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.offers_icons_item:last-child {
+  margin-right: 0px;
+}
+.book_button {
+  background: #31124b;
+  margin-top: 39px;
+  margin-bottom: -5px;
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -ms-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.book_button:hover {
+  opacity: 0.8;
+}
+.offer_reviews {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.offer_reviews_content {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+.offer_reviews_title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2d2c2c;
+  text-transform: uppercase;
+}
+.offer_reviews_subtitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #929191;
+  margin-top: 1px;
+}
+.offer_reviews_rating {
+  display: inline-block;
+  width: 62px;
+  height: 57px;
+  font-size: 28px;
+  font-weight: 700;
   color: #ffffff;
-  border-bottom: solid 2px #e1e1e1;
-  padding-top: 11px;
+  line-height: 57px;
+  background: #fa9e1b;
+  vertical-align: middle;
+  border-radius: 45%;
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
+  transform: translateY(-4px);
 }

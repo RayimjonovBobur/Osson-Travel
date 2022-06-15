@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../Footer/Footer";
 import "./Contact.css";
+import man from "../../../assets/Images/man.png";
 
 const Contact = () => {
   return (
@@ -82,7 +83,7 @@ const Contact = () => {
           <div class="row">
             <div class="col-lg-5">
               <div class="about_image">
-                <img src="images/man.png" alt="" />
+                <img src={man} alt="" />
               </div>
             </div>
 
@@ -105,27 +106,27 @@ const Contact = () => {
                 <ul class="about_social_list">
                   <li class="about_social_item">
                     <Link to="/">
-                      <i class="fa fa-pinterest"></i>
+                      <i class="fa-brands fa-pinterest"></i>
                     </Link>
                   </li>
                   <li class="about_social_item">
                     <Link to="/">
-                      <i class="fa fa-facebook-f"></i>
+                      <i class="fa-brands fa-facebook"></i>
                     </Link>
                   </li>
                   <li class="about_social_item">
                     <Link to="/">
-                      <i class="fa fa-twitter"></i>
+                      <i class="fa-brands fa-twitter"></i>
                     </Link>
                   </li>
                   <li class="about_social_item">
                     <Link to="/">
-                      <i class="fa fa-dribbble"></i>
+                      <i class="fa-brands fa-dribbble"></i>
                     </Link>
                   </li>
                   <li class="about_social_item">
                     <Link to="/">
-                      <i class="fa fa-behance"></i>
+                      <i class="fa-brands fa-behance"></i>
                     </Link>
                   </li>
                 </ul>

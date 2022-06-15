@@ -53,7 +53,7 @@ const Home = () => {
                   data-animation-out="animate-out fadeOut"
                 >
                   <h1>osson</h1>
-                  <h1>the Travel</h1>
+                  <h1>Travel</h1>
                   <div class="button home_slider_button">
                     <div class="button_bcg"></div>
                     <Link to="/">
@@ -883,8 +883,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer/>
-
+      <Footer />
     </div>
   );
 };

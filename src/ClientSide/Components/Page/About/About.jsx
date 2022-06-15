@@ -12,14 +12,14 @@ import intro from "../../../assets/Images/intro.png";
 const About = () => {
   return (
     <div className="super-conatiner">
-      <div class="home">
+      <div class="about">
         <div
-          class="home_background parallax-window"
+          class="about_background parallax-window"
           data-parallax="scroll"
           style={{ backgroundImage: `url(${about_background})` }}
         ></div>
-        <div class="home_content">
-          <div class="home_title">about us</div>
+        <div class="about_content">
+          <div class="about_title">about us</div>
         </div>
       </div>
 

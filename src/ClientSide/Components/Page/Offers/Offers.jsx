@@ -13,14 +13,14 @@ import "./Offers.css";
 const Offers = () => {
   return (
     <div class="super_container">
-      <div class="home">
+      <div class="offers-con">
         <div
-          class="home_background parallax-window"
+          class="offers-background-image parallax-window"
           data-parallax="scroll"
-          style={{ backgroundImage: `url(${about_background})`}}
+          style={{ backgroundImage: `url(${about_background})` }}
         ></div>
-        <div class="home_content">
-          <div class="home_title">our offers</div>
+        <div class="offers_content-header">
+          <div class="offers_title-birnchi">our offers</div>
         </div>
       </div>
 

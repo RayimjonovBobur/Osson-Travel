@@ -1,3 +1,35 @@
+.offers-con {
+  width: 100%;
+  height: 465px;
+  background: transparent;
+}
+.offers-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.offers_content-header {
+  position: absolute;
+  bottom: 106px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.offers_title-birnchi {
+  font-size: 72px;  
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
 .offers {
   width: 100%;
   padding-top: 115px;

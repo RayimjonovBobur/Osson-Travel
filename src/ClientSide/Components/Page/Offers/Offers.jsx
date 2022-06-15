@@ -5,6 +5,7 @@ import offer_5 from "../../../assets/Images/offer_5.jpg";
 import offer_6 from "../../../assets/Images/offer_6.jpg";
 import offer_7 from "../../../assets/Images/offer_7.jpg";
 import offer_8 from "../../../assets/Images/offer_8.jpg";
+import about_background from "../../../assets/Images/about_background.jpg";
 import Footer from "../../Footer/Footer";
 import Search from "../../Search/Search";
 import "./Offers.css";
@@ -12,6 +13,17 @@ import "./Offers.css";
 const Offers = () => {
   return (
     <div class="super_container">
+      <div class="offers-con">
+        <div
+          class="offers-background-image parallax-window"
+          data-parallax="scroll"
+          style={{ backgroundImage: `url(${about_background})` }}
+        ></div>
+        <div class="offers_content-header">
+          <div class="offers_title-birnchi">our offers</div>
+        </div>
+      </div>
+
       <div class="offers">
         <Search />
         <div class="container">

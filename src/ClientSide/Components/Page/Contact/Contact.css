@@ -1,3 +1,42 @@
+.contact {
+  width: 100%;
+  height: 465px;
+  background: transparent;
+}
+.contact_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.contact_content {
+  position: absolute;
+  bottom: 106px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.contact_title {
+  font-size: 72px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/*********************************
+5. Contact Form Section
+*********************************/
+
+.contact_form_section {
+  padding-top: 105px;
+}
 .contact_form_container {
   padding-top: 74px;
   padding-left: 98px;
@@ -101,6 +140,11 @@
   font-weight: 400 !important;
   color: #ffffff !important;
 }
+
+/*********************************
+6. About
+*********************************/
+
 .about {
   padding-top: 105px;
   padding-bottom: 146px;
@@ -192,6 +236,11 @@
 .about_info .contact_info_text a {
   color: #2e2e2e;
 }
+
+/*********************************
+7. Travelix Map
+*********************************/
+
 .travelix_map {
   width: 100%;
 }

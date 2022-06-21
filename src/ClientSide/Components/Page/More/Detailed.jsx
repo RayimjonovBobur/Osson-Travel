@@ -62,7 +62,7 @@ const Detailed = () => {
                       <div className="tours-tabs__info__item__icon">
                         <img src={hours_icon} alt="" />
                       </div>
-                      h5.tours-tabs__info__item__title
+                      <h5 className="tours-tabs__info__item__title"></h5>
                     </div>
                   </div>
                 </div>

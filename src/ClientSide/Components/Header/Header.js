@@ -7,6 +7,8 @@ const Header = () => {
   return (
     <div className="contaisner">
       <header className="header">
+        {/* Top Bar  */}
+
         {/* Main Navigation  */}
 
         <nav className="main_nav">
@@ -23,19 +25,19 @@ const Header = () => {
                 <div className="main_nav_container ml-auto">
                   <ul className="main_nav_list">
                     <li className="main_nav_item">
-                      <Link to="/">home</Link>
+                      <Link to="/">Asosiy</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/about">about us</Link>
+                      <Link to="/about">Biz haqimizda</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/offers">offers</Link>
+                      <Link to="/offers">Barcha turlar</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/news">news</Link>
+                      <Link to="/news">Yangiliklar</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/contact">contact</Link>
+                      <Link to="/contact">A'loqa</Link>
                     </li>
                   </ul>
                 </div>
@@ -51,7 +53,7 @@ const Header = () => {
                     height="17px"
                     viewBox="0 0 512 512"
                     enableBackground="new 0 0 512 512"
-                  // xml:space="preserve"
+                    // xml:space="preserve"
                   >
                     <g>
                       <g>
@@ -106,19 +108,19 @@ const Header = () => {
           </div>
           <ul>
             <li className="menu_item">
-              <a href="index.html">home</a>
+              <a href="index.html">Asosiy</a>
             </li>
             <li className="menu_item">
-              <a href="/">about us</a>
+              <a href="/">Biz haqimizda</a>
             </li>
             <li className="menu_item">
-              <Link to="/offers">offers</Link>
+              <Link to="/offers">Barcha turlar</Link>
             </li>
             <li className="menu_item">
-              <Link to="/news">news</Link>
+              <Link to="/news">Yangiliklar</Link>
             </li>
             <li className="menu_item">
-              <a href="contact.html">contact</a>
+              <a href="contact.html">A'loqa</a>
             </li>
           </ul>
         </div>

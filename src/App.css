@@ -12,9 +12,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
+  background-color: #f6f6f6 !important;
   font-weight: 400;
-  background: #ffffff;
-  color: #a5a5a5;
 }
 div {
   display: block;

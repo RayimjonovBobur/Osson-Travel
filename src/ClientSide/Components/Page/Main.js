@@ -3,6 +3,7 @@ import Home from "./Home/Home";
 import News from "./News/News";
 import About from "./About/About";
 import Offers from "./Offers/Offers";
+import Detailed from "./More/Detailed";
 
 export const Main = [
   {
@@ -24,5 +25,9 @@ export const Main = [
   {
     path: "/contact",
     page: <Contact />
+  },
+  {
+    path: "/detailed",
+    page: <Detailed />
   }
 ];

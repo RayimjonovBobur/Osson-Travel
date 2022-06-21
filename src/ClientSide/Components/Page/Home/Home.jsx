@@ -178,7 +178,7 @@ const Home = () => {
                   <div className="intro_date">Iyun 5 - Iyun 15</div>
                   <div className="button intro_button">
                     <div className="button_bcg"></div>
-                    <Link to="/">
+                    <Link to="/detailed">
                       Ba'tafsil<span></span>
                       <span></span>
                       <span></span>
@@ -210,7 +210,7 @@ const Home = () => {
                   <div className="intro_date">Iyun 25 - Iyul 5</div>
                   <div className="button intro_button">
                     <div className="button_bcg"></div>
-                    <Link to="/">
+                    <Link to="/detailed">
                       Ba'tafsil<span></span>
                       <span></span>
                       <span></span>
@@ -243,7 +243,7 @@ const Home = () => {
                   <div className="intro_date">Avgust 7- Avgust 17</div>
                   <div className="button intro_button">
                     <div className="button_bcg"></div>
-                    <Link to="/">
+                    <Link to="/detailed">
                       Ba'tafsil<span></span>
                       <span></span>
                       <span></span>

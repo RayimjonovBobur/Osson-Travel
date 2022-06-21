@@ -1,3 +1,6 @@
+
+
+
 @charset "utf-8";
 /* CSS Document */
 
@@ -1392,10 +1395,12 @@ section {
   margin-right: 2px;
 }
 .offers_text {
-  font-size: 14px;
-  font-weight: 400;
-  color: #929191;
-  margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #929191;
+    margin-top: 16px;
+    width: 230px;
+    text-align: justify;
 }
 .offers_icons {
   margin-top: 17px;
@@ -1616,11 +1621,11 @@ section {
 12. Contact
 *********************************/
 
-.contact {
+.home_contact {
   width: 100%;
   padding-bottom: 105px;
 }
-.contact_background {
+.home_contact_background {
   position: absolute;
   bottom: -34px;
   left: 0;

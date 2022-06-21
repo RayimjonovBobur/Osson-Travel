@@ -1,38 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Footer from "../../Footer/Footer";
 import "./Contact.css";
 import man from "../../../assets/Images/man.png";
+import contact_background from "../../../assets/Images/contact_background.jpg";
+import logo from "../../../assets/Images/logo.png";
+import placeholder from "../../../assets/Images/placeholder.svg";
+import phone_call from "../../../assets/Images/phone-call.svg";
+import message from "../../../assets/Images/message.svg";
+import planet_earth from "../../../assets/Images/planet-earth.svg";
 
 const Contact = () => {
   return (
     <div className="super_container">
-      <div class="home">
+      <div className="contact">
         <div
-          class="home_background parallax-window"
+          className="contact_background parallax-window"
           data-parallax="scroll"
-          data-image-src="images/contact_background.jpg"
+          style={{ backgroundImage: `url(${contact_background})` }}
         ></div>
-        <div class="home_content">
-          <div class="home_title">contact</div>
+        <div className="contact_content">
+          <div className="contact_title">
+            <h1>Biz bilan bog'lanish</h1>
+          </div>
         </div>
       </div>
 
-      <div class="contact_form_section">
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="contact_form_container">
-                <div class="contact_title text-center">get in touch</div>
+      <div className="contact_form_section">
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <div className="contact_form_container">
+                <div className="contact_title text-center">get in touch</div>
                 <form
                   action="#"
                   id="contact_form"
-                  class="contact_form text-center"
+                  className="contact_form text-center"
                 >
                   <input
                     type="text"
                     id="contact_form_name"
-                    class="contact_form_name input_field"
+                    className="contact_form_name input_field"
                     placeholder="Name"
                     required="required"
                     data-error="Name is required."
@@ -40,7 +47,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="contact_form_email"
-                    class="contact_form_email input_field"
+                    className="contact_form_email input_field"
                     placeholder="E-mail"
                     required="required"
                     data-error="Email is required."
@@ -48,14 +55,14 @@ const Contact = () => {
                   <input
                     type="text"
                     id="contact_form_subject"
-                    class="contact_form_subject input_field"
+                    className="contact_form_subject input_field"
                     placeholder="Subject"
                     required="required"
                     data-error="Subject is required."
                   />
                   <textarea
                     id="contact_form_message"
-                    class="text_field contact_form_message"
+                    className="text_field contact_form_message"
                     name="message"
                     rows="4"
                     placeholder="Message"
@@ -65,7 +72,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     id="form_submit_button"
-                    class="form_submit_button button trans_200"
+                    className="form_submit_button button trans_200"
                   >
                     send message<span></span>
                     <span></span>
@@ -77,90 +84,89 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      <div class="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="about_image">
+      <div className="about">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <div className="about_image">
                 <img src={man} alt="" />
               </div>
             </div>
 
-            <div class="col-lg-4">
-              <div class="about_content">
-                <div class="logo_container about_logo">
-                  <div class="logo">
-                    <Link to="/">
-                      <img src="images/logo.png" alt="" />
+            <div className="col-lg-4">
+              <div className="about_content">
+                <div className="logo_container about_logo">
+                  <div className="logoa">
+                    <a href="#">
+                      <img src={logo} alt="" />
                       travelix
-                    </Link>
+                    </a>
                   </div>
                 </div>
-                <p class="about_text">
+                <p className="about_text">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et
                   suscipit urna. Integer eleme ntum orci eu vehicula iaculis
                   consequat nisl. Nunc et suscipit urna pretium.
                 </p>
-                <ul class="about_social_list">
-                  <li class="about_social_item">
-                    <Link to="/">
-                      <i class="fa-brands fa-pinterest"></i>
-                    </Link>
+                <ul className="about_social_list">
+                  <li className="about_social_item">
+                    <a href="#">
+                      <i className="fa fa-pinterest"></i>
+                    </a>
                   </li>
-                  <li class="about_social_item">
-                    <Link to="/">
-                      <i class="fa-brands fa-facebook"></i>
-                    </Link>
+                  <li className="about_social_item">
+                    <a href="#">
+                      <i className="fa fa-facebook-f"></i>
+                    </a>
                   </li>
-                  <li class="about_social_item">
-                    <Link to="/">
-                      <i class="fa-brands fa-twitter"></i>
-                    </Link>
+                  <li className="about_social_item">
+                    <a href="#">
+                      <i className="fa fa-twitter"></i>
+                    </a>
                   </li>
-                  <li class="about_social_item">
-                    <Link to="/">
-                      <i class="fa-brands fa-dribbble"></i>
-                    </Link>
+                  <li className="about_social_item">
+                    <a href="#">
+                      <i className="fa fa-dribbble"></i>
+                    </a>
                   </li>
-                  <li class="about_social_item">
-                    <Link to="/">
-                      <i class="fa-brands fa-behance"></i>
-                    </Link>
+                  <li className="about_social_item">
+                    <a href="#">
+                      <i className="fa fa-behance"></i>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div class="col-lg-3">
-              <div class="about_info">
-                <ul class="contact_info_list">
-                  <li class="contact_info_item d-flex flex-row">
+            <div className="col-lg-3">
+              <div className="about_info">
+                <ul className="contact_info_list">
+                  <li className="contact_info_item d-flex flex-row">
                     <div>
-                      <div class="contact_info_icon">
-                        <img src="images/placeholder.svg" alt="" />
+                      <div className="contact_info_icon">
+                        <img src={placeholder} alt="" />
                       </div>
                     </div>
-                    <div class="contact_info_text">
+                    <div className="contact_info_text">
                       4127 Raoul Wallenber 45b-c Gibraltar
                     </div>
                   </li>
-                  <li class="contact_info_item d-flex flex-row">
+                  <li className="contact_info_item d-flex flex-row">
                     <div>
-                      <div class="contact_info_icon">
-                        <img src="images/phone-call.svg" alt="" />
+                      <div className="contact_info_icon">
+                        <img src={phone_call} alt="" />
                       </div>
                     </div>
-                    <div class="contact_info_text">2556-808-8613</div>
+                    <div className="contact_info_text">2556-808-8613</div>
                   </li>
-                  <li class="contact_info_item d-flex flex-row">
+                  <li className="contact_info_item d-flex flex-row">
                     <div>
-                      <div class="contact_info_icon">
-                        <img src="images/message.svg" alt="" />
+                      <div className="contact_info_icon">
+                        <img src={message} alt="" />
                       </div>
                     </div>
-                    <div class="contact_info_text">
+                    <div className="contact_info_text">
                       <a
                         href="mailto:contactme@gmail.com?Subject=Hello"
                         target="_top"
@@ -169,13 +175,13 @@ const Contact = () => {
                       </a>
                     </div>
                   </li>
-                  <li class="contact_info_item d-flex flex-row">
+                  <li className="contact_info_item d-flex flex-row">
                     <div>
-                      <div class="contact_info_icon">
-                        <img src="images/planet-earth.svg" alt="" />
+                      <div className="contact_info_icon">
+                        <img src={planet_earth} alt="" />
                       </div>
                     </div>
-                    <div class="contact_info_text">
+                    <div className="contact_info_text">
                       <a href="https://colorlib.com">www.colorlib.com</a>
                     </div>
                   </li>
@@ -185,9 +191,9 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div class="travelix_map">
-        <div id="google_map" class="google_map">
-          <div class="map_container">
+      <div className="travelix_map">
+        <div id="google_map" className="google_map">
+          <div className="map_container">
             <div id="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1128218.9660308918!2d71.09381868941708!3d40.44570260203516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ba35e21e649803%3A0xcd6937bf69229b68!2sFarg&#39;ona%20Viloyati%2C%20O%60zbekiston!5e0!3m2!1suz!2s!4v1655277286860!5m2!1suz!2s"
@@ -202,7 +208,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

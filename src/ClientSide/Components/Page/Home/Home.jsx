@@ -845,62 +845,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div className="home_contact">
-        <div
-          className="contact_background"
-          style={{ backgroundImage: `url(${contact})` }}
-        ></div>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <div className="contact_image"></div>
-            </div>
-            <div className="col-lg-7">
-              <div className="contact_form_container">
-                <div className="contact_title">Buyurtma qilish</div>
-                <form action="#" id="contact_form" className="contact_form">
-                  <input
-                    type="text"
-                    id="contact_form_name"
-                    className="contact_form_name input_field"
-                    placeholder="Isim"
-                    required="required"
-                    data-error="Name is required."
-                  />
-                  <input
-                    type="text"
-                    id="contact_form_email"
-                    className="contact_form_email input_field"
-                    placeholder="Telefon raqam"
-                    required="required"
-                    data-error="Email is required."
-                  />
-                  <input
-                    type="text"
-                    id="contact_form_subject"
-                    className="contact_form_subject input_field"
-                    placeholder="Familya"
-                    required="required"
-                    data-error="Subject is required."
-                  />
-                  <button
-                    type="submit"
-                    id="form_submit_button"
-                    className="form_submit_button button"
-                  >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <Footer />
     </div>
   );

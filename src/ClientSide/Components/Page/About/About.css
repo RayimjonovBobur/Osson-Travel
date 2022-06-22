@@ -50,16 +50,19 @@
   font-weight: 700;
   color: #2d2c2c;
   text-transform: uppercase;
+  text-align: center;
 }
 .intro_text {
   margin-bottom: 0px;
   font-weight: 600;
   color: #929191;
-  margin-top: 60px;
+  margin-top: 30px;
+  text-align: justify;
 }
-.intro_button {
-  margin-top: 57px;
+.info-button {
+  margin-top: 30px;
   z-index: 1;
+  margin-left: 120px;
 }
 
 /*********************************

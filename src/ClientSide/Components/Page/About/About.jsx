@@ -33,23 +33,27 @@ const About = () => {
             </div>
             <div className="col-lg-5">
               <div className="intro_content">
-                <div className="intro_title">we have the best tours</div>
+                <div className="intro_title">BIZDA ENG yaxshi turlar</div>
                 <p className="intro_text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vivamus quis vulputate eros, iaculis consequat nisl. Nunc et
-                  suscipit urna. Integer elementum orci eu vehicula pretium.
-                  Donec bibendum tristique condimentum. Aenean in lacus ligula.
-                  Phasellus euismod gravida eros. Aenean nec ipsum aliquet,
-                  pharetra magna id, interdum sapien. Etiam id lorem eu nisl
-                  pellentesque semper. Nullam tincidunt metus placerat, suscipit
-                  leo ut, tempus nulla. Fusce at eleifend tellus. Ut eleifend
-                  dui nunc, non fermentum quam placerat non. Etiam venenatis
-                  nibh augue, sed eleifend justo tristique eu
+                  “OSSON-TOUR” sayyohlik kompaniyasining axborot saytiga xush
+                  kelibsiz! “OSSON-TOUR” MChJ kompaniyasi O‘zbekiston sayyohlik
+                  xizmatlari bozorida yangi hisoblanadi. “OSSON-TOUR” –
+                  turoperatorlik va agentlik faoliyatini muvaffaqiyatli amalga
+                  oshirib kelayotgan kompaniya. Bugungi kunda “OSSON-TOUR” 13 ta
+                  yo‘nalish bo‘ylab operatorlik faoliyatini yuritadi, shu
+                  jumladan Avstriya, Benilyuks, Isroil, Italiya, BAA, Fransiya,
+                  Chexiya va boshqa davlatlar bor. Biz ekskursiya,
+                  davolash-sog‘lomlashtirish turlari, plyajda dam olish, ko‘l va
+                  tog‘larda hordiq chiqarish, voqeaviy va ziyorat turlarining
+                  butun doirasida xizmat ko‘rsatamiz. Alohida e’tibor yuqori
+                  shinamlikdagi qo‘shma turlarni rivojlantirishga qaratilgan,
+                  assortimentda 100 dan ortiq dastur, turda 2 tadan 5 tagacha
+                  turlar mavjud.
                 </p>
-                <div className="button intro_button">
+                <div className="button info-button">
                   <div className="button_bcg"></div>
-                  <a href="#">
-                    explore now<span></span>
+                  <a href="/">
+                    Ba'tafsil<span></span>
                     <span></span>
                     <span></span>
                   </a>

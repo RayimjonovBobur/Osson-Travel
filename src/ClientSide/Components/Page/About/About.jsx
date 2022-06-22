@@ -19,7 +19,7 @@ const About = () => {
           style={{ backgroundImage: `url(${about_background})` }}
         ></div>
         <div className="about_content-header">
-          <div className="about_title">about us</div>
+          <div className="about_title">Biz haqimizda</div>
         </div>
       </div>
 

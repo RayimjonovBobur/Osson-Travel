@@ -627,9 +627,10 @@ const Home = () => {
                         <i></i>
                       </div>
                       <p className="offers_text">
-                        Suspendisse potenti. In faucibus massa. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Nullam eu
-                        convallis tortor.
+                        Birlashgan Arab Amirliklarining eng yirik shahri, shu
+                        nomdagi amirlikning ma’muriy markazi. Fors ko‘rfazi
+                        qirg‘og‘ida joylashgan va dunyodagi eng issiq
+                        shaharlardan biri hisoblanadi.
                       </p>
                       <div className="offers_icons">
                         <ul className="offers_icons_list">
@@ -646,9 +647,6 @@ const Home = () => {
                             <img src={sailboat} alt="" />
                           </li>
                         </ul>
-                      </div>
-                      <div className="offers_link">
-                        <a href="offers.html">read more</a>
                       </div>
                     </div>
                   </div>
@@ -665,14 +663,14 @@ const Home = () => {
                         style={{ backgroundImage: `url(${offer_4})` }}
                       ></div>
                       <div className="offer_name">
-                        <Link to="/">travel light</Link>
+                        <Link to="/">Singapur</Link>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-6">
                     <div className="offers_content">
                       <div className="offers_price">
-                        $30<span>per night</span>
+                        2030$<span>10-kunga</span>
                       </div>
                       <div className="rating_r rating_r_4 offers_rating">
                         <i></i>
@@ -682,9 +680,10 @@ const Home = () => {
                         <i></i>
                       </div>
                       <p className="offers_text">
-                        Suspendisse potenti. In faucibus massa. Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Nullam eu
-                        convallis tortor.
+                        Ushbu shaharda-Futuristik binolar, top-toza ko‘chalar,
+                        noyob transport tizimi, har jabhada yuqori
+                        texnologiyalar – Singapur boshqa Osiyo megapolislariga
+                        mutlaqo o‘xshamaydi.
                       </p>
                       <div className="offers_icons">
                         <ul className="offers_icons_list">
@@ -701,9 +700,6 @@ const Home = () => {
                             <img src={sailboat} alt="" />
                           </li>
                         </ul>
-                      </div>
-                      <div className="offers_link">
-                        <a href="offers.html">read more</a>
                       </div>
                     </div>
                   </div>
@@ -729,10 +725,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">grand hotel</Link>
+                    <Link to="/">Gruzin afsonasi</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 650$</div>
+                  <div className="trending_location">Gruzin,Tbilis</div>
                 </div>
               </div>
             </div>
@@ -744,10 +740,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">mars hotel</Link>
+                    <Link to="/">Qizil dengiz</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 1040$</div>
+                  <div className="trending_location"> Misr,Texron</div>
                 </div>
               </div>
             </div>
@@ -759,10 +755,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">queen hotel</Link>
+                    <Link to="/">Mehmondo'st Ozarbayjon</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 1000$</div>
+                  <div className="trending_location">Ozarbayjon,Boku</div>
                 </div>
               </div>
             </div>
@@ -774,10 +770,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">mars hotel</Link>
+                    <Link to="/">Qadimiy Rossiya</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 1200$</div>
+                  <div className="trending_location">Rossiya,Moskva</div>
                 </div>
               </div>
             </div>
@@ -789,10 +785,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">grand hotel</Link>
+                    <Link to="/">CHexiya tog' kurorti</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 1300$</div>
+                  <div className="trending_location">CHexiya, Praga</div>
                 </div>
               </div>
             </div>
@@ -804,10 +800,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">mars hotel</Link>
+                    <Link to="/">Shveysariya tog'lari</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 2010$</div>
+                  <div className="trending_location">Shveysariya, Bern</div>
                 </div>
               </div>
             </div>
@@ -819,10 +815,10 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">queen hotel</Link>
+                    <Link to="/">Buyuk Xitoy</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 1300$</div>
+                  <div className="trending_location">Xitoy,Pekin</div>
                 </div>
               </div>
             </div>
@@ -837,10 +833,12 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">mars hotel</Link>
+                    <Link to="/">Niderlandiya</Link>
                   </div>
-                  <div className="trending_price">From $182</div>
-                  <div className="trending_location">madrid, spain</div>
+                  <div className="trending_price">Narxi 1300$</div>
+                  <div className="trending_location">
+                    Niderlandiya,Amsterdam
+                  </div>
                 </div>
               </div>
             </div>
@@ -867,7 +865,7 @@ const Home = () => {
                     type="text"
                     id="contact_form_name"
                     className="contact_form_name input_field"
-                    placeholder="Name"
+                    placeholder="Isim"
                     required="required"
                     data-error="Name is required."
                   />
@@ -875,7 +873,7 @@ const Home = () => {
                     type="text"
                     id="contact_form_email"
                     className="contact_form_email input_field"
-                    placeholder="E-mail"
+                    placeholder="Telefon raqam"
                     required="required"
                     data-error="Email is required."
                   />
@@ -883,19 +881,10 @@ const Home = () => {
                     type="text"
                     id="contact_form_subject"
                     className="contact_form_subject input_field"
-                    placeholder="Subject"
+                    placeholder="Familya"
                     required="required"
                     data-error="Subject is required."
                   />
-                  <textarea
-                    id="contact_form_message"
-                    className="text_field contact_form_message"
-                    name="message"
-                    rows="4"
-                    placeholder="Message"
-                    required="required"
-                    data-error="Please, write us a message."
-                  ></textarea>
                   <button
                     type="submit"
                     id="form_submit_button"

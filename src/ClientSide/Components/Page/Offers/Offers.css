@@ -24,7 +24,7 @@
   transform: translateX(-50%);
 }
 .offers_title-birnchi {
-  font-size: 72px;  
+  font-size: 72px;
   font-weight: 800;
   color: #ffffff;
   text-transform: uppercase;
@@ -189,6 +189,10 @@
   margin-top: 16px;
   margin-bottom: 0px;
 }
+.info {
+  width: 400px;
+}
+
 .offers_icons {
   margin-top: 21px;
 }
@@ -200,14 +204,15 @@
   margin-right: 0px;
 }
 .book_button {
-  background: #31124b;
-  margin-top: 39px;
+  background: #fa9e1b;
+  margin-top: -39px;
   margin-bottom: -5px;
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;
   -o-transition: all 200ms ease;
   transition: all 200ms ease;
+  border-radius: 0;
 }
 .book_button:hover {
   opacity: 0.8;

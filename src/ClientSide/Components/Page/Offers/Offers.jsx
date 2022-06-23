@@ -20,7 +20,7 @@ const Offers = () => {
           style={{ backgroundImage: `url(${about_background})` }}
         ></div>
         <div className="offers_content-header">
-          <div className="offers_title-birnchi">our offers</div>
+          <div className="offers_title-birnchi">Barcha turlar</div>
         </div>
       </div>
 
@@ -30,102 +30,7 @@ const Offers = () => {
           <div className="row">
             <div className="col-lg-1 temp_col"></div>
             <div className="col-lg-11">
-              <div className="offers_sorting_container">
-                <ul className="offers_sorting">
-                  <li>
-                    <span className="sorting_text">price</span>
-                    <i className="fa fa-chevron-down"></i>
-                    <ul>
-                      <li
-                        className="sort_btn"
-                        data-isotope-option='{ "sortBy": "original-order" }'
-                        data-parent=".price_sorting"
-                      >
-                        <span>show all</span>
-                      </li>
-                      <li
-                        className="sort_btn"
-                        data-isotope-option='{ "sortBy": "price" }'
-                        data-parent=".price_sorting"
-                      >
-                        <span>ascending</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="sorting_text">location</span>
-                    <i className="fa fa-chevron-down"></i>
-                    <ul>
-                      <li
-                        className="sort_btn"
-                        data-isotope-option='{ "sortBy": "original-order" }'
-                      >
-                        <span>default</span>
-                      </li>
-                      <li
-                        className="sort_btn"
-                        data-isotope-option='{ "sortBy": "name" }'
-                      >
-                        <span>alphabetical</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="sorting_text">stars</span>
-                    <i className="fa fa-chevron-down"></i>
-                    <ul>
-                      <li className="filter_btn" data-filter="*">
-                        <span>show all</span>
-                      </li>
-                      <li
-                        className="sort_btn"
-                        data-isotope-option='{ "sortBy": "stars" }'
-                      >
-                        <span>ascending</span>
-                      </li>
-                      <li className="filter_btn" data-filter=".rating_3">
-                        <span>3</span>
-                      </li>
-                      <li className="filter_btn" data-filter=".rating_4">
-                        <span>4</span>
-                      </li>
-                      <li className="filter_btn" data-filter=".rating_5">
-                        <span>5</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="distance_item">
-                    <span className="sorting_text">distance from center</span>
-                    <i className="fa fa-chevron-down"></i>
-                    <ul>
-                      <li className="num_sorting_btn">
-                        <span>distance</span>
-                      </li>
-                      <li className="num_sorting_btn">
-                        <span>distance</span>
-                      </li>
-                      <li className="num_sorting_btn">
-                        <span>distance</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <span className="sorting_text">reviews</span>
-                    <i className="fa fa-chevron-down"></i>
-                    <ul>
-                      <li className="num_sorting_btn">
-                        <span>review</span>
-                      </li>
-                      <li className="num_sorting_btn">
-                        <span>review</span>
-                      </li>
-                      <li className="num_sorting_btn">
-                        <span>review</span>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+              <div className="offers_sorting_container"></div>
             </div>
 
             <div className="col-lg-12">
@@ -140,14 +45,14 @@ const Offers = () => {
                           style={{ backgroundImage: `url(${offer_1})` }}
                         ></div>
                         <div className="offer_name">
-                          <a href="single_listing.html">grand castle</a>
+                          <a href="single_listing.html">Turkiya ,Istambul</a>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-8">
                       <div className="offers_content">
                         <div className="offers_price">
-                          $70<span>per night</span>
+                          1200$<span>10-kunga</span>
                         </div>
                         <div
                           className="rating_r rating_r_4 offers_rating"
@@ -159,10 +64,12 @@ const Offers = () => {
                           <i></i>
                           <i></i>
                         </div>
-                        <p className="offers_text">
-                          Suspendisse potenti. In faucibus massa. Lorem ipsum
-                          dolor sit amet, consectetur adipiscing elit. Nullam eu
-                          convallis tortor. Lorem ipsum dolor sit amet.
+                        <p className="offers_text info">
+                          Istanbulda amalga oshiriladigan eng mashhur
+                          tadbirlardan ba'zilari ajoyib Ayasofyani ziyorat
+                          qilish, Katta bozor va ziravorlar bozorida xarid
+                          qilish, Istanbuldagi Moviy masjidga borish va Galata
+                          minorasidan bahramand bo'lishdir. Galata minorasi.
                         </p>
                         <div className="offers_icons">
                           <ul className="offers_icons_list">
@@ -182,20 +89,20 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <a href="/">
-                            book<span></span>
+                            Ba'tafsil<span></span>
                             <span></span>
                             <span></span>
                           </a>
                         </div>
                         <div className="offer_reviews">
                           <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">very good</div>
+                            <div className="offer_reviews_title">kun</div>
                             <div className="offer_reviews_subtitle">
-                              100 reviews
+                              davomida
                             </div>
                           </div>
                           <div className="offer_reviews_rating text-center">
-                            8.1
+                            10
                           </div>
                         </div>
                       </div>
@@ -212,14 +119,14 @@ const Offers = () => {
                           style={{ backgroundImage: `url(${offer_5})` }}
                         ></div>
                         <div className="offer_name">
-                          <a href="single_listing.html">eurostar hotel</a>
+                          <a href="single_listing.html">Venetsiya,italiya</a>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-8">
                       <div className="offers_content">
                         <div className="offers_price">
-                          $50<span>per night</span>
+                          2700$<span>7-kunga</span>
                         </div>
                         <div
                           className="rating_r rating_r_3 offers_rating"
@@ -231,10 +138,11 @@ const Offers = () => {
                           <i></i>
                           <i></i>
                         </div>
-                        <p className="offers_text">
-                          Suspendisse potenti. In faucibus massa. Lorem ipsum
-                          dolor sit amet, consectetur adipiscing elit. Nullam eu
-                          convallis tortor. Lorem ipsum dolor sit amet.
+                        <p className="offers_text info">
+                          Venetsiya, shubhasiz, dunyodagi eng o'ziga xos
+                          shaharlar qatorida. Albatta, u Evropada kashf
+                          qilinadigan eng yaxshi shaharlar qatoriga kiradi!
+                          Venetsiya topografiyasi boshqa hech kimga o'xshamaydi.
                         </p>
                         <div className="offers_icons">
                           <ul className="offers_icons_list">
@@ -254,20 +162,20 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            book<span></span>
+                            Ba'tafsil<span></span>
                             <span></span>
                             <span></span>
                           </Link>
                         </div>
                         <div className="offer_reviews">
                           <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">very good</div>
+                            <div className="offer_reviews_title">kun</div>
                             <div className="offer_reviews_subtitle">
-                              100 reviews
+                              davomida
                             </div>
                           </div>
                           <div className="offer_reviews_rating text-center">
-                            8.1
+                            7
                           </div>
                         </div>
                       </div>
@@ -285,14 +193,14 @@ const Offers = () => {
                           style={{ backgroundImage: `url(${offer_6})` }}
                         ></div>
                         <div className="offer_name">
-                          <a href="single_listing.html">grand castle</a>
+                          <a href="single_listing.html">Madrid,Ispaniya</a>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-8">
                       <div className="offers_content">
                         <div className="offers_price">
-                          $110<span>per night</span>
+                          1300$<span>7-kunga</span>
                         </div>
                         <div
                           className="rating_r rating_r_5 offers_rating"
@@ -304,10 +212,11 @@ const Offers = () => {
                           <i></i>
                           <i></i>
                         </div>
-                        <p className="offers_text">
-                          Suspendisse potenti. In faucibus massa. Lorem ipsum
-                          dolor sit amet, consectetur adipiscing elit. Nullam eu
-                          convallis tortor. Lorem ipsum dolor sit amet.
+                        <p className="offers_text info">
+                          Dunyoga mashhur opera teatridan tortib, Xofburg
+                          saroyigacha, Vena kafelari sahnasining yorqinligi va
+                          ulug'vorligigacha, Vena qayerda bo'lmasin kuch, boylik
+                          va go'zallik ramzi hisoblanadi.
                         </p>
                         <div className="offers_icons">
                           <ul className="offers_icons_list">
@@ -327,20 +236,20 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            book<span></span>
+                            Ba'tafsil<span></span>
                             <span></span>
                             <span></span>
                           </Link>
                         </div>
                         <div className="offer_reviews">
                           <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">very good</div>
+                            <div className="offer_reviews_title">kun</div>
                             <div className="offer_reviews_subtitle">
-                              100 reviews
+                              davomida
                             </div>
                           </div>
                           <div className="offer_reviews_rating text-center">
-                            8.1
+                            10
                           </div>
                         </div>
                       </div>
@@ -358,14 +267,14 @@ const Offers = () => {
                           style={{ backgroundImage: `url(${offer_7})` }}
                         ></div>
                         <div className="offer_name">
-                          <a href="single_listing.html">eurostar hotel</a>
+                          <a href="single_listing.html">Dubay,BAA</a>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-8">
                       <div className="offers_content">
                         <div className="offers_price">
-                          $50<span>per night</span>
+                          2700$<span>10-kunga</span>
                         </div>
                         <div
                           className="rating_r rating_r_4 offers_rating"
@@ -377,10 +286,11 @@ const Offers = () => {
                           <i></i>
                           <i></i>
                         </div>
-                        <p className="offers_text">
-                          Suspendisse potenti. In faucibus massa. Lorem ipsum
-                          dolor sit amet, consectetur adipiscing elit. Nullam eu
-                          convallis tortor. Lorem ipsum dolor sit amet.
+                        <p className="offers_text info">
+                          Birlashgan Arab Amirliklarining eng yirik shahri, shu
+                          nomdagi amirlikning ma’muriy markazi. Fors ko‘rfazi
+                          qirg‘og‘ida joylashgan va dunyodagi eng issiq
+                          shaharlardan biri hisoblanadi.
                         </p>
                         <div className="offers_icons">
                           <ul className="offers_icons_list">
@@ -400,20 +310,20 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            book<span></span>
+                            Ba'tafsil<span></span>
                             <span></span>
                             <span></span>
                           </Link>
                         </div>
                         <div className="offer_reviews">
                           <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">very good</div>
+                            <div className="offer_reviews_title">kun</div>
                             <div className="offer_reviews_subtitle">
-                              100 reviews
+                              davonida
                             </div>
                           </div>
                           <div className="offer_reviews_rating text-center">
-                            8.1
+                            10
                           </div>
                         </div>
                       </div>
@@ -431,14 +341,14 @@ const Offers = () => {
                           style={{ backgroundImage: `url(${offer_8})` }}
                         ></div>
                         <div className="offer_name">
-                          <a href="single_listing.html">grand castle</a>
+                          <a href="single_listing.html">Vena,Avstriya</a>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-8">
                       <div className="offers_content">
                         <div className="offers_price">
-                          $90<span>per night</span>
+                          1600$<span>8-kunga</span>
                         </div>
                         <div
                           className="rating_r rating_r_3 offers_rating"
@@ -450,10 +360,11 @@ const Offers = () => {
                           <i></i>
                           <i></i>
                         </div>
-                        <p className="offers_text">
-                          Suspendisse potenti. In faucibus massa. Lorem ipsum
-                          dolor sit amet, consectetur adipiscing elit. Nullam eu
-                          convallis tortor. Lorem ipsum dolor sit amet.
+                        <p className="offers_text info">
+                          Dunyoga mashhur opera teatridan tortib, Xofburg
+                          saroyigacha, Vena kafelari sahnasining yorqinligi va
+                          ulug'vorligigacha, Vena qayerda bo'lmasin kuch, boylik
+                          va go'zallik ramzi hisoblanadi.
                         </p>
                         <div className="offers_icons">
                           <ul className="offers_icons_list">
@@ -473,20 +384,20 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            book<span></span>
+                            Ba'tafsil<span></span>
                             <span></span>
                             <span></span>
                           </Link>
                         </div>
                         <div className="offer_reviews">
                           <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">very good</div>
+                            <div className="offer_reviews_title">kun</div>
                             <div className="offer_reviews_subtitle">
-                              100 reviews
+                              davomida
                             </div>
                           </div>
                           <div className="offer_reviews_rating text-center">
-                            8.1
+                            8
                           </div>
                         </div>
                       </div>

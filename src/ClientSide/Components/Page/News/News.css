@@ -44,8 +44,7 @@
 .blog_post:not(:last-child) {
   margin-bottom: 74px;
 }
-.blog_post_image {
-}
+
 .blog_post_image img {
   width: 100%;
 }
@@ -128,6 +127,12 @@
 .blog_post_text p {
   color: #929191;
   line-height: 2.14;
+  text-align: justify;
+}
+.blog_post_info {
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
 }
 .blog_post_text p:last-of-type {
   margin-bottom: 0px;

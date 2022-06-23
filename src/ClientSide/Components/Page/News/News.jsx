@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./News.css";
 import blog_background from "../../../assets/Images/blog_background.jpg";
 import blog_1 from "../../../assets/Images/blog_1.jpg";
-import blog_2 from "../../../assets/Images/blog_2.jpg";
+import blog_2 from "../../../assets/Images/blog_2.jpeg";
 import blog_3 from "../../../assets/Images/blog_3.jpg";
 import latest_1 from "../../../assets/Images/latest_1.jpg";
 import latest_2 from "../../../assets/Images/latest_2.jpg";
@@ -58,20 +58,42 @@ const News = () => {
                     </ul>
                   </div>
                   <div className="blog_post_title">
-                    <Link to="/">Try these new dream destinations</Link>
+                    <Link to="/">
+                      O‘zbekiston – Ozarbayjon: turizm sohasida hamkorlik
+                      dasturi imzolandi
+                    </Link>
                   </div>
                   <div className="blog_post_text">
                     <p>
-                      Aenean in lacus ligula. Phasellus euismod gravida eros.
-                      Aenean nec ipsum aliquet, pharetra magna id, interdum
-                      sapien. Etiam id lorem eu nisl pellentesque semper. Nullam
-                      tincidunt metus placerat, suscipit leo ut, tempus nulla.
-                      Fusce at eleifend tellus. Ut eleifend dui nunc, non
-                      fermentum qua.
+                      <span className="blog_post_info">
+                        Dasturga muvofiq, tomonlar quyidagi yo‘nalishlarda
+                        hamkorlik qiladilar:
+                      </span>
+                      – Ozarbayjon Respublikasi va O‘zbekiston Respublikasining
+                      yirik shaharlarida “O‘zbekistonga sayohat” va
+                      “Ozarbayjonga sayohat” targ‘ibot tadbirlarini o‘tkazish; –
+                      ikki davlat hududida O‘zbekiston va Ozarbayjon sayyohlik
+                      kompaniyalari vakillari ishtirokida sayyohlik
+                      yarmarkalarini o‘tkazish; – O‘zbekiston va Ozarbayjon
+                      telekanallarida ikki davlatning sayyohlik salohiyati
+                      to‘g‘risidagi reklama materiallarini joylashtirish uchun
+                      efir vaqti almashinuvi, shuningdek, O‘zbekiston va
+                      Ozarbayjonning mashhur telekanallari ko‘rsatuvlarini
+                      suratga olishni tashkil etish bilan bog‘liq masalalarni
+                      o‘rganish; – O‘zbekistonning turizm sektori vakillari
+                      bilan O‘zbekiston va Ozarbayjon ta’lim muassasalari
+                      o‘rtasida turizm sohasida tajriba almashish; – turizm
+                      kunlarini o‘tkazish (mamlakatlarning madaniyati,
+                      gastronomiyasi va turizm salohiyati taqdimoti); –
+                      o‘zbekistonlik va ozarbayjonlik sayohatchilar uchun ikki
+                      davlat hududlari bo‘ylab yangi turistik yo‘nalishlarni
+                      ishlab chiqish va amalga joriy etish.
                     </p>
                   </div>
                   <div className="blog_post_link">
-                    <Link to="/">read more</Link>
+                    <a href="https://uzbektourism.uz/news/view?id=2256">
+                      Ba'tafsil
+                    </a>
                   </div>
                 </div>
 
@@ -97,16 +119,33 @@ const News = () => {
                     </ul>
                   </div>
                   <div className="blog_post_title">
-                    <Link to="/">Try these new dream destinations</Link>
+                    <Link to="/">
+                      Rossiya Jahon sayyohlik tashkilotidan chiqishini eʼlon
+                      qildi
+                    </Link>
                   </div>
                   <div className="blog_post_text">
                     <p>
-                      Aenean in lacus ligula. Phasellus euismod gravida eros.
-                      Aenean nec ipsum aliquet, pharetra magna id, interdum
-                      sapien. Etiam id lorem eu nisl pellentesque semper. Nullam
-                      tincidunt metus placerat, suscipit leo ut, tempus nulla.
-                      Fusce at eleifend tellus. Ut eleifend dui nunc, non
-                      fermentum qua.
+                      "Rossiya Federatsiyasining xalqaro shartnomalari
+                      toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
+                      Rossiya Tashqi ishlar vazirligining manfaatdor federal
+                      ijroiya organlari bilan kelishilgan Rossiya
+                      Federatsiyasining Jahon sayyohlik tashkiloti tarkibidan
+                      chiqishi toʻgʻrisidagi taklifini qabul qilish; ", deyiladi
+                      hujjatda.Maʼlumot uchun 27 aprel kuni Rossiya BMT
+                      huzuridagi Jahon Sayyohlik tashkiloti faoliyati
+                      siyosiylashgani sababli tashkilot tarkibidan chiqish
+                      niyati borligini maʼlum qilgan edi. Oʻsha kuni JST Bosh
+                      Assambleyasi navbatdan tashqari yigʻilishida “Ukrainada
+                      davom etayotgan harbiy hujum munosabati bilan” Rossiyaning
+                      aʼzoligini toʻxtatishga qaror qildi. Rossiya TIV rasmiy
+                      vakili Mariya Zaxarova bu qarorni “siyosiy
+                      ikkiyuzlamachilik namunasi” deb atadi va Gʻarb davlatlari
+                      bu tashkilotdan oʻz manfaatlari yoʻlida, jumladan, Rossiya
+                      Federatsiyasini kamsitish maqsadida foydalanishini
+                      taʼkidladi. Eslatib oʻtamiz, Rossiya SSSRning huquqiy
+                      vorisi sifatida 1991 yildan beri JSTda ishtirok etib
+                      kelayotgan edi.
                     </p>
                   </div>
                   <div className="blog_post_link">

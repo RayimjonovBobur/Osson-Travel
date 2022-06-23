@@ -149,7 +149,7 @@ const News = () => {
                     </p>
                   </div>
                   <div className="blog_post_link">
-                    <Link to="/">read more</Link>
+                    <Link to="/">Ba'tafsil</Link>
                   </div>
                 </div>
 

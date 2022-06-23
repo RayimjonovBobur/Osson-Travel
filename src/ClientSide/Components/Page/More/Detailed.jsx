@@ -4,21 +4,24 @@ import dubai from "../../../assets/Images/dubai.jpg";
 import { DetaileDate } from "./DetailedData";
 import { useDispatch } from "react-redux";
 import hours_icon from "../../../assets/Images/24-hours.png";
-import { GoCalendar } from "react-icons/go";
 import { Ri24HoursFill } from "react-icons/ri";
+import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";
 import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 
 const Detailed = () => {
-  const [isactive, setActive] = useState(false);
+  // const [isactive, setActive] = useState(false);
+  const [activeTab, setActiveTab] = useState("tab1");
+  const [active, setActive] = useState(null);
   const dispatch = useDispatch();
-  const active = 0;
+  // const active = 0;
 
   const handleLink = (i) => {
-    setActive(!isactive);
-    setActive((prevState) => {
-      return { animate: !prevState.animate };
-    });
+    setActive(i);
+    // setActive(!isactive);
+    // setActive((prevState) => {
+    //   return { animate: !prevState.animate };
+    // });
   };
 
   // let animationClasses = isactive ? " active" : "";
@@ -49,9 +52,12 @@ const Detailed = () => {
               <ul className="nav nav-tabs hidden-xs">
                 {DetaileDate.map((item, i) => (
                   <li
-                    // className={`${isactive ? "active" : ""}`}
+                    // className={({ isActive }) =>
+                    //   isActive || active === i ? "active" : ""
+                    // }
+                    className={activeTab === "tab1" ? "active" : ""}
                     // className={`${animationClasses}`}
-                    onClick={handleLink}
+                    onClick={() => handleLink(i)}
                   >
                     <button>{item.headerTitle} </button>
                   </li>

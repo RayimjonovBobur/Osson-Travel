@@ -68,21 +68,13 @@ body {
           cursor: pointer;
           position: relative;
           display: block;
+          font-weight: bold;
         }
       }
     }
     .active {
-      margin-top: -3px;
-      border: none;
-      background: #ff0202 !important;
       color: #fff;
-      font-size: 0.933em;
-      font-family: PT Sans;
-      font-weight: 700;
-      font-style: normal;
-      text-transform: uppercase;
-      transition: background 0.2s ease-in-out, height 0.2s ease-in-out,
-        margin 0.2s ease-in-out;
+      background-color: #ff0202 !important;
     }
   }
 

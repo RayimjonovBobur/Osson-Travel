@@ -27,7 +27,7 @@ const News = () => {
           style={{ backgroundImage: `url(${blog_background})` }}
         ></div>
         <div className="news_content">
-          <div className="news_title">the blog</div>
+          <div className="news_title">yangiliklar</div>
         </div>
       </div>
 
@@ -40,14 +40,14 @@ const News = () => {
                   <div className="blog_post_image">
                     <img src={blog_1} alt="https://unsplash.com/@anniespratt" />
                     <div className="blog_post_date d-flex flex-column align-items-center justify-content-center">
-                      <div className="blog_post_day">01</div>
-                      <div className="blog_post_month">Dec, 2017</div>
+                      <div className="blog_post_day">24</div>
+                      <div className="blog_post_month">avgust, 2022</div>
                     </div>
                   </div>
                   <div className="blog_post_meta">
                     <ul>
                       <li className="blog_post_meta_item">
-                        <Link to="/">by Lore Papp</Link>
+                        <Link to="/">by Lore Uzb</Link>
                       </li>
                       <li className="blog_post_meta_item">
                         <Link to="/">Uncategorized</Link>
@@ -99,10 +99,10 @@ const News = () => {
 
                 <div className="blog_post">
                   <div className="blog_post_image">
-                    <img src={blog_2} alt="https://unsplash.com/@tschax" />
+                    <img src={blog_3} alt="https://unsplash.com/@tschax" />
                     <div className="blog_post_date d-flex flex-column align-items-center justify-content-center">
-                      <div className="blog_post_day">01</div>
-                      <div className="blog_post_month">Dec, 2017</div>
+                      <div className="blog_post_day">10</div>
+                      <div className="blog_post_month">iyun, 2022</div>
                     </div>
                   </div>
                   <div className="blog_post_meta">
@@ -120,12 +120,41 @@ const News = () => {
                   </div>
                   <div className="blog_post_title">
                     <Link to="/">
+                      Yevropacha dam olish va tabiat sari – Bodrumga
                       Rossiya Jahon sayyohlik tashkilotidan chiqishini eʼlon
                       qildi
                     </Link>
                   </div>
                   <div className="blog_post_text">
                     <p>
+                      1 iyuldan O'zbekiston ushbu mavsumdagi birinchi to'g'ridan
+                      to'g'ri reyslarni yo'lga qo'yishni
+                      rejalashtirgan.Turkiyaning eng hashamatli kurortlaridan
+                      biriga qanday yetib olish, qaerda to'xtash va u yerda
+                      nimalar bilan shug'ullanish mumkinligi haqida aytib
+                      beradi. <br /> Bodrum. U qanday? Bodrum — bu Mugla
+                      provinsiyasidagi Egey dengizining janubi-g'arbiy qismida
+                      joylashgan yarim orol. Ushbu shaharni eng premium
+                      shaharlardan biri, deb atash mumkin. Aynan Bodrumda
+                      ko'pincha siyosatchi va mashhur kishilar, shuningdek, o'z
+                      yaxtalarida keladigan VIP-sayyohlar dam oladi. Ushbu
+                      shahar ham xotirjamligi, ham yorqin tungi hayoti bilan
+                      hayron qoldiradi: Bodrumning tungi klublari, bar va
+                      restoranlari tashrif buyuruvchilarni qanday qilib xursand
+                      qilish va dam olishingizni unutilmas qilishni bilishadi.
+                      Bodrumda Antaliya toifasidagi, ya'ni katta ko'p qavatli
+                      mehmonxonalar kam. Bu ushbu hududning yana bir o'zgacha
+                      jihati. Bu yerda kichik va shinam mehmonxonalar,
+                      butik-mehmonxonalar va luxury-mehmonxonalar ko'p. Bodrum
+                      juda ixcham – eng uzoqdagi mehmonxonalarga ham transfer
+                      vaqti yarim soatdan oshmaydi. Bolali sayyohlar uchun
+                      ideal. Mehmonxonalarda Antaliyadagi kabi «barchasi
+                      kiritilgan» konsepsiya va oilaviy dam olish uchun barcha
+                      sharoitlar bor: bolalar maydonchalari, bolalar
+                      animasiyasi, ham bolalar, ham o'smirlar uchun ko'ngilochar
+                      mashg'ulotlar, enaga xizmatlari, alohida bolalar taomlari
+                      va h.k.
+=======
                       "Rossiya Federatsiyasining xalqaro shartnomalari
                       toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
                       Rossiya Tashqi ishlar vazirligining manfaatdor federal
@@ -149,25 +178,25 @@ const News = () => {
                     </p>
                   </div>
                   <div className="blog_post_link">
-                    <Link to="/">read more</Link>
+                    <Link to="/">Ba'tafsil</Link>
                   </div>
                 </div>
 
                 <div className="blog_post">
                   <div className="blog_post_image">
                     <img
-                      src={blog_3}
+                      src={blog_2}
                       alt="https://unsplash.com/@stilclassics"
                     />
                     <div className="blog_post_date d-flex flex-column align-items-center justify-content-center">
-                      <div className="blog_post_day">01</div>
-                      <div className="blog_post_month">Dec, 2017</div>
+                      <div className="blog_post_day">23</div>
+                      <div className="blog_post_month">iyun, 2022</div>
                     </div>
                   </div>
                   <div className="blog_post_meta">
                     <ul>
                       <li className="blog_post_meta_item">
-                        <Link to="/">by Lore Papp</Link>
+                        <Link to="/">izohlar</Link>
                       </li>
                       <li className="blog_post_meta_item">
                         <Link to="/">Uncategorized</Link>
@@ -178,20 +207,38 @@ const News = () => {
                     </ul>
                   </div>
                   <div className="blog_post_title">
-                    <Link to="/">Try these new dream destinations</Link>
+                    <Link to="/">
+                      Rossiya Jahon sayyohlik tashkilotidan chiqishini eʼlon
+                      qildi
+                    </Link>
                   </div>
                   <div className="blog_post_text">
                     <p>
-                      Aenean in lacus ligula. Phasellus euismod gravida eros.
-                      Aenean nec ipsum aliquet, pharetra magna id, interdum
-                      sapien. Etiam id lorem eu nisl pellentesque semper. Nullam
-                      tincidunt metus placerat, suscipit leo ut, tempus nulla.
-                      Fusce at eleifend tellus. Ut eleifend dui nunc, non
-                      fermentum qua.
+                      {" "}
+                      "Rossiya Federatsiyasining xalqaro shartnomalari
+                      toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
+                      Rossiya Tashqi ishlar vazirligining manfaatdor federal
+                      ijroiya organlari bilan kelishilgan Rossiya
+                      Federatsiyasining Jahon sayyohlik tashkiloti tarkibidan
+                      chiqishi toʻgʻrisidagi taklifini qabul qilish; ", deyiladi
+                      hujjatda.Maʼlumot uchun 27 aprel kuni Rossiya BMT
+                      huzuridagi Jahon Sayyohlik tashkiloti faoliyati
+                      siyosiylashgani sababli tashkilot tarkibidan chiqish
+                      niyati borligini maʼlum qilgan edi. Oʻsha kuni JST Bosh
+                      Assambleyasi navbatdan tashqari yigʻilishida “Ukrainada
+                      davom etayotgan harbiy hujum munosabati bilan” Rossiyaning
+                      aʼzoligini toʻxtatishga qaror qildi. Rossiya TIV rasmiy
+                      vakili Mariya Zaxarova bu qarorni “siyosiy
+                      ikkiyuzlamachilik namunasi” deb atadi va Gʻarb davlatlari
+                      bu tashkilotdan oʻz manfaatlari yoʻlida, jumladan, Rossiya
+                      Federatsiyasini kamsitish maqsadida foydalanishini
+                      taʼkidladi. Eslatib oʻtamiz, Rossiya SSSRning huquqiy
+                      vorisi sifatida 1991 yildan beri JSTda ishtirok etib
+                      kelayotgan edi.
                     </p>
                   </div>
                   <div className="blog_post_link">
-                    <Link to="/">read more</Link>
+                    <Link to="/">Ba'tafsil</Link>
                   </div>
                 </div>
               </div>
@@ -199,13 +246,13 @@ const News = () => {
               <div className="blog_navigation">
                 <ul>
                   <li className="blog_dot active">
-                    <div></div>01.
+                    <div></div>23.
                   </li>
                   <li className="blog_dot">
-                    <div></div>02.
+                    <div></div>06.
                   </li>
                   <li className="blog_dot">
-                    <div></div>03.
+                    <div></div>2022.
                   </li>
                 </ul>
               </div>
@@ -271,54 +318,37 @@ const News = () => {
                 </form>
               </div>
 
-              <div className="sidebar_archives">
-                <div className="sidebar_title">Archives</div>
-                <div className="sidebar_list">
-                  <ul>
-                    <li>
-                      <Link to="/">March 2017</Link>
-                    </li>
-                    <li>
-                      <Link to="/">April 2017</Link>
-                    </li>
-                    <li>
-                      <Link to="/">May 2017</Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
               <div className="sidebar_categories">
-                <div className="sidebar_title">Categories</div>
+                <div className="sidebar_title">Yo'nalishlar</div>
                 <div className="sidebar_list">
                   <ul>
                     <li>
-                      <Link to="/">Travel</Link>
+                      <Link to="/">Istambul,Turkiya</Link>
                     </li>
                     <li>
-                      <Link to="/">Exotic Destinations</Link>
+                      <Link to="/">Madrid,Ispaniya</Link>
                     </li>
                     <li>
-                      <Link to="/">City Breaks</Link>
+                      <Link to="/">Parij,Fransiya</Link>
                     </li>
                     <li>
-                      <Link to="/">Travel Tips</Link>
+                      <Link to="/">Vena,Avstriya</Link>
                     </li>
                     <li>
-                      <Link to="/">Lifestyle & Travel</Link>
+                      <Link to="/">Dubay,BAA</Link>
                     </li>
                     <li>
-                      <Link to="/">City Breaks</Link>
+                      <Link to="/">Venetsiay,Italiya</Link>
                     </li>
                     <li>
-                      <Link to="/">Uncategorized</Link>
+                      <Link to="/">Shveysariya, Bern</Link>
                     </li>
                   </ul>
                 </div>
               </div>
 
               <div className="sidebar_latest_posts">
-                <div className="sidebar_title">Latest Posts</div>
+                <div className="sidebar_title">Eng yaxshi sifatni tanlang!</div>
                 <div className="latest_posts_container">
                   <ul>
                     <li className="latest_post clearfix">
@@ -396,7 +426,7 @@ const News = () => {
                         </div>
                         <div className="latest_post_meta">
                           <div className="latest_post_author trans_200">
-                            <Link to="/">by Jane Smith</Link>
+                            <Link to="/">by Jane ghvhass</Link>
                           </div>
                           <div className="latest_post_date trans_200">
                             <Link to="/">Aug 25, 2016</Link>

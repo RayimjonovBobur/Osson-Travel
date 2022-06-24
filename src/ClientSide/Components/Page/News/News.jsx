@@ -403,7 +403,7 @@ const News = () => {
                         </div>
                         <div className="latest_post_meta">
                           <div className="latest_post_author trans_200">
-                            <Link to="/">by Jane Smith</Link>
+                            <Link to="/">by Jane ghvhass</Link>
                           </div>
                           <div className="latest_post_date trans_200">
                             <Link to="/">Aug 25, 2016</Link>

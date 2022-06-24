@@ -188,7 +188,86 @@ body {
 
       .timeline {
         .timeline__item {
-          
+          display: table;
+          width: 100%;
+          margin-bottom: 2px;
+
+          .timeline__item__icon-wrap {
+            display: table-cell;
+            vertical-align: top;
+            width: 70px;
+            position: relative;
+            overflow: hidden;
+
+            &::before {
+              content: " ";
+              display: block;
+              border-left: 4px dotted #ff0202;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              -moz-transform: translate(-50%, 0);
+              -ms-transform: translate(-50%, 0);
+              -webkit-transform: translate(-50%, 0);
+              -o-transform: translate(-50%, 0);
+              transform: translate(-50%, 0);
+              z-index: 1;
+            }
+            .timeline__item__icon {
+              display: inline-block;
+              width: 70px;
+              height: 70px;
+              line-height: 70px;
+              background: #ff0202;
+              border-radius: 100%;
+              text-align: center;
+              font-family: "PT Sans";
+              font-size: 1.467em;
+              color: #fff;
+              position: relative;
+              z-index: 2;
+
+              &:before {
+                content: " ";
+                display: block;
+                width: 60px;
+                height: 60px;
+                background: transparent;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 100%;
+                border: 3px solid rgba(255, 255, 255, 0.5);
+              }
+              .timeline__item__icon__text {
+                display: inline-block;
+                margin-left: -3px;
+              }
+            }
+          }
+          .timeline__item__content {
+            display: table-cell;
+            vertical-align: top;
+            padding-bottom: 10px;
+
+            .timeline__item__title {
+              margin: 20px 0 !important;
+              font-family: PT Sans;
+              font-weight: 700;
+              font-style: normal;
+              font-size: 1.467em;
+            }
+            .timeline__item__description {
+              p {
+                font-size: 15px;
+                color: #333333;
+              }
+            }
+          }
+          .padding-left {
+            padding-left: 50px;
+          }
         }
       }
     }

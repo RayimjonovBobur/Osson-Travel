@@ -41,7 +41,7 @@ const News = () => {
                     <img src={blog_1} alt="https://unsplash.com/@anniespratt" />
                     <div className="blog_post_date d-flex flex-column align-items-center justify-content-center">
                       <div className="blog_post_day">24</div>
-                      <div className="blog_post_month">iyul, 2022</div>
+                      <div className="blog_post_month">avgust, 2022</div>
                     </div>
                   </div>
                   <div className="blog_post_meta">

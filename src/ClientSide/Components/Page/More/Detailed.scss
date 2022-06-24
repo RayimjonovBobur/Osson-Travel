@@ -68,21 +68,13 @@ body {
           cursor: pointer;
           position: relative;
           display: block;
+          font-weight: bold;
         }
       }
     }
     .active {
-      margin-top: -3px;
-      border: none;
-      background: #ff0202 !important;
       color: #fff;
-      font-size: 0.933em;
-      font-family: PT Sans;
-      font-weight: 700;
-      font-style: normal;
-      text-transform: uppercase;
-      transition: background 0.2s ease-in-out, height 0.2s ease-in-out,
-        margin 0.2s ease-in-out;
+      background-color: #ff0202 !important;
     }
   }
 
@@ -136,9 +128,16 @@ body {
     .tours-tabs__content {
       background-color: #fff;
       color: #000;
+
+      h2 {
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 2em;
+      }
       p {
         margin: 0;
         margin-bottom: 15px;
+        color: #000;
       }
       .tours-tabs__table {
         width: 100% !important;
@@ -150,11 +149,38 @@ body {
         font-size: 0.933em;
         tbody {
           tr {
+            border-bottom: 1px solid #e4e4e4;
             td {
-              
+              padding: 20px;
+              vertical-align: top;
+              border: none;
             }
           }
-        } 
+        }
+      }
+      .included-ul-content {
+        li {
+          // list-style-image: url(../../../assets/Images/TRAVELSYSTEM.png);
+          img {
+            padding: 5px;
+          }
+          font-size: 1.1em;
+          &::marker {
+            unicode-bidi: isolate;
+            font-variant-numeric: tabular-nums;
+            text-transform: none;
+            text-indent: 0px !important;
+            text-align: start !important;
+            text-align-last: start !important;
+          }
+        }
+      }
+      .extra {
+        li {
+          img {
+            padding: 5px;
+          }
+        }
       }
     }
   }

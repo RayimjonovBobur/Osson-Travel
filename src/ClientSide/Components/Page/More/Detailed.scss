@@ -57,6 +57,10 @@ body {
       li {
         background-color: #fff;
         margin: 0 7px 0 0;
+        border: none;
+        border-bottom: none;
+        padding: 0;
+        position: inherit;
         button {
           border-radius: 3px;
           border: none;
@@ -128,7 +132,6 @@ body {
     .tours-tabs__content {
       background-color: #fff;
       color: #000;
-
       h2 {
         margin: 0;
         margin-bottom: 30px;
@@ -180,6 +183,12 @@ body {
           img {
             padding: 5px;
           }
+        }
+      }
+
+      .timeline {
+        .timeline__item {
+          
         }
       }
     }

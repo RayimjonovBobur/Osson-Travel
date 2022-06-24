@@ -121,6 +121,8 @@ const News = () => {
                   <div className="blog_post_title">
                     <Link to="/">
                       Yevropacha dam olish va tabiat sari – Bodrumga
+                      Rossiya Jahon sayyohlik tashkilotidan chiqishini eʼlon
+                      qildi
                     </Link>
                   </div>
                   <div className="blog_post_text">
@@ -152,6 +154,27 @@ const News = () => {
                       animasiyasi, ham bolalar, ham o'smirlar uchun ko'ngilochar
                       mashg'ulotlar, enaga xizmatlari, alohida bolalar taomlari
                       va h.k.
+=======
+                      "Rossiya Federatsiyasining xalqaro shartnomalari
+                      toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
+                      Rossiya Tashqi ishlar vazirligining manfaatdor federal
+                      ijroiya organlari bilan kelishilgan Rossiya
+                      Federatsiyasining Jahon sayyohlik tashkiloti tarkibidan
+                      chiqishi toʻgʻrisidagi taklifini qabul qilish; ", deyiladi
+                      hujjatda.Maʼlumot uchun 27 aprel kuni Rossiya BMT
+                      huzuridagi Jahon Sayyohlik tashkiloti faoliyati
+                      siyosiylashgani sababli tashkilot tarkibidan chiqish
+                      niyati borligini maʼlum qilgan edi. Oʻsha kuni JST Bosh
+                      Assambleyasi navbatdan tashqari yigʻilishida “Ukrainada
+                      davom etayotgan harbiy hujum munosabati bilan” Rossiyaning
+                      aʼzoligini toʻxtatishga qaror qildi. Rossiya TIV rasmiy
+                      vakili Mariya Zaxarova bu qarorni “siyosiy
+                      ikkiyuzlamachilik namunasi” deb atadi va Gʻarb davlatlari
+                      bu tashkilotdan oʻz manfaatlari yoʻlida, jumladan, Rossiya
+                      Federatsiyasini kamsitish maqsadida foydalanishini
+                      taʼkidladi. Eslatib oʻtamiz, Rossiya SSSRning huquqiy
+                      vorisi sifatida 1991 yildan beri JSTda ishtirok etib
+                      kelayotgan edi.
                     </p>
                   </div>
                   <div className="blog_post_link">

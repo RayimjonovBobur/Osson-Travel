@@ -325,7 +325,7 @@ const News = () => {
               </div>
 
               <div className="sidebar_latest_posts">
-                <div className="sidebar_title">Biz bilan ko'proq!</div>
+                <div className="sidebar_title">Eng yaxshi sifatni tanlang!</div>
                 <div className="latest_posts_container">
                   <ul>
                     <li className="latest_post clearfix">

@@ -470,13 +470,15 @@ const Detailed = () => {
                     </div>
                   </TabPanel>
                 </div>
-              </main>{" "}
-              <aside className="col-md-3">adasd</aside>
+              </main>
+              <aside className="col-md-3">
+                <div className="price-decoration block-after-indent"></div>
+              </aside>
             </div>
           </Tabs>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };

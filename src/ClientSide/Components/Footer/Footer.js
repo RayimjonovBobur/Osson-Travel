@@ -22,16 +22,14 @@ function Footer() {
                     <div className="logo">
                       <Link to="/">
                         <img src={Logo} alt="" />
-                        travelix
+                        osson-tour
                       </Link>
                     </div>
+                    <p className="footer_about_text">
+                      MChJ kompaniyasi O‘zbekiston sayyohlik xizmatlari bozorida yangi hisoblanadi.
+                    </p>
                   </div>
-                  <p className="footer_about_text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc
-                    et suscipit urna. Integer eleme ntum orci eu vehicula
-                    pretium.
-                  </p>
+
                   <ul className="footer_social_list">
                     <li className="footer_social_item">
                       <Link to="/">
@@ -65,7 +63,7 @@ function Footer() {
 
             <div className="col-lg-3 footer_column">
               <div className="footer_col">
-                <div className="footer_title">blog posts</div>
+                <div className="footer_title">eng yaxshi shaharlar</div>
                 <div className="footer_content footer_blog">
                   <div className="footer_blog_item clearfix">
                     <div className="footer_blog_image">
@@ -117,32 +115,29 @@ function Footer() {
 
             <div className="col-lg-3 footer_column">
               <div className="footer_col">
-                <div className="footer_title">tags</div>
+                <div className="footer_title">Bo'limlar</div>
                 <div className="footer_content footer_tags">
                   <ul className="tags_list clearfix">
                     <li className="tag_item">
-                      <Link to="/">design</Link>
+                      <Link to="/">asosiy</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">fashion</Link>
+                      <Link to="/">biz haqimizda</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">music</Link>
+                      <Link to="/">barcha turlar</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">video</Link>
+                      <Link to="/">yangiliklar</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">party</Link>
+                      <Link to="/">a'loqa</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">photography</Link>
+                      <Link to="/">turizim va sport</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">adventure</Link>
-                    </li>
-                    <li className="tag_item">
-                      <Link to="/">travel</Link>
+                      <Link to="/">turizim qonunlari</Link>
                     </li>
                   </ul>
                 </div>
@@ -151,7 +146,7 @@ function Footer() {
 
             <div className="col-lg-3 footer_column">
               <div className="footer_col">
-                <div className="footer_title">contact info</div>
+                <div className="footer_title">Manzil</div>
                 <div className="footer_content footer_contact">
                   <ul className="contact_info_list">
                     <li className="contact_info_item d-flex flex-row">
@@ -161,7 +156,8 @@ function Footer() {
                         </div>
                       </div>
                       <div className="contact_info_text">
-                        4127 Raoul Wallenber 45b-c Gibraltar
+
+                        Farg'ona shahar 24-uy
                       </div>
                     </li>
                     <li className="contact_info_item d-flex flex-row">
@@ -170,7 +166,7 @@ function Footer() {
                           <img src={phone_call} alt="" />
                         </div>
                       </div>
-                      <div className="contact_info_text">2556-808-8613</div>
+                      <div className="contact_info_text">+998 91 679 2002</div>
                     </li>
                     <li className="contact_info_item d-flex flex-row">
                       <div>
@@ -183,7 +179,7 @@ function Footer() {
                           href="mailto:contactme@gmail.com?Subject=Hello"
                           target="_top"
                         >
-                          contactme@gmail.com
+                          ossontravel@gmail.ru
                         </a>
                       </div>
                     </li>
@@ -194,7 +190,7 @@ function Footer() {
                         </div>
                       </div>
                       <div className="contact_info_text">
-                        <a href="https://colorlib.com">www.colorlib.com</a>
+                        <a href="http://ossontravel.uz">www.ossontravel.uz</a>
                       </div>
                     </li>
                   </ul>
@@ -211,38 +207,15 @@ function Footer() {
             <div className="col-lg-3 order-lg-1 order-2  ">
               <div className="copyright_content d-flex flex-row align-items-center">
                 <div>
-                  Copyright &copy;2022 All rights reserved | This template is
-                  made with <i className="fa fa-heart-o" aria-hidden="true"></i>{" "}
-                  by{" "}
+                  "OSSON-TOUR" mas'uliyati cheklangan jamiyati <i className="fa fa-heart-o" aria-hidden="true"></i>{" "}
+                  {" "}
                   <a href="https://colorlib.com" target="_blank">
-                    Colorlib
+                    Bosh sahifa
                   </a>
                 </div>
               </div>
             </div>
-            <div className="col-lg-9 order-lg-2 order-1">
-              <div className="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
-                <div className="footer_nav">
-                  <ul className="footer_nav_list">
-                    <li className="footer_nav_item">
-                      <Link to="/">home</Link>
-                    </li>
-                    <li className="footer_nav_item">
-                      <a href="about.html">about us</a>
-                    </li>
-                    <li className="footer_nav_item">
-                      <a href="offers.html">offers</a>
-                    </li>
-                    <li className="footer_nav_item">
-                      <Link to="/news">news</Link>
-                    </li>
-                    <li className="footer_nav_item">
-                      <a href="contact.html">contact</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>

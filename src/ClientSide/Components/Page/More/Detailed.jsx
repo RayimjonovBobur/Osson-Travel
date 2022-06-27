@@ -9,6 +9,14 @@ import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";
 import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import Istanbul from "../../../assets/Images/istanbul.jpg";
+import kappadokiya from "../../../assets/Images/kappadokija.jpg";
+// import { SRLWrapper } from "simple-react-lightbox";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import item1 from "../../../assets/Images/item1.jpg";
+import item2 from "../../../assets/Images/item2.jpg";
+import item3 from "../../../assets/Images/item3.jpg";
+import item4 from "../../../assets/Images/item4.jpg";
 
 const Detailed = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -22,9 +30,8 @@ const Detailed = () => {
     setOpenDate2(!openDate2);
   };
 
-  // let animationClasses = isactive ? " active" : "";
-
   return (
+    // <SRLWrapper>
     <div className="super_container">
       <div className="detailed-con">
         <div
@@ -223,7 +230,7 @@ const Detailed = () => {
                   </div>{" "}
                 </TabPanel>
                 <TabPanel>
-                  <div className="tab-pance ">
+                  <div className="tab-pance">
                     <div className="tours-tabs__content padding-all">
                       <div className="timeline">
                         <div className="timeline__item">
@@ -328,15 +335,143 @@ const Detailed = () => {
                         </div>
                       </div>
                     </div>
-                  </div>{" "}
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="tours-tabs__content padding-all">
+                    <p>
+                      <strong>ISTANBUL</strong> – sirli va muhtasham, sershovqin
+                      va ertaknamo go‘zal Istanbul – bu Yevropa va Osiyo,
+                      an’anaviy Sharq va zamonaviy G‘arb o‘rtasidagi ko‘prik.
+                      O‘zining boy tarixi davomida u nomini bir necha marta
+                      o‘zgartirishga va Rim, Vizantiya, Usmonlilar va Lotin
+                      imperiyalarining poytaxti bo‘lishga ulgurdi.
+                    </p>
+                    <p>
+                      <img
+                        src={Istanbul}
+                        alt=""
+                        className="size-full wp-image-2463 aligncenter"
+                        width="800"
+                        height="450"
+                      />
+                    </p>
+                    <p>
+                      <strong>KAPPADOKIYA</strong> – siz geografik xaritadan
+                      topa olmaydigan sirli joy. Antik davrga borib taqaluvchi
+                      nom va ushbu provinsiyani o‘rab olgan sir-u sinoat
+                      tarixning ajralmas qismi hisoblanadi. Million yillar avval
+                      vulqondan chiqqan lava va tabiiy jarayonlar tufayli bu
+                      yerda noyob, o‘zga sayyoranikiga o‘xshash, minglab tosh
+                      qo‘ziqorinlar va turli xil rang hamda o‘lchamdagi
+                      haykallardan iborat manzara yuzaga keldi. Mahalliy aholi
+                      orasida keng tarqalgan rivoyatga ko‘ra, bu yerda
+                      farishtalar yashaydi, deb hisoblanadi. Kappadokiyadagi har
+                      bir yil – bu osmon ostidagi noyob, o‘ziga xos muzey.
+                    </p>
+                    <p>
+                      <img
+                        src={kappadokiya}
+                        alt=""
+                        className="size-full wp-image-2791 aligncenter"
+                      />
+                    </p>
+                    <p>
+                      Kappadokiyaga borganda beixtiyor boshqa sayyoraga tushib
+                      qolgandek fikr uyg‘onadi – ko‘z o‘ngingizda namoyon
+                      bo‘luvchi landshaftlar shu qadar betakror va hech narsaga
+                      o‘xshamaydi. Bu yerda uchini qor qoplagan vulqonlar,
+                      baland bo‘lmagan, alohida turgan tog‘lar, qoya massivlari
+                      va farovon vodiylar bor.
+                    </p>
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="tours-tabs__content padding-all">
+                    <p>
+                      1 KISHI UCHUN NARX (2 KISHILIK GURUH): 17 000 000 so‘mdan
+                      boshlab
+                    </p>
+                    <p>
+                      1 KISHI UCHUN NARX (4 KISHILIK GURUH): 8 500 000 so‘mdan
+                      boshlab
+                    </p>
+                    <p>
+                      1 KISHI UCHUN NARX (6 KISHILIK GURUH): 6 500 000 so‘mdan
+                      boshlab
+                    </p>
+                  </div>
+                </TabPanel>
+                <TabPanel>
+                  <div className="tours-tabs__content padding-all">
+                    <div className="row product-thumbnails">
+                      <div className="col-md-12">
+                        <a
+                          className="woocommerce-main-image swipebox"
+                          href="https://travelsystem.uz/wp-content/uploads/2021/06/turkiya-osmani.jpg"
+                          title="Usmonli sultonlar va ularning lolalari"
+                        >
+                          <img
+                            width="1920"
+                            href="800"
+                            src={dubai}
+                            alt=""
+                            className="attachment-full size-full wp-post-image"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div className=" product-thumbnails columns-3">
+                      <div className="col-sm-3 col-xs-4 product-thumbnails__item">
+                        <a href="https://travelsystem.uz/wp-content/uploads/2021/06/tur-v-stambul-iz-tashkenta16-1-180x120.jpg">
+                          <img src="" alt="" />
+                        </a>
+                      </div>
+                      <div className="row">
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item1}
+                            effect="blur"
+                            delayTime="300"
+                          />
+                        </div>
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item2}
+                            effect="blur"
+                            delayTime="300"
+                          />
+                        </div>
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item3}
+                            effect="blur"
+                            delayTime="300"
+                          />
+                        </div>
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item4}
+                            effect="blur"
+                            delayTime="300"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </TabPanel>
               </div>
             </main>{" "}
-            <aside className="col-md-3">adasd</aside>{" "}
+            <aside className="col-md-3">adasd</aside>
           </div>
         </Tabs>
       </div>
     </div>
+    // </SRLWrapper>
   );
 };
 

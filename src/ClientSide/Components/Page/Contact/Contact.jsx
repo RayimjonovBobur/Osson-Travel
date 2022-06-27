@@ -25,65 +25,6 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="contact_form_section">
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="contact_form_container">
-                <div className="contact_title text-center">get in touch</div>
-                <form
-                  action="#"
-                  id="contact_form"
-                  className="contact_form text-center"
-                >
-                  <input
-                    type="text"
-                    id="contact_form_name"
-                    className="contact_form_name input_field"
-                    placeholder="Name"
-                    required="required"
-                    data-error="Name is required."
-                  />
-                  <input
-                    type="text"
-                    id="contact_form_email"
-                    className="contact_form_email input_field"
-                    placeholder="E-mail"
-                    required="required"
-                    data-error="Email is required."
-                  />
-                  <input
-                    type="text"
-                    id="contact_form_subject"
-                    className="contact_form_subject input_field"
-                    placeholder="Subject"
-                    required="required"
-                    data-error="Subject is required."
-                  />
-                  <textarea
-                    id="contact_form_message"
-                    className="text_field contact_form_message"
-                    name="message"
-                    rows="4"
-                    placeholder="Message"
-                    required="required"
-                    data-error="Please, write us a message."
-                  ></textarea>
-                  <button
-                    type="submit"
-                    id="form_submit_button"
-                    className="form_submit_button button trans_200"
-                  >
-                    send message<span></span>
-                    <span></span>
-                    <span></span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="about">
         <div className="container">
           <div className="row">
@@ -104,10 +45,17 @@ const Contact = () => {
                   </div>
                 </div>
                 <p className="about_text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Vivamus quis vu lputate eros, iaculis consequat nisl. Nunc et
-                  suscipit urna. Integer eleme ntum orci eu vehicula iaculis
-                  consequat nisl. Nunc et suscipit urna pretium.
+                  Bugungi kunda{" "}
+                  <span className="contact-text">OSSon-TOUR </span> 13 ta
+                  yo‘nalish bo‘ylab operatorlik faoliyatini yuritadi, shu
+                  jumladan Avstriya, Benilyuks, Isroil, Italiya, BAA, Fransiya,
+                  Chexiya va boshqa davlatlar bor. Biz ekskursiya,
+                  davolash-sog‘lomlashtirish turlari, plyajda dam olish, ko‘l va
+                  tog‘larda hordiq chiqarish, voqeaviy va ziyorat turlarining
+                  butun doirasida xizmat ko‘rsatamiz. Alohida e’tibor yuqori
+                  shinamlikdagi qo‘shma turlarni rivojlantirishga qaratilgan,
+                  assortimentda 100 dan ortiq dastur, turda 2 tadan 5 tagacha
+                  turlar mavjud.
                 </p>
                 <ul className="about_social_list">
                   <li className="about_social_item">
@@ -149,7 +97,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="contact_info_text">
-                      4127 Raoul Wallenber 45b-c Gibraltar
+                      Farg'ona shahar 24-uy
                     </div>
                   </li>
                   <li className="contact_info_item d-flex flex-row">
@@ -158,7 +106,7 @@ const Contact = () => {
                         <img src={phone_call} alt="" />
                       </div>
                     </div>
-                    <div className="contact_info_text">2556-808-8613</div>
+                    <div className="contact_info_text">+99891 679 2002</div>
                   </li>
                   <li className="contact_info_item d-flex flex-row">
                     <div>
@@ -171,7 +119,7 @@ const Contact = () => {
                         href="mailto:contactme@gmail.com?Subject=Hello"
                         target="_top"
                       >
-                        contactme@gmail.com
+                        ossontravel@mail.ru
                       </a>
                     </div>
                   </li>
@@ -182,7 +130,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="contact_info_text">
-                      <a href="https://colorlib.com">www.colorlib.com</a>
+                      <a href="https://colorlib.com">www.ossontravel.uz</a>
                     </div>
                   </li>
                 </ul>

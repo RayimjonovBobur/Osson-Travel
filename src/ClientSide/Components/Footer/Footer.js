@@ -44,11 +44,13 @@ function Footer() {
                     <li className="footer_social_item">
                       <Link to="/">
                         <i className="fa-brands fa-twitter"></i>
+
                       </Link>
                     </li>
                     <li className="footer_social_item">
                       <Link to="/">
                         <i className="fa-brands fa-dribbble"></i>
+
                       </Link>
                     </li>
                     <li className="footer_social_item">

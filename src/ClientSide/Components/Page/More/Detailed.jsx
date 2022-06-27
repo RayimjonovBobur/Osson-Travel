@@ -422,6 +422,16 @@ const Detailed = () => {
                           <img src="" alt="" />
                         </a>
                       </div>
+                      <div className="row">
+                        <div className="col-md-4">
+                          
+                        </div>
+                        <div className="col-md-4">
+                          bit balo
+                        </div>
+                        <div className="col-md-4">yana shu bir balo</div>
+                        <div className="col-md-4"></div>
+                      </div>
                     </div>
                   </div>
                 </TabPanel>

@@ -270,6 +270,26 @@ body {
           }
         }
       }
+
+      .product-thumbnails {
+        .product-item-foto {
+          // gap: 15px;
+          margin-top: -20px;
+          div {
+            margin-top: 20px;
+            float: none;
+            display: inline-block;
+            text-align: center;
+
+            span {
+              img {
+                width: 500px;
+                height: 230px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

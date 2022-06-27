@@ -33,27 +33,27 @@ function Footer() {
                   <ul className="footer_social_list">
                     <li className="footer_social_item">
                       <Link to="/">
-                        <i className="fa fa-pinterest"></i>
+                        <i className="fa-brands fa-pinterest"></i>
                       </Link>
                     </li>
                     <li className="footer_social_item">
                       <Link to="/">
-                        <i className="fa fa-facebook-f"></i>
+                        <i className="fa-brands fa-facebook"></i>
                       </Link>
                     </li>
                     <li className="footer_social_item">
                       <Link to="/">
-                        <i className="fa fa-twitter"></i>
+                        <i className="fa-brands fa-twitter"></i>
                       </Link>
                     </li>
                     <li className="footer_social_item">
                       <Link to="/">
-                        <i className="fa fa-dribbble"></i>
+                        <i className="fa-brands fa-dribbble"></i>
                       </Link>
                     </li>
                     <li className="footer_social_item">
                       <Link to="/">
-                        <i className="fa fa-behance"></i>
+                        <i className="fa-brands fa-behance"></i>
                       </Link>
                     </li>
                   </ul>

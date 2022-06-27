@@ -11,6 +11,12 @@ import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Istanbul from "../../../assets/Images/istanbul.jpg";
 import kappadokiya from "../../../assets/Images/kappadokija.jpg";
+// import { SRLWrapper } from "simple-react-lightbox";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import item1 from "../../../assets/Images/item1.jpg";
+import item2 from "../../../assets/Images/item2.jpg";
+import item3 from "../../../assets/Images/item3.jpg";
+import item4 from "../../../assets/Images/item4.jpg";
 
 const Detailed = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -24,9 +30,8 @@ const Detailed = () => {
     setOpenDate2(!openDate2);
   };
 
-  // let animationClasses = isactive ? " active" : "";
-
   return (
+    // <SRLWrapper>
     <div className="super_container">
       <div className="detailed-con">
         <div
@@ -416,21 +421,45 @@ const Detailed = () => {
                         </a>
                       </div>
                     </div>
-                    <div className="row product-thumbnails columns-3">
+                    <div className=" product-thumbnails columns-3">
                       <div className="col-sm-3 col-xs-4 product-thumbnails__item">
-                        <a href="	https://travelsystem.uz/wp-content/uploads/2021/06/tur-v-stambul-iz-tashkenta16-1-180x120.jpg">
+                        <a href="https://travelsystem.uz/wp-content/uploads/2021/06/tur-v-stambul-iz-tashkenta16-1-180x120.jpg">
                           <img src="" alt="" />
                         </a>
                       </div>
                       <div className="row">
-                        <div className="col-md-4">
-                          
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item1}
+                            effect="blur"
+                            delayTime="300"
+                          />
                         </div>
-                        <div className="col-md-4">
-                          bit balo
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item2}
+                            effect="blur"
+                            delayTime="300"
+                          />
                         </div>
-                        <div className="col-md-4">yana shu bir balo</div>
-                        <div className="col-md-4"></div>
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item3}
+                            effect="blur"
+                            delayTime="300"
+                          />
+                        </div>
+                        <div className="col-6">
+                          <LazyLoadImage
+                            className="resultImage"
+                            src={item4}
+                            effect="blur"
+                            delayTime="300"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -442,6 +471,7 @@ const Detailed = () => {
         </Tabs>
       </div>
     </div>
+    // </SRLWrapper>
   );
 };
 

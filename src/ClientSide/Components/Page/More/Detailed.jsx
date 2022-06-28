@@ -3,7 +3,6 @@ import "./Detailed.scss";
 import dubai from "../../../assets/Images/dubai.jpg";
 import { DetaileDate } from "./DetailedData";
 import { useDispatch } from "react-redux";
-import hours_icon from "../../../assets/Images/24-hours.png";
 import { Ri24HoursFill } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";

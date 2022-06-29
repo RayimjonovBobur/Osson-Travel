@@ -10,7 +10,6 @@ import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Istanbul from "../../../assets/Images/istanbul.jpg";
 import kappadokiya from "../../../assets/Images/kappadokija.jpg";
-// import { SRLWrapper } from "simple-react-lightbox";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import item1 from "../../../assets/Images/item1.jpg";
 import item2 from "../../../assets/Images/item2.jpg";

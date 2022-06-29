@@ -617,7 +617,7 @@ const Home = () => {
                   <div className="col-lg-6">
                     <div className="offers_content">
                       <div className="offers_price">
-                        2140$<span>7-kunga</span>
+                        2140$<span>7-kunga</span>.
                       </div>
                       <div className="rating_r rating_r_4 offers_rating">
                         <i></i>

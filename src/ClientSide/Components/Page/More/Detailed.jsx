@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Detailed.scss";
 import dubai from "../../../assets/Images/dubai.jpg";
 import { DetaileDate } from "./DetailedData";
-import { useDispatch } from "react-redux";
 import { Ri24HoursFill } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";

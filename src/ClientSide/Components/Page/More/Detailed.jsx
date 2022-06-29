@@ -21,7 +21,6 @@ const Detailed = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [openDate, setOpenDate] = useState(true);
   const [openDate2, setOpenDate2] = useState(false);
-  const dispatch = useDispatch();
 
   const handleLink = (i) => {
     setActiveTab(i);

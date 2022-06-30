@@ -45,11 +45,10 @@ body {
   align-items: center;
   width: 1100px;
   position: relative;
-  z-index: 1;
 
+  margin-top: 30px;
   .tours-tabs {
     // margin-top: -170px;
-    margin-top: 30px;
     .nav-tabs {
       margin: 0;
       border-bottom: 3px solid #ff0202;
@@ -287,6 +286,52 @@ body {
                 height: 230px;
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .order-container {
+    .order-content {
+      margin-left: 20%;
+      .btn-order {
+        margin-left: 15%;
+        display: inline-block;
+        line-height: 3em;
+        padding: 0 2em;
+        border: none;
+        border-radius: 3px;
+        white-space: nowrap;
+        vertical-align: top;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 15px;
+        font-family: PT Sans;
+        font-weight: 700;
+        font-style: normal;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        background: rgba(255, 2, 2, 0.8);
+        border-radius: 50px;
+        &:hover {
+          background-color: #ff0202;
+          color: #fff;
+        }
+
+        .order-icon {
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          margin-right: 0;
+          margin-left: 10px;
+
+          &:before {
+            content: "\f178";
           }
         }
       }

@@ -15,17 +15,44 @@ import item2 from "../../../assets/Images/item2.jpg";
 import item3 from "../../../assets/Images/item3.jpg";
 import item4 from "../../../assets/Images/item4.jpg";
 import Footer from "../../Footer/Footer";
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: "9999",
+  },
+};
 
 const Detailed = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [openDate, setOpenDate] = useState(true);
   const [openDate2, setOpenDate2] = useState(false);
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  let subtitle;
 
   const handleLink = (i) => {
     setActiveTab(i);
     setOpenDate(!openDate);
     setOpenDate2(!openDate2);
   };
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <>
@@ -468,12 +495,40 @@ const Detailed = () => {
                 </div>
               </main>
               <aside className="col-md-3">
-                <div className="price-decoration block-after-indent"></div>
+                <div className="order-container">
+                  <div className="order-content">
+                    <button className="btn-order" onClick={openModal}>
+                      BUYURTMA QILISH
+                      <i className="order-icon"></i>
+                    </button>
+                    <div className="price-decoration block-after-indent">
+                      sdfdsfsd
+                    </div>
+                  </div>
+                </div>
               </aside>
             </div>
           </Tabs>
         </div>
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
       <Footer />
     </>
   );

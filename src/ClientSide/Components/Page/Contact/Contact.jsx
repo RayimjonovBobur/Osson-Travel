@@ -59,28 +59,28 @@ const Contact = () => {
                 </p>
                 <ul className="about_social_list">
                   <li className="about_social_item">
-                    <a href="#">
-                      <i className="fa fa-pinterest"></i>
+                    <a href="/">
+                      <i className="fa-brands fa-pinterest"></i>
                     </a>
                   </li>
                   <li className="about_social_item">
-                    <a href="#">
-                      <i className="fa fa-facebook-f"></i>
+                    <a href="/">
+                      <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li className="about_social_item">
-                    <a href="#">
-                      <i className="fa fa-twitter"></i>
+                    <a href="/">
+                      <i className="fa-brands fa-twitter"></i>
                     </a>
                   </li>
                   <li className="about_social_item">
-                    <a href="#">
-                      <i className="fa fa-dribbble"></i>
+                    <a href="/">
+                      <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li className="about_social_item">
-                    <a href="#">
-                      <i className="fa fa-behance"></i>
+                    <a href="/">
+                      <i className="fa-brands fa-instagram"></i>
                     </a>
                   </li>
                 </ul>

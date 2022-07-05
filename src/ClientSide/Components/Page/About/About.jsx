@@ -68,24 +68,27 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <div className="section_title">years statistics</div>
+              <div className="section_title">Bizning mijozlar</div>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-10 offset-lg-1 text-center">
               <p className="stats_text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                quis vulputate eros, iaculis consequat nisl. Nunc et suscipit
-                urna. Integer elementum orci eu vehicula pretium. Donec bibendum
-                tristique condimentum. Aenean in lacus ligula.
+                Har bir mehmon bizning do'stimiz va hamkorimiz! Biz
+                mehmonlarimizga ularning talablari va ehtiyojlariga to'liq javob
+                beradigan yuqori sifatli turistik mahsulotni taklif etamiz.Biz
+                siz uchun istalgan murakkablikdagi turni xursandchilik bilan
+                tuzib beramiz. Siz shunchaki bizga +998 95 817 5555 raqamiga
+                qo‘ng‘iroq qilishingiz yoki talabnoma shaklini to‘ldirishingiz
+                lozim.
               </p>
             </div>
           </div>
           <div className="row">
             <div className="col">
               <div className="stats_years">
-                <div className="stats_years_last">2016</div>
-                <div className="stats_years_new float-right">2017</div>
+                <div className="stats_years_last">2021</div>
+                <div className="stats_years_new float-right">2022</div>
               </div>
             </div>
           </div>
@@ -99,7 +102,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">1642</div>
-                      <div className="stats_type">Clients</div>
+                      <div className="stats_type">Mijozlar</div>
                     </div>
                   </div>
                   <div
@@ -120,7 +123,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">3527</div>
-                      <div className="stats_type">Clients</div>
+                      <div className="stats_type">Mijozlar</div>
                     </div>
                   </div>
                 </div>
@@ -132,7 +135,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">768</div>
-                      <div className="stats_type">Returning Clients</div>
+                      <div className="stats_type">Qaytgan mijozlar</div>
                     </div>
                   </div>
                   <div
@@ -153,7 +156,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">145</div>
-                      <div className="stats_type">Returning Clients</div>
+                      <div className="stats_type">Qaytgan mijozlar</div>
                     </div>
                   </div>
                 </div>
@@ -241,12 +244,12 @@ const About = () => {
                 <div className="add_content">
                   <h1 className="add_title">thailand</h1>
                   <div className="add_subtitle">
-                    From <span>$999</span>
+                    Narx <span>2300$</span>
                   </div>
                   <div className="button add_button">
                     <div className="button_bcg"></div>
-                    <a href="#">
-                      explore now<span></span>
+                    <a href="/">
+                      Ba'tafsil<span></span>
                       <span></span>
                       <span></span>
                     </a>
@@ -259,57 +262,7 @@ const About = () => {
       </div>
 
       <div className="milestones">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 milestone_col">
-              <div className="milestone text-center">
-                <div className="milestone_icon">
-                  <img src="images/milestone_1.png" alt="" />
-                </div>
-                <div className="milestone_counter" data-end-value="255">
-                  0
-                </div>
-                <div className="milestone_text">Clients</div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 milestone_col">
-              <div className="milestone text-center">
-                <div className="milestone_icon">
-                  <img src="images/milestone_2.png" alt="" />
-                </div>
-                <div className="milestone_counter" data-end-value="1176">
-                  0
-                </div>
-                <div className="milestone_text">Projects</div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 milestone_col">
-              <div className="milestone text-center">
-                <div className="milestone_icon">
-                  <img src="images/milestone_3.png" alt="" />
-                </div>
-                <div className="milestone_counter" data-end-value="39">
-                  0
-                </div>
-                <div className="milestone_text">Countries</div>
-              </div>
-            </div>
-
-            <div className="col-lg-3 milestone_col">
-              <div className="milestone text-center">
-                <div className="milestone_icon">
-                  <img src="images/milestone_4.png" alt="" />
-                </div>
-                <div className="milestone_counter" data-end-value="127">
-                  0
-                </div>
-                <div className="milestone_text">Coffees</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src={stats_4} alt="" />
       </div>
 
       <Footer />

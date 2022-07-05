@@ -25,8 +25,11 @@ import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
 import contact from "../../../assets/Images/contact.png";
 import Footer from "../../Footer/Footer";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const { challageData } = useSelector((state) => state?.users_reducer);
+  console.log(challageData);
   return (
     <div className="super-container">
       <div className="home">

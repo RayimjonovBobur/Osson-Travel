@@ -501,8 +501,15 @@ const Detailed = () => {
                       BUYURTMA QILISH
                       <i className="order-icon"></i>
                     </button>
-                    <div className="price-decoration block-after-indent">
-                      sdfdsfsd
+                    <div className="price-decoration block-after-indent mt-3">
+                      <div className="price-description-content text-center">
+                        <div className="price-description-title">
+                          <h3>1 687 000 so'mdan</h3>
+                        </div>
+                        <div className="price-description-text">
+                          <p>Bir kishi uchun</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

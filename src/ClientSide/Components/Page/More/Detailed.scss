@@ -315,6 +315,7 @@ body {
         transition: all 0.2s ease-in-out;
         background: rgba(255, 2, 2, 0.8);
         border-radius: 50px;
+        outline: none;
         &:hover {
           background-color: #ff0202;
           color: #fff;
@@ -332,6 +333,15 @@ body {
 
           &:before {
             content: "\f178";
+          }
+        }
+      }
+      .price-decoration {
+        .price-description-content {
+          padding: 10px 5px;
+          .price-description-title {
+            background: #ff0202;
+            color: #fff;
           }
         }
       }

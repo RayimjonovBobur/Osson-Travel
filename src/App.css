@@ -241,3 +241,7 @@ section {
   min-height: 400px;
   background: transparent;
 }
+
+.dropdown-menu {
+  min-width: 5.5rem !important;
+}

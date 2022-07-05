@@ -32,7 +32,6 @@ const Detailed = () => {
   };
 
   return (
-    // <SRLWrapper>
     <>
       <div className="super_container">
         <div className="detailed-con">
@@ -426,19 +425,20 @@ const Detailed = () => {
                           </a>
                         </div>
                       </div>
-                      <div className=" product-thumbnails columns-3">
+                      <div className="product-thumbnails columns-3">
                         <div className="col-sm-3 col-xs-4 product-thumbnails__item">
                           <a href="https://travelsystem.uz/wp-content/uploads/2021/06/tur-v-stambul-iz-tashkenta16-1-180x120.jpg">
                             <img src="" alt="" />
                           </a>
                         </div>
-                        <div className="row">
+                        <div className="row product-item-foto">
                           <div className="col-6">
                             <LazyLoadImage
                               className="resultImage"
                               src={item1}
                               effect="blur"
                               delayTime="300"
+                              height="150"
                             />
                           </div>
                           <div className="col-6">
@@ -478,7 +478,6 @@ const Detailed = () => {
       </div>
       <Footer />
     </>
-    // </SRLWrapper>
   );
 };
 

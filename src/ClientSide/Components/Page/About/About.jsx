@@ -68,7 +68,7 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <div className="section_title">years statistics</div>
+              <div className="section_title">Bizning mijozlar</div>
             </div>
           </div>
           <div className="row">
@@ -245,7 +245,7 @@ const About = () => {
                   </div>
                   <div className="button add_button">
                     <div className="button_bcg"></div>
-                    <a href="#">
+                    <a href="/">
                       explore now<span></span>
                       <span></span>
                       <span></span>

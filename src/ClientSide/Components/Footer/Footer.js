@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Images/logo.png";
+import Logo from "../../assets/Images/trevel-logo.svg";
 import message from "../../assets/Images/message.svg";
 import placeholder from "../../assets/Images/placeholder.svg";
 import footer_blog_1 from "../../assets/Images/footer_blog_1.jpg";
@@ -22,6 +22,7 @@ function Footer() {
                     <div className="logo">
                       <Link to="/">
                         <img src={Logo} alt="" />
+                        <br />
                         osson-tour
                       </Link>
                     </div>
@@ -168,7 +169,7 @@ function Footer() {
                           <img src={phone_call} alt="" />
                         </div>
                       </div>
-                      <div className="contact_info_text">+998 91 679 2002</div>
+                      <div className="contact_info_text">+998 95 817 5555</div>
                     </li>
                     <li className="contact_info_item d-flex flex-row">
                       <div>

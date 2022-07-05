@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Images/Logo.jpg";
+// import Logo from "../../assets";
+import Logo from "../../assets/Images/trevel-logo.svg"
 import "./Header.css";
 
 const Header = () => {
@@ -53,7 +54,7 @@ const Header = () => {
                     height="17px"
                     viewBox="0 0 512 512"
                     enableBackground="new 0 0 512 512"
-                    // xml:space="preserve"
+                  // xml:space="preserve"
                   >
                     <g>
                       <g>

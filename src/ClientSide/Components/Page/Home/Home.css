@@ -71,6 +71,12 @@ div {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.footer_social_list {
+  list-style: none;
+  margin-bottom: 0px;
+  margin-top: 180px;
+}
+
 ul {
   list-style: none;
   margin-bottom: 0px;

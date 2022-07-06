@@ -16,6 +16,7 @@ import item3 from "../../../assets/Images/item3.jpg";
 import item4 from "../../../assets/Images/item4.jpg";
 import Footer from "../../Footer/Footer";
 import Modal from "react-modal";
+import { Close } from "../../../assets/Icons";
 
 const customStyles = {
   content: {
@@ -26,6 +27,7 @@ const customStyles = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     zIndex: "9999",
+    width: "25%",
   },
 };
 
@@ -503,12 +505,12 @@ const Detailed = () => {
                     </button>
                     <div className="price-decoration block-after-indent mt-3">
                       <div className="price-description-content text-center">
-                        <div className="price-description-title">
-                          <h3>1 687 000 so'mdan</h3>
-                        </div>
-                        <div className="price-description-text">
-                          <p>Bir kishi uchun</p>
-                        </div>
+                        <span className="woocommerce-Price-amount amount">
+                          1 687 000 so'mdan
+                        </span>
+                      </div>
+                      <div className="price-decoration__label">
+                        <p>Bir kishi uchun</p>
                       </div>
                     </div>
                   </div>
@@ -518,24 +520,74 @@ const Detailed = () => {
           </Tabs>
         </div>
       </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
-      </Modal>
+      <div className="modal">
+        <Modal
+          isOpen={modalIsOpen}
+          onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <div className="modal-contain p-1">
+            <div className="form-contact__fields-short">
+              <div className="d-flex">
+                <h6 className="text-center">HOZIR BUYURTMA BERING !</h6>{" "}
+                <span onClick={closeModal} className="close-btn">
+                  <Close />
+                </span>
+              </div>
+              <div className="form-contact__item-short">
+                <span className="form-control-wrap">
+                  <input
+                    type="text"
+                    className="modal-form-input"
+                    placeholder="Ism"
+                  />
+                </span>
+              </div>{" "}
+              <div className="form-contact__item-short">
+                <span className="wpcf7-form-control-wrap your-name">
+                  <input
+                    type="text"
+                    className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-validation-item"
+                    placeholder="Familya"
+                  />
+                </span>
+              </div>
+            </div>
+            <div className="form-contact__fields-short">
+              <div className="wpcf7-form-control-wrap your-mail">
+                <input
+                  type="email"
+                  className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
+                  placeholder="Sizning Email"
+                />
+              </div>
+            </div>{" "}
+            <div className="form-contact__fields-short">
+              <div className="wpcf7-form-control-wrap your-mail">
+                <input
+                  type="number"
+                  className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
+                  placeholder="Telefon raqami"
+                  // data-role="input, input-mask"
+                  data-mask-pattern="+380 (__) ___-____"
+                />
+              </div>
+            </div>
+            <p>
+              <span className="atbtn atbtn--input-wrap text-center justify-content-center m-auto">
+                <i className="atbtn__icon fa fa-paper-plane"></i>
+                <input
+                  type="submit"
+                  value="Buyurtma qilish"
+                  className="modal-button"
+                />
+              </span>
+            </p>
+          </div>
+        </Modal>
+      </div>
       <Footer />
     </>
   );

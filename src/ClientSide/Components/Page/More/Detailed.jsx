@@ -531,7 +531,7 @@ const Detailed = () => {
           <div className="modal-contain p-1">
             <div className="form-contact__fields-short">
               <div className="d-flex">
-                <h6 className="text-center">HOZIR TURAGA BUYURT BERING</h6>{" "}
+                <h6 className="text-center">HOZIR BUYURTMA BERING !</h6>{" "}
                 <span onClick={closeModal} className="close-btn">
                   <Close />
                 </span>

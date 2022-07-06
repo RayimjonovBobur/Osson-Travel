@@ -291,14 +291,15 @@ const Home = () => {
                       <i></i>
                     </div>
                     <p className="cta_text">
-                      Biz mehmonlarimizga ularning talablari va ehtiyojlariga
-                      to'liq javob beradigan yuqori sifatli turistik mahsulotni
-                      taklif etamiz.“Osson Travel” kompaniyasi O‘zbekiston
-                      sayyohlik xizmatlari bozorida yangi hisoblanadi.
-                      Kompaniyamiz sayyohlik sohasida yangi hisoblansada
-                      tajribaga ega professional turoperatorlar va yosh,
-                      iqtidorli, izlanuvchan, sayohatga befarq bo'lmagan
-                      mutaxassislarni sizga taklif etadi.
+                      Agar siz xalqaro miqyosda sayohat qilmoqchi bo'lsangiz,
+                      lekin qaerdan boshlashni bilmasangiz, biz Osson-Travel
+                      kompaniyasi sizga doimo yordam berishdan mamnunmiz.
+                      .“Osson Travel” kompaniyasi O‘zbekiston sayyohlik
+                      xizmatlari bozorida yangi hisoblanadi. Kompaniyamiz
+                      sayyohlik sohasida yangi hisoblansada tajribaga ega
+                      professional turoperatorlar va yosh, iqtidorli,
+                      izlanuvchan, sayohatga befarq bo'lmagan mutaxassislarni
+                      sizga taklif etadi.
                     </p>
                     <div className="button cta_button">
                       <div className="button_bcg"></div>

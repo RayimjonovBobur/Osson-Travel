@@ -160,7 +160,7 @@ function Footer() {
                       </div>
                       <div className="contact_info_text">
 
-                        Farg'ona shahar 24-uy
+                        Farg'ona shahar Turkiston 20-uy
                       </div>
                     </li>
                     <li className="contact_info_item d-flex flex-row">

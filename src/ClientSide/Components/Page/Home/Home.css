@@ -377,7 +377,7 @@ section {
   content: "";
 }
 .main_nav_col {
-  height: 143px;
+  height: 100px;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
   -ms-transition: all 400ms ease;

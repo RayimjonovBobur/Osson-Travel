@@ -138,8 +138,9 @@
   -ms-transform: translateY(2px);
   -o-transform: translateY(2px);
   transform: translateY(2px);
-  width: 140px;
-  height: 120px;
+  width: 99px;
+  height: 110px;
+  margin-top: 20px;
 }
 
 /*********************************

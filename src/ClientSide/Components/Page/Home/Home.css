@@ -1195,14 +1195,9 @@ section {
 8.1 CTA Slider
 *********************************/
 
-.cta_slider_container {
-}
 .cta_item {
-  padding-top: 75px;
-  padding-bottom: 61px;
-  padding-left: 90px;
-  padding-right: 90px;
-  background: #ffffff;
+  padding: 40px 50px;
+  background: #ffffff87;
 }
 .cta_title {
   font-size: 30px;

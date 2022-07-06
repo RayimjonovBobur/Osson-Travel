@@ -25,8 +25,11 @@ import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
 import contact from "../../../assets/Images/contact.png";
 import Footer from "../../Footer/Footer";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const { challageData } = useSelector((state) => state?.users_reducer);
+  console.log(challageData);
   return (
     <div className="super-container">
       <div className="home">
@@ -288,14 +291,15 @@ const Home = () => {
                       <i></i>
                     </div>
                     <p className="cta_text">
-                      Biz mehmonlarimizga ularning talablari va ehtiyojlariga
-                      to'liq javob beradigan yuqori sifatli turistik mahsulotni
-                      taklif etamiz.“Osson Travel” kompaniyasi O‘zbekiston
-                      sayyohlik xizmatlari bozorida yangi hisoblanadi.
-                      Kompaniyamiz sayyohlik sohasida yangi hisoblansada
-                      tajribaga ega professional turoperatorlar va yosh,
-                      iqtidorli, izlanuvchan, sayohatga befarq bo'lmagan
-                      mutaxassislarni sizga taklif etadi.
+                      Agar siz xalqaro miqyosda sayohat qilmoqchi bo'lsangiz,
+                      lekin qaerdan boshlashni bilmasangiz, biz Osson-Travel
+                      kompaniyasi sizga doimo yordam berishdan mamnunmiz.
+                      .“Osson Travel” kompaniyasi O‘zbekiston sayyohlik
+                      xizmatlari bozorida yangi hisoblanadi. Kompaniyamiz
+                      sayyohlik sohasida yangi hisoblansada tajribaga ega
+                      professional turoperatorlar va yosh, iqtidorli,
+                      izlanuvchan, sayohatga befarq bo'lmagan mutaxassislarni
+                      sizga taklif etadi.
                     </p>
                     <div className="button cta_button">
                       <div className="button_bcg"></div>
@@ -617,7 +621,7 @@ const Home = () => {
                   <div className="col-lg-6">
                     <div className="offers_content">
                       <div className="offers_price">
-                        2130$<span>7-kunga</span>
+                        2140$<span>7-kunga</span>.
                       </div>
                       <div className="rating_r rating_r_4 offers_rating">
                         <i></i>

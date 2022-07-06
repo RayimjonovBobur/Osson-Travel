@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Detailed.scss";
 import dubai from "../../../assets/Images/dubai.jpg";
 import { DetaileDate } from "./DetailedData";
-import { useDispatch } from "react-redux";
-import hours_icon from "../../../assets/Images/24-hours.png";
 import { Ri24HoursFill } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";
@@ -11,25 +9,50 @@ import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Istanbul from "../../../assets/Images/istanbul.jpg";
 import kappadokiya from "../../../assets/Images/kappadokija.jpg";
-// import { SRLWrapper } from "simple-react-lightbox";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import item1 from "../../../assets/Images/item1.jpg";
 import item2 from "../../../assets/Images/item2.jpg";
 import item3 from "../../../assets/Images/item3.jpg";
 import item4 from "../../../assets/Images/item4.jpg";
 import Footer from "../../Footer/Footer";
+import Modal from "react-modal";
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: "9999",
+  },
+};
 
 const Detailed = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [openDate, setOpenDate] = useState(true);
   const [openDate2, setOpenDate2] = useState(false);
-  const dispatch = useDispatch();
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  let subtitle;
 
   const handleLink = (i) => {
     setActiveTab(i);
     setOpenDate(!openDate);
     setOpenDate2(!openDate2);
   };
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   return (
     <>
@@ -164,7 +187,7 @@ const Detailed = () => {
                           <strong>&nbsp;</strong>
                         </p>
                         <p>
-                          <strong>NARXGA KIRITILGAN:</strong>
+                          <strong>Sayohat narxiga kiritilgan:</strong>
                         </p>
                         <ul className="included-ul-content">
                           <li>
@@ -470,12 +493,49 @@ const Detailed = () => {
                     </div>
                   </TabPanel>
                 </div>
-              </main>{" "}
-              <aside className="col-md-3">adasd</aside>
+              </main>
+              <aside className="col-md-3">
+                <div className="order-container">
+                  <div className="order-content">
+                    <button className="btn-order" onClick={openModal}>
+                      BUYURTMA QILISH
+                      <i className="order-icon"></i>
+                    </button>
+                    <div className="price-decoration block-after-indent mt-3">
+                      <div className="price-description-content text-center">
+                        <div className="price-description-title">
+                          <h3>1 687 000 so'mdan</h3>
+                        </div>
+                        <div className="price-description-text">
+                          <p>Bir kishi uchun</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
             </div>
           </Tabs>
         </div>
       </div>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
+        <button onClick={closeModal}>close</button>
+        <div>I am a modal</div>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </Modal>
       <Footer />
     </>
   );

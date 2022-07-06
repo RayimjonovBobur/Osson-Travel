@@ -1,4 +1,4 @@
-import Contact from "./Contact/Contact";
+  import Contact from "./Contact/Contact";
 import Home from "./Home/Home";
 import News from "./News/News";
 import About from "./About/About";
@@ -24,10 +24,10 @@ export const Main = [
   },
   {
     path: "/contact",
-    page: <Contact />
+    page: <Contact />,
   },
   {
     path: "/detailed",
-    page: <Detailed />
-  }
+    page: <Detailed />,
+  },
 ];

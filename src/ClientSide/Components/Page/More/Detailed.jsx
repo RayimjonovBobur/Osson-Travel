@@ -570,7 +570,6 @@ const Detailed = () => {
                   type="number"
                   className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
                   placeholder="Telefon raqami"
-                  // data-role="input, input-mask"
                   data-mask-pattern="+380 (__) ___-____"
                 />
               </div>

@@ -531,7 +531,7 @@ const Detailed = () => {
           <div className="modal-contain p-1">
             <div className="form-contact__fields-short">
               <div className="d-flex">
-                <h6 className="text-center">HOZIR TURAGA BUYURT BERING</h6>{" "}
+                <h6 className="text-center">HOZIR BUYURTMA BERING !</h6>{" "}
                 <span onClick={closeModal} className="close-btn">
                   <Close />
                 </span>
@@ -570,7 +570,6 @@ const Detailed = () => {
                   type="number"
                   className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
                   placeholder="Telefon raqami"
-                  // data-role="input, input-mask"
                   data-mask-pattern="+380 (__) ___-____"
                 />
               </div>

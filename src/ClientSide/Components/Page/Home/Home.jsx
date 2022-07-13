@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import home_slider from "../../../assets/Images/home_slider.jpg";
@@ -23,13 +23,24 @@ import trend_6 from "../../../assets/Images/trend_6.png";
 import trend_7 from "../../../assets/Images/trend_7.png";
 import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
-import contact from "../../../assets/Images/contact.png";
 import Footer from "../../Footer/Footer";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 const Home = () => {
+  const [place, setPlaces] = useState([]);
   const { challageData } = useSelector((state) => state?.users_reducer);
-  console.log(challageData);
+  useEffect(() => {
+    axios
+      .get(`http://ossontravel.pythonanywhere.com/api/places`)
+      .then((res) => {
+        setPlaces(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  console.log(place);
   return (
     <div className="super-container">
       <div className="home">
@@ -53,7 +64,6 @@ const Home = () => {
                     <div className="button_bcg"></div>
                     <Link to="/">
                       ba'tafsil<span></span>
-                      <span></span>
                       <span></span>
                     </Link>
                   </div>

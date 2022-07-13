@@ -16,11 +16,11 @@ const Header = () => {
       icon: uzb,
     },
     {
-      code: "ru",
+      code: "en",
       icon: rus,
     },
     {
-      code: "en",
+      code: "ru",
       icon: eng,
     },
   ];

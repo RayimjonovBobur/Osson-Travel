@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { setChallage } from "./Redux/stored_reducer";
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next) 
   .use(LanguageDetector)
   .use(HttpApi)
   .init({

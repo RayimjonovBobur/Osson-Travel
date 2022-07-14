@@ -135,7 +135,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">768</div>
-                      <div className="stats_type">Qaytgan mijozlar</div>
+                      <div className="stats_type">Mijozlar</div>
                     </div>
                   </div>
                   <div
@@ -156,40 +156,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">145</div>
-                      <div className="stats_type">Qaytgan mijozlar</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="stats_item d-flex flex-md-row flex-column clearfix">
-                  <div className="stats_last order-md-1 order-3">
-                    <div className="stats_last_icon d-flex flex-column align-items-center justify-content-end">
-                      <img src={stats_3} alt="" />
-                    </div>
-                    <div className="stats_last_content">
-                      <div className="stats_number">11546</div>
-                      <div className="stats_type">Reach</div>
-                    </div>
-                  </div>
-                  <div
-                    className="stats_bar order-md-2 order-2"
-                    data-x="11546"
-                    data-y="9321"
-                    data-color="#fa6f1b"
-                  >
-                    <div className="stats_bar_perc">
-                      <div>
-                        <div className="stats_bar_value"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="stats_new order-md-3 order-1 text-right">
-                    <div className="stats_new_icon d-flex flex-column align-items-center justify-content-end">
-                      <img src="images/stats_3.png" alt="" />
-                    </div>
-                    <div className="stats_new_content">
-                      <div className="stats_number">9321</div>
-                      <div className="stats_type">Reach</div>
+                      <div className="stats_type">Mijozlar</div>
                     </div>
                   </div>
                 </div>
@@ -201,7 +168,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">3729</div>
-                      <div className="stats_type">Items</div>
+                      <div className="stats_type">Mijozlar</div>
                     </div>
                   </div>
                   <div
@@ -222,7 +189,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">17429</div>
-                      <div className="stats_type">More Items</div>
+                      <div className="stats_type">Mijozlar</div>
                     </div>
                   </div>
                 </div>

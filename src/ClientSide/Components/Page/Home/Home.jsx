@@ -349,14 +349,17 @@ const Home = () => {
                           style={{ backgroundImage: `url(${offer_1})` }}
                         ></div>
                         <div className="offer_name">
-                          <Link to="/">Istanbul,Turkiya</Link>
+                          <Link to="/">
+                            {item.name}, {item.capital}
+                          </Link>
                         </div>
                       </div>
                     </div>
                     <div className="col-lg-6">
                       <div className="offers_content">
                         <div className="offers_price">
-                          1700$<span>10-kunga</span>
+                          ${item.price1}
+                          <span>10-kunga</span>
                         </div>
                         <div className="rating_r rating_r_4 offers_rating">
                           <i></i>
@@ -366,11 +369,7 @@ const Home = () => {
                           <i></i>
                         </div>
                         <p className="offers_text">
-                          Istanbulda amalga oshiriladigan eng mashhur
-                          tadbirlardan ba'zilari ajoyib Ayasofyani ziyorat
-                          qilish, Katta bozor va ziravorlar bozorida xarid
-                          qilish, Istanbuldagi Moviy masjidga borish va Galata
-                          minorasidan bahramand bo'lishdir. Galata minorasi.
+                          {item.short_decription_uz}
                         </p>
                         <div className="offers_icons">
                           <ul className="offers_icons_list">
@@ -394,7 +393,7 @@ const Home = () => {
                 </div>
               </div>
             ))}
-            <div className="col-lg-6 offers_col">
+            {/* <div className="col-lg-6 offers_col">
               <div className="offers_item">
                 <div className="row">
                   <div className="col-lg-6">
@@ -658,7 +657,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

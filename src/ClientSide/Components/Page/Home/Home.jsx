@@ -32,7 +32,7 @@ const Home = () => {
   const { challageData } = useSelector((state) => state?.users_reducer);
   useEffect(() => {
     axios
-      .get(`http://ossontravel.pythonanywhere.com/api/places`)
+      .get(`https://ossontravel.pythonanywhere.com/api/places/shuffle?count=3`)
       .then((res) => {
         setPlaces(res.data);
       })
@@ -180,102 +180,39 @@ const Home = () => {
             </div>
           </div>
           <div className="row intro_items">
-            <div className="col-lg-4 intro_col">
-              <div className="intro_item">
-                <div className="intro_item_overlay"></div>
-                <div
-                  className="intro_item_background"
-                  style={{ backgroundImage: `url(${intro_1})` }}
-                ></div>
-                <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div className="intro_date">Iyun 5 - Iyun 15</div>
-                  <div className="button intro_button">
-                    <div className="button_bcg"></div>
-                    <Link to="/detailed">
-                      Ba'tafsil<span></span>
-                      <span></span>
-                      <span></span>
-                    </Link>
-                  </div>
-                  <div className="intro_center text-center">
-                    <h1>Turkiya</h1>
-                    <div className="intro_price">Narxi $1150</div>
-                    <div className="rating rating_4">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
+            {place.map((item, i) => (
+              <div className="col-lg-4 intro_col">
+                <div className="intro_item">
+                  <div className="intro_item_overlay"></div>
+                  <div
+                    className="intro_item_background"
+                    style={{ backgroundImage: `url(${intro_1})` }}
+                  ></div>
+                  <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                    <div className="intro_date">Iyun 5 - Iyun 15</div>
+                    <div className="button intro_button">
+                      <div className="button_bcg"></div>
+                      <Link to="/detailed">
+                        Ba'tafsil<span></span>
+                        <span></span>
+                        <span></span>
+                      </Link>
+                    </div>
+                    <div className="intro_center text-center">
+                      <h1>{item.name}</h1>
+                      <div className="intro_price">Narxi ${item.price1}</div>
+                      <div className="rating rating_4">
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="col-lg-4 intro_col">
-              <div className="intro_item">
-                <div className="intro_item_overlay"></div>
-                <div
-                  className="intro_item_background"
-                  style={{ backgroundImage: `url(${intro_2})` }}
-                ></div>
-                <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div className="intro_date">Iyun 25 - Iyul 5</div>
-                  <div className="button intro_button">
-                    <div className="button_bcg"></div>
-                    <Link to="/detailed">
-                      Ba'tafsil<span></span>
-                      <span></span>
-                      <span></span>
-                    </Link>
-                  </div>
-                  <div className="intro_center text-center">
-                    <h1>Gretsiya</h1>
-                    <div className="intro_price">Narxi $1050</div>
-                    <div className="rating rating_4">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 intro_col">
-              <div className="intro_item">
-                <div className="intro_item_overlay"></div>
-
-                <div
-                  className="intro_item_background"
-                  style={{ backgroundImage: `url(${intro_3})` }}
-                ></div>
-                <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div className="intro_date">Avgust 7- Avgust 17</div>
-                  <div className="button intro_button">
-                    <div className="button_bcg"></div>
-                    <Link to="/detailed">
-                      Ba'tafsil<span></span>
-                      <span></span>
-                      <span></span>
-                    </Link>
-                  </div>
-                  <div className="intro_center text-center">
-                    <h1>Dubay</h1>
-                    <div className="intro_price">Narxi $1450</div>
-                    <div className="rating rating_4">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -401,60 +338,62 @@ const Home = () => {
             </div>
           </div>
           <div className="row offers_items">
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_1})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/">Istanbul,Turkiya</Link>
+            {place.map((item, i) => (
+              <div className="col-lg-6 offers_col">
+                <div className="offers_item">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="offers_image_container">
+                        <div
+                          className="offers_image_background"
+                          style={{ backgroundImage: `url(${offer_1})` }}
+                        ></div>
+                        <div className="offer_name">
+                          <Link to="/">Istanbul,Turkiya</Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        1700$<span>10-kunga</span>
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Istanbulda amalga oshiriladigan eng mashhur tadbirlardan
-                        ba'zilari ajoyib Ayasofyani ziyorat qilish, Katta bozor
-                        va ziravorlar bozorida xarid qilish, Istanbuldagi Moviy
-                        masjidga borish va Galata minorasidan bahramand
-                        bo'lishdir. Galata minorasi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
+                    <div className="col-lg-6">
+                      <div className="offers_content">
+                        <div className="offers_price">
+                          1700$<span>10-kunga</span>
+                        </div>
+                        <div className="rating_r rating_r_4 offers_rating">
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                        </div>
+                        <p className="offers_text">
+                          Istanbulda amalga oshiriladigan eng mashhur
+                          tadbirlardan ba'zilari ajoyib Ayasofyani ziyorat
+                          qilish, Katta bozor va ziravorlar bozorida xarid
+                          qilish, Istanbuldagi Moviy masjidga borish va Galata
+                          minorasidan bahramand bo'lishdir. Galata minorasi.
+                        </p>
+                        <div className="offers_icons">
+                          <ul className="offers_icons_list">
+                            <li className="offers_icons_item">
+                              <img src={post} alt="" />
+                            </li>
+                            <li className="offers_icons_item">
+                              <img src={compass} alt="" />
+                            </li>
+                            <li className="offers_icons_item">
+                              <img src={bicycle} alt="" />
+                            </li>
+                            <li className="offers_icons_item">
+                              <img src={sailboat} alt="" />
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
             <div className="col-lg-6 offers_col">
               <div className="offers_item">
                 <div className="row">

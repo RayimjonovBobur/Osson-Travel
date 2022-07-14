@@ -43,7 +43,7 @@ const Header = () => {
                 <div className="main_nav_container ml-auto">
                   <ul className="main_nav_list">
                     <li className="main_nav_item">
-                      <Link to="/"> {t("firstTitle")}</Link>
+                      <Link to="/"> {t("Asosiy")}</Link>
                     </li>
                     <li className="main_nav_item">
                       <Link to="/about">Biz haqimizda</Link>

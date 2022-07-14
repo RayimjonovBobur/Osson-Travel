@@ -228,9 +228,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="milestones">
-        <img src={stats_4} alt="" />
-      </div>
+      <div className="milestones"></div>
 
       <Footer />
     </div>

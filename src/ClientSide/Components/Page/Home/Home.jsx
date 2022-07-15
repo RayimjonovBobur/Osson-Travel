@@ -3,13 +3,8 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import home_slider from "../../../assets/Images/home_slider.jpg";
 import intro_1 from "../../../assets/Images/intro_1.jpg";
-import intro_2 from "../../../assets/Images/intro_2.jpg";
-import intro_3 from "../../../assets/Images/intro_3.jpg";
 import cta from "../../../assets/Images/cta.jpg";
 import offer_1 from "../../../assets/Images/offer_1.jpg";
-import offer_2 from "../../../assets/Images/offer_2.jpg";
-import offer_3 from "../../../assets/Images/offer_3.jpg";
-import offer_4 from "../../../assets/Images/offer_4.jpg";
 import post from "../../../assets/Images/post.png";
 import compass from "../../../assets/Images/compass.png";
 import bicycle from "../../../assets/Images/bicycle.png";
@@ -192,8 +187,9 @@ const Home = () => {
                     <div className="intro_date">Iyun 5 - Iyun 15</div>
                     <div className="button intro_button">
                       <div className="button_bcg"></div>
-                      <Link to="/detailed">
-                        Ba'tafsil<span></span>
+                      <Link to={`/detailed/${item.id}`}>
+                        Ba'tafsil
+                        <span></span>
                         <span></span>
                         <span></span>
                       </Link>
@@ -339,7 +335,7 @@ const Home = () => {
           </div>
           <div className="row offers_items">
             {place.map((item, i) => (
-              <div className="col-lg-6 offers_col">
+              <div className="col-lg-6 offers_col" key={i}>
                 <div className="offers_item">
                   <div className="row">
                     <div className="col-lg-6">

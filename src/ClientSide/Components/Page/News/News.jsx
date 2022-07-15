@@ -120,9 +120,8 @@ const News = () => {
                   </div>
                   <div className="blog_post_title">
                     <Link to="/">
-                      Yevropacha dam olish va tabiat sari – Bodrumga
-                      Rossiya Jahon sayyohlik tashkilotidan chiqishini eʼlon
-                      qildi
+                      Yevropacha dam olish va tabiat sari – Bodrumga Rossiya
+                      Jahon sayyohlik tashkilotidan chiqishini eʼlon qildi
                     </Link>
                   </div>
                   <div className="blog_post_text">
@@ -153,9 +152,7 @@ const News = () => {
                       sharoitlar bor: bolalar maydonchalari, bolalar
                       animasiyasi, ham bolalar, ham o'smirlar uchun ko'ngilochar
                       mashg'ulotlar, enaga xizmatlari, alohida bolalar taomlari
-                      va h.k.
-=======
-                      "Rossiya Federatsiyasining xalqaro shartnomalari
+                      va h.k."Rossiya Federatsiyasining xalqaro shartnomalari
                       toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
                       Rossiya Tashqi ishlar vazirligining manfaatdor federal
                       ijroiya organlari bilan kelishilgan Rossiya

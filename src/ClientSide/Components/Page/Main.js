@@ -27,7 +27,7 @@ export const Main = [
     page: <Contact />,
   },
   {
-    path: "/detailed",
+    path: "/detailed/:id",
     page: <Detailed />,
   },
 ];

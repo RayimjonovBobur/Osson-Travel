@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Detailed.scss";
 import dubai from "../../../assets/Images/dubai.jpg";
 import { DetaileDate } from "./DetailedData";
@@ -17,6 +17,8 @@ import item4 from "../../../assets/Images/item4.jpg";
 import Footer from "../../Footer/Footer";
 import Modal from "react-modal";
 import { Close } from "../../../assets/Icons";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const customStyles = {
   content: {
@@ -32,6 +34,10 @@ const customStyles = {
 };
 
 const Detailed = () => {
+  let { id } = useParams();
+  const [item, setItem] = useState([]);
+  const [itemData, setItemData] = useState([]);
+
   const [activeTab, setActiveTab] = useState(0);
   const [openDate, setOpenDate] = useState(true);
   const [openDate2, setOpenDate2] = useState(false);
@@ -56,6 +62,19 @@ const Detailed = () => {
     setIsOpen(false);
   }
 
+  useEffect(() => {
+    axios
+      .get(`http://ossontravel.pythonanywhere.com/api/places/${id}`)
+      .then((res) => {
+        setItemData(res.data.images);
+        setItem(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
+  console.log(item);
+
   return (
     <>
       <div className="super_container">
@@ -67,7 +86,9 @@ const Detailed = () => {
           >
             <div className="detailed_content-header">
               <div className="detailed_title-birnchi">
-                <h1>BAAda All inslusive</h1>
+                <h1>
+                  {item.name}, {item.capital_uz}
+                </h1>
                 <h3>
                   BAAga sayohatlar 2021-2022 | BAAda dam olish kunlari | AOE
                   mehmonxonalari
@@ -105,7 +126,7 @@ const Detailed = () => {
                             </div>
                             <div className="mx-4">
                               <div className="tours-tabs__info__item__title">
-                                8 kun 7 kecha
+                                {item.duration}
                               </div>
                               <div className="tours-tabs__info__item__description">
                                 Kunlar soni

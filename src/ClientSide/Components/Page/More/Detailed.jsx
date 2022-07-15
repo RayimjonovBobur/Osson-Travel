@@ -5,7 +5,6 @@ import { DetaileDate } from "./DetailedData";
 import { Ri24HoursFill } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";
-import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Istanbul from "../../../assets/Images/istanbul.jpg";
 import kappadokiya from "../../../assets/Images/kappadokija.jpg";
@@ -19,6 +18,7 @@ import Modal from "react-modal";
 import { Close } from "../../../assets/Icons";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import i18n from "i18next";
 
 const customStyles = {
   content: {
@@ -34,9 +34,11 @@ const customStyles = {
 };
 
 const Detailed = () => {
+  const challage = i18n.language;
   let { id } = useParams();
   const [item, setItem] = useState([]);
   const [itemData, setItemData] = useState([]);
+  const NewData = {};
 
   const [activeTab, setActiveTab] = useState(0);
   const [openDate, setOpenDate] = useState(true);
@@ -75,6 +77,35 @@ const Detailed = () => {
   }, [id]);
   console.log(item);
 
+  if (challage === "uz") {
+    NewData.name = item.name_uz;
+    NewData.capital = item.capital_uz;
+    NewData.duration = item.duration_uz;
+    NewData.leaving_days = item.leaving_days_uz;
+    NewData.coming_back_days = item.coming_back_days_uz;
+    NewData.included = item.included_uz;
+    NewData.not_include = item.not_include_uz;
+    NewData.daily_plans = item.daily_plans_uz;
+  } else if (challage === "ru") {
+    NewData.name = item.name_ru;
+    NewData.capital = item.capital_ru;
+    NewData.duration = item.duration_ru;
+    NewData.leaving_days = item.leaving_days_ru;
+    NewData.coming_back_days = item.coming_back_days_ru;
+    NewData.included = item.included_ru;
+    NewData.not_include = item.not_include_ru;
+    NewData.daily_plans = item.daily_plans_ru;
+  } else if (challage === "en") {
+    NewData.name = item.name_en;
+    NewData.capital = item.capital_en;
+    NewData.duration = item.duration_en;
+    NewData.leaving_days = item.leaving_days_en;
+    NewData.coming_back_days = item.coming_back_days_en;
+    NewData.included = item.included_en;
+    NewData.not_include = item.not_include_en;
+    NewData.daily_plans = item.daily_plans_en;
+  }
+
   return (
     <>
       <div className="super_container">
@@ -87,7 +118,7 @@ const Detailed = () => {
             <div className="detailed_content-header">
               <div className="detailed_title-birnchi">
                 <h1>
-                  {item.name}, {item.capital_uz}
+                  {NewData.name}, {NewData.capital}
                 </h1>
                 <h3>
                   BAAga sayohatlar 2021-2022 | BAAda dam olish kunlari | AOE
@@ -126,7 +157,7 @@ const Detailed = () => {
                             </div>
                             <div className="mx-4">
                               <div className="tours-tabs__info__item__title">
-                                {item.duration}
+                                {NewData.duration}
                               </div>
                               <div className="tours-tabs__info__item__description">
                                 Kunlar soni
@@ -181,13 +212,17 @@ const Detailed = () => {
                               <td style={{ width: "184px" }}>
                                 <strong>JO‘NAB KETISH</strong>
                               </td>
-                              <td style={{ width: "660px" }}>Seshanba, Juma</td>
+                              <td style={{ width: "660px" }}>
+                                {NewData.leaving_days}
+                              </td>
                             </tr>
                             <tr>
                               <td style={{ width: "184px" }}>
                                 <strong>QAYTIB KELISH</strong>
                               </td>
-                              <td style={{ width: "660px" }}>Seshanba, Juma</td>
+                              <td style={{ width: "660px" }}>
+                                {NewData.coming_back_days}
+                              </td>
                             </tr>{" "}
                             <tr>
                               <td style={{ width: "184px" }}>
@@ -212,8 +247,13 @@ const Detailed = () => {
                         <p>
                           <strong>NARXGA KIRITILGAN:</strong>
                         </p>
-                        <ul className="included-ul-content">
-                          <li>
+                        <div
+                          className="included-ul-content"
+                          dangerouslySetInnerHTML={{
+                            __html: NewData.included,
+                          }}
+                        >
+                          {/* <li>
                             <img src={travel} alt="" />{" "}
                             aeroport-mehmonxona-aeroport guruh bo‘lib transferi
                           </li>
@@ -224,14 +264,19 @@ const Detailed = () => {
                           <li>
                             <img src={travel} alt="" /> guruh bo‘lib piyoda
                             sayohat
-                          </li>
-                        </ul>
+                          </li> */}
+                        </div>
                         <p>&nbsp;</p>
                         <h5>
                           <strong>Sayohat narxiga kiritilmagan:</strong>
                         </h5>
-                        <ul className="extra">
-                          <li>
+                        <ul
+                          className="extra"
+                          dangerouslySetInnerHTML={{
+                            __html: NewData.not_include,
+                          }}
+                        >
+                          {/* <li>
                             <img src={travel} alt="" />
                             Aviaparvoz (Kattalar{" "}
                             <strong>4.770.000 so‘mdan boshlab</strong>; Bolalar{" "}
@@ -252,7 +297,7 @@ const Detailed = () => {
                           <li>
                             <img src={travel} alt="" />
                             Shaxsiy xarajatlar
-                          </li>
+                          </li> */}
                         </ul>
                         <p>
                           <strong>
@@ -292,8 +337,13 @@ const Detailed = () => {
                             </div>
                             <div className="timeline__item__content padding-left">
                               <h3 className="timeline__item__title">1-kun</h3>
-                              <div className="timeline__item__description">
-                                <p>
+                              <div
+                                className="timeline__item__description"
+                                dangerouslySetInnerHTML={{
+                                  __html: NewData.daily_plans,
+                                }}
+                              >
+                                {/* <p>
                                   Istanbulga uchib kelish. Aeroportdan
                                   mehmonxonaga transfer.
                                 </p>
@@ -311,7 +361,7 @@ const Detailed = () => {
                                   Tungi Bosfor bo‘ylab kema sayohati (shou
                                   dastur, kechki ovqat, spirtli/spirtsiz
                                   ichimliklar, mehmonxonadan/ga transfer)
-                                </p>
+                                </p> */}
                               </div>
                             </div>
                           </div>{" "}

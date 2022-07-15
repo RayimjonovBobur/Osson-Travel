@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { setChallage } from "./Redux/stored_reducer";
 
 i18n
-  .use(initReactI18next) 
+  .use(initReactI18next)
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
@@ -35,8 +35,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h1>{t("firstTitle")}</h1>
-      <Routes>
+        <Routes>
         {Main.map((page) => (
           <Route path={page?.path} element={page?.page} />
         ))}

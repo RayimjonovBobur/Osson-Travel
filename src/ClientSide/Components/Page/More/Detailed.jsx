@@ -167,7 +167,7 @@ const Detailed = () => {
                       </div>
                       <div className="tours-tabs__content padding-all">
                         <h2>
-                          <strong>Manzali sayohat</strong>
+                          <strong>Mazmunli sayohat</strong>
                         </h2>
                         <p>
                           <span></span>
@@ -541,6 +541,7 @@ const Detailed = () => {
           </Tabs>
         </div>
       </div>
+      {/* MODAL */}
       <div className="modal">
         <Modal
           isOpen={modalIsOpen}
@@ -552,7 +553,7 @@ const Detailed = () => {
           <div className="modal-contain p-1">
             <div className="form-contact__fields-short">
               <div className="d-flex">
-                <h6 className="text-center">HOZIR BUYURTMA BERING !</h6>{" "}
+                <h6 className="text-center">HOZIROQ BUYURTMA BERING !</h6>{" "}
                 <span onClick={closeModal} className="close-btn">
                   <Close />
                 </span>

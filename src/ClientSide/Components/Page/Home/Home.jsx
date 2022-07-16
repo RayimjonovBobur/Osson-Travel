@@ -40,7 +40,6 @@ const Home = () => {
         console.log(error);
       });
   }, []);
-  console.log(place);
   return (
     <div className="super-container">
       <div className="home">

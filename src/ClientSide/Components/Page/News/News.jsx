@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./News.css";
 import blog_background from "../../../assets/Images/blog_background.jpg";
@@ -16,9 +16,10 @@ import gallery_4 from "../../../assets/Images/gallery_4.jpg";
 import gallery_5 from "../../../assets/Images/gallery_5.jpg";
 import gallery_6 from "../../../assets/Images/gallery_6.jpg";
 import Footer from "../../Footer/Footer";
+import axios from "axios";
 
 const News = () => {
-  return (
+    return (
     <div className="super-container">
       <div className="news">
         <div

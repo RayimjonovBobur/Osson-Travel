@@ -20,6 +20,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import i18n from "i18next";
 import AboutPlace from "./AboutPlace";
+import InputMask from "react-input-mask";
 
 const customStyles = {
   content: {
@@ -39,6 +40,10 @@ const Detailed = () => {
   let { id } = useParams();
   const [item, setItem] = useState([]);
   const [itemData, setItemData] = useState([]);
+  const [name, setName] = useState([]);
+  const [surName, setSurName] = useState([]);
+  const [email, setEmail] = useState([]);
+  const [phone, setPhone] = useState([]);
   const NewData = {};
 
   const [activeTab, setActiveTab] = useState(0);
@@ -125,36 +130,42 @@ const Detailed = () => {
     NewData.price3_desc = item.price3_desc_en;
   }
 
-  const PathPayme = (e) => { 
-    var axios = require("axios");
-    var data = JSON.stringify({
+  const PathPayme = (e) => {
+    e.preventDefault();
+    const axios = require("axios");
+    const data = JSON.stringify({
       amount: item.price1,
-      number_of_people: "2",
-      place_id: item.id,
-      place_name: item.name,
-      customer_full_name: "Sanjarbek Saminjonov",
-      customer_passport: "ABoewoe",
-      customer_phone_number: "+998911236467",
-      place: 2,
+      customer_full_name: `${name} ${surName}`,
+      customer_passport: "AA1112233",
+      customer_phone_number: phone,
+      place: item.id,
     });
+    console.log(data);
 
-    var config = {
-      method: "post",
-      url: "https://ossontravel.pythonanywhere.com/api/order/new/",
-      headers: {
-        "Content-Type": "application/json",
+    const createOrderUrl = `https://ossontravel.pythonanywhere.com/api/order/new/`;
+    const paymentCheckoutUrl = `https://ossontravel.pythonanywhere.com/api/payment/click-url/`;
+    function getCheckoutUrl(data) {
+      axios
+        .post(paymentCheckoutUrl, data)
+        .then((response) => window.location.assign(response.data.url));
+    }
+    axios.post(createOrderUrl, data).then(
+      (response) => {
+        if (response.status === 201) {
+          const data = {
+            id: response.data.id,
+            amount: response.data.amount_for_payme,
+            return_url: `https://ossontravel.uz/detailed/${item.id}`,
+          };
+          getCheckoutUrl(data);
+          console.log(response.data);
+        }
       },
-      data: data,
-    };
-
-    axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch(function (error) {
+      (error) => {
         console.log(error);
-      });
-  }
+      }
+    );
+  };
 
   return (
     <>
@@ -651,7 +662,7 @@ const Detailed = () => {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <form className="modal-contain p-1" onSubmit={(e)=> PathPayme(e)}>
+          <form className="modal-contain p-1" onSubmit={(e) => PathPayme(e)}>
             <div className="form-contact__fields-short">
               <div className="d-flex">
                 <h6 className="text-center">HOZIROQ BUYURTMA BERING !</h6>{" "}
@@ -665,6 +676,8 @@ const Detailed = () => {
                     type="text"
                     className="modal-form-input"
                     placeholder="Ism"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </span>
               </div>{" "}
@@ -674,6 +687,8 @@ const Detailed = () => {
                     type="text"
                     className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-validation-item"
                     placeholder="Familya"
+                    value={surName}
+                    onChange={(e) => setSurName(e.target.value)}
                   />
                 </span>
               </div>
@@ -682,18 +697,19 @@ const Detailed = () => {
               <div className="wpcf7-form-control-wrap your-mail">
                 <input
                   type="email"
-                  className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
                   placeholder="Sizning Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>{" "}
             <div className="form-contact__fields-short">
               <div className="wpcf7-form-control-wrap your-mail">
-                <input
-                  type="number"
-                  className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
+                <InputMask
+                  mask={"+\\9\\9\\8\\ 99 999 99 99"}
                   placeholder="Telefon raqami"
-                  data-mask-pattern="+380 (__) ___-____"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
             </div>

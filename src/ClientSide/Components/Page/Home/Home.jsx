@@ -26,8 +26,10 @@ import Search from "../../Search/Search";
 import contact from "../../../assets/Images/contact.png";
 import Footer from "../../Footer/Footer";
 import { useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   const { challageData } = useSelector((state) => state?.users_reducer);
   console.log(challageData);
   return (
@@ -52,7 +54,8 @@ const Home = () => {
                   <div className="button home_slider_button">
                     <div className="button_bcg"></div>
                     <Link to="/">
-                      ba'tafsil<span></span>
+                      {t("in detail")}
+                      <span></span>
                       <span></span>
                       <span></span>
                     </Link>
@@ -153,19 +156,14 @@ const Home = () => {
           <div className="row">
             <div className="col">
               <h2 className="intro_title text-center">
-                SAYOHATNI BIZ BILAN MAZMUNLI O'TKAZING!
+                {t("a meaningful travel")}
               </h2>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="intro_text text-center">
-                <p>
-                  Har bir mehmon bizning do'stimiz va hamkorimiz! Biz
-                  mehmonlarimizga ularning talablari va ehtiyojlariga to'liq
-                  javob beradigan yuqori sifatli turistik mahsulotni taklif
-                  etamiz.{" "}
-                </p>
+                <p>{t("visiting friends")} </p>
               </div>
             </div>
           </div>
@@ -182,7 +180,8 @@ const Home = () => {
                   <div className="button intro_button">
                     <div className="button_bcg"></div>
                     <Link to="/detailed">
-                      Ba'tafsil<span></span>
+                      {t("in detail")}
+                      <span></span>
                       <span></span>
                       <span></span>
                     </Link>
@@ -214,7 +213,8 @@ const Home = () => {
                   <div className="button intro_button">
                     <div className="button_bcg"></div>
                     <Link to="/detailed">
-                      Ba'tafsil<span></span>
+                      {t("in detail")}
+                      <span></span>
                       <span></span>
                       <span></span>
                     </Link>
@@ -247,7 +247,8 @@ const Home = () => {
                   <div className="button intro_button">
                     <div className="button_bcg"></div>
                     <Link to="/detailed">
-                      Ba'tafsil<span></span>
+                      {t("in detail")}
+                      <span></span>
                       <span></span>
                       <span></span>
                     </Link>
@@ -282,7 +283,7 @@ const Home = () => {
               <div className="cta_slider_container">
                 <div className="owl-carousel owl-theme cta_slider">
                   <div className="owl-item cta_item text-center">
-                    <div className="cta_title">Bizning xizmatlar</div>
+                    <div className="cta_title">{t("OUR SERVICES")}</div>
                     <div className="rating_r rating_r_4">
                       <i></i>
                       <i></i>
@@ -290,21 +291,12 @@ const Home = () => {
                       <i></i>
                       <i></i>
                     </div>
-                    <p className="cta_text">
-                      Agar siz xalqaro miqyosda sayohat qilmoqchi bo'lsangiz,
-                      lekin qaerdan boshlashni bilmasangiz, biz Osson-Travel
-                      kompaniyasi sizga doimo yordam berishdan mamnunmiz.
-                      .“Osson Travel” kompaniyasi O‘zbekiston sayyohlik
-                      xizmatlari bozorida yangi hisoblanadi. Kompaniyamiz
-                      sayyohlik sohasida yangi hisoblansada tajribaga ega
-                      professional turoperatorlar va yosh, iqtidorli,
-                      izlanuvchan, sayohatga befarq bo'lmagan mutaxassislarni
-                      sizga taklif etadi.
-                    </p>
+                    <p className="cta_text">{t("international travel")}</p>
                     <div className="button cta_button">
                       <div className="button_bcg"></div>
                       <Link to="/">
-                        Ba'tafsil<span></span>
+                        {t("in detail")}
+                        <span></span>
                         <span></span>
                         <span></span>
                       </Link>
@@ -385,9 +377,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <h2 className="section_title">
-                Eng yaxshilari ichidan tanlash qoldi...
-              </h2>
+              <h2 className="section_title">{t("the best ones")}</h2>
             </div>
           </div>
           <div className="row offers_items">
@@ -718,7 +708,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <h2 className="section_title">BIZ BILAN KO'PROQ!</h2>
+              <h2 className="section_title">{t("more with us!")}</h2>
             </div>
           </div>
           <div className="row trending_container">
@@ -729,7 +719,7 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Gruzin afsonasi</Link>
+                    <Link to="/">{t("the legend of georgia")}</Link>
                   </div>
                   <div className="trending_price">Narxi 650$</div>
                   <div className="trending_location">Gruzin,Tbilis</div>
@@ -744,7 +734,7 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Qizil dengiz</Link>
+                    <Link to="/">{t("red sea")}</Link>
                   </div>
                   <div className="trending_price">Narxi 1040$</div>
                   <div className="trending_location"> Misr,Texron</div>
@@ -759,7 +749,7 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Mehmondo'st Ozarbayjon</Link>
+                    <Link to="/">{t("hospitable azerbaijan")}</Link>
                   </div>
                   <div className="trending_price">Narxi 1000$</div>
                   <div className="trending_location">Ozarbayjon,Boku</div>
@@ -774,7 +764,7 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Qadimiy Rossiya</Link>
+                    <Link to="/">{t("ancient russia")}</Link>
                   </div>
                   <div className="trending_price">Narxi 1200$</div>
                   <div className="trending_location">Rossiya,Moskva</div>
@@ -789,7 +779,7 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">CHexiya tog' kurorti</Link>
+                    <Link to="/">{t("")}</Link>
                   </div>
                   <div className="trending_price">Narxi 1300$</div>
                   <div className="trending_location">CHexiya, Praga</div>

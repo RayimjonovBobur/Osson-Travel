@@ -85,7 +85,6 @@ const Detailed = () => {
         console.log(error);
       });
   }, [id]);
-  console.log(item);
 
   if (challage === "uz") {
     NewData.name = item.name_uz;
@@ -140,26 +139,33 @@ const Detailed = () => {
       customer_phone_number: phone,
       place: item.id,
     });
-    console.log(data);
 
-    const createOrderUrl = `https://ossontravel.pythonanywhere.com/api/order/new/`;
+    const config = {
+      method: "post",
+      url: "https://ossontravel.pythonanywhere.com/api/order/new/",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
     const paymentCheckoutUrl = `https://ossontravel.pythonanywhere.com/api/payment/click-url/`;
     function getCheckoutUrl(data) {
       axios
         .post(paymentCheckoutUrl, data)
-        .then((response) => window.location.assign(response.data.url));
+        .then((response) => window.location.assign(response.data.click_url));
     }
-    axios.post(createOrderUrl, data).then(
+
+    axios(config).then(
       (response) => {
         if (response.status === 201) {
           const data = {
-            id: response.data.id,
-            amount: response.data.amount_for_payme,
+            order_id: response.data.id,
             return_url: `https://ossontravel.uz/detailed/${item.id}`,
           };
           getCheckoutUrl(data);
-          console.log(response.data);
         }
+        console.log(JSON.stringify(response.data));
       },
       (error) => {
         console.log(error);

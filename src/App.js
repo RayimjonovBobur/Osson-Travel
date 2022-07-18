@@ -35,7 +35,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-        <Routes>
+      {t("firstTitle")}
+      <Routes>
         {Main.map((page) => (
           <Route path={page?.path} element={page?.page} />
         ))}

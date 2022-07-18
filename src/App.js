@@ -14,7 +14,7 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    supportedLngs: ["uz", "en", "ru"],
+    supportedLngs: ["uz", "ru", "en"],
     fallbackLng: "",
     detection: {
       order: ["path", "cookie", "localStorage", "htmlTag"],
@@ -35,7 +35,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {t("firstTitle")}
       <Routes>
         {Main.map((page) => (
           <Route path={page?.path} element={page?.page} />

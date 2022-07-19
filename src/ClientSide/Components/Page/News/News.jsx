@@ -17,9 +17,11 @@ import gallery_5 from "../../../assets/Images/gallery_5.jpg";
 import gallery_6 from "../../../assets/Images/gallery_6.jpg";
 import Footer from "../../Footer/Footer";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const News = () => {
-    return (
+  const { t } = useTranslation();
+  return (
     <div className="super-container">
       <div className="news">
         <div
@@ -28,7 +30,7 @@ const News = () => {
           style={{ backgroundImage: `url(${blog_background})` }}
         ></div>
         <div className="news_content">
-          <div className="news_title">yangiliklar</div>
+          <div className="news_title">{t("news")} </div>
         </div>
       </div>
 
@@ -59,41 +61,14 @@ const News = () => {
                     </ul>
                   </div>
                   <div className="blog_post_title">
-                    <Link to="/">
-                      O‘zbekiston – Ozarbayjon: turizm sohasida hamkorlik
-                      dasturi imzolandi
-                    </Link>
+                    <Link to="/">{t("uzbekistan-news")}</Link>
                   </div>
                   <div className="blog_post_text">
-                    <p>
-                      <span className="blog_post_info">
-                        Dasturga muvofiq, tomonlar quyidagi yo‘nalishlarda
-                        hamkorlik qiladilar:
-                      </span>
-                      – Ozarbayjon Respublikasi va O‘zbekiston Respublikasining
-                      yirik shaharlarida “O‘zbekistonga sayohat” va
-                      “Ozarbayjonga sayohat” targ‘ibot tadbirlarini o‘tkazish; –
-                      ikki davlat hududida O‘zbekiston va Ozarbayjon sayyohlik
-                      kompaniyalari vakillari ishtirokida sayyohlik
-                      yarmarkalarini o‘tkazish; – O‘zbekiston va Ozarbayjon
-                      telekanallarida ikki davlatning sayyohlik salohiyati
-                      to‘g‘risidagi reklama materiallarini joylashtirish uchun
-                      efir vaqti almashinuvi, shuningdek, O‘zbekiston va
-                      Ozarbayjonning mashhur telekanallari ko‘rsatuvlarini
-                      suratga olishni tashkil etish bilan bog‘liq masalalarni
-                      o‘rganish; – O‘zbekistonning turizm sektori vakillari
-                      bilan O‘zbekiston va Ozarbayjon ta’lim muassasalari
-                      o‘rtasida turizm sohasida tajriba almashish; – turizm
-                      kunlarini o‘tkazish (mamlakatlarning madaniyati,
-                      gastronomiyasi va turizm salohiyati taqdimoti); –
-                      o‘zbekistonlik va ozarbayjonlik sayohatchilar uchun ikki
-                      davlat hududlari bo‘ylab yangi turistik yo‘nalishlarni
-                      ishlab chiqish va amalga joriy etish.
-                    </p>
+                    <p>{t("uzbek-info")}</p>
                   </div>
                   <div className="blog_post_link">
                     <a href="https://uzbektourism.uz/news/view?id=2256">
-                      Ba'tafsil
+                      {t("in_detail")}
                     </a>
                   </div>
                 </div>
@@ -120,63 +95,13 @@ const News = () => {
                     </ul>
                   </div>
                   <div className="blog_post_title">
-                    <Link to="/">
-                      Yevropacha dam olish va tabiat sari – Bodrumga Rossiya
-                      Jahon sayyohlik tashkilotidan chiqishini eʼlon qildi
-                    </Link>
+                    <Link to="/">{t("europe-news")}</Link>
                   </div>
                   <div className="blog_post_text">
-                    <p>
-                      1 iyuldan O'zbekiston ushbu mavsumdagi birinchi to'g'ridan
-                      to'g'ri reyslarni yo'lga qo'yishni
-                      rejalashtirgan.Turkiyaning eng hashamatli kurortlaridan
-                      biriga qanday yetib olish, qaerda to'xtash va u yerda
-                      nimalar bilan shug'ullanish mumkinligi haqida aytib
-                      beradi. <br /> Bodrum. U qanday? Bodrum — bu Mugla
-                      provinsiyasidagi Egey dengizining janubi-g'arbiy qismida
-                      joylashgan yarim orol. Ushbu shaharni eng premium
-                      shaharlardan biri, deb atash mumkin. Aynan Bodrumda
-                      ko'pincha siyosatchi va mashhur kishilar, shuningdek, o'z
-                      yaxtalarida keladigan VIP-sayyohlar dam oladi. Ushbu
-                      shahar ham xotirjamligi, ham yorqin tungi hayoti bilan
-                      hayron qoldiradi: Bodrumning tungi klublari, bar va
-                      restoranlari tashrif buyuruvchilarni qanday qilib xursand
-                      qilish va dam olishingizni unutilmas qilishni bilishadi.
-                      Bodrumda Antaliya toifasidagi, ya'ni katta ko'p qavatli
-                      mehmonxonalar kam. Bu ushbu hududning yana bir o'zgacha
-                      jihati. Bu yerda kichik va shinam mehmonxonalar,
-                      butik-mehmonxonalar va luxury-mehmonxonalar ko'p. Bodrum
-                      juda ixcham – eng uzoqdagi mehmonxonalarga ham transfer
-                      vaqti yarim soatdan oshmaydi. Bolali sayyohlar uchun
-                      ideal. Mehmonxonalarda Antaliyadagi kabi «barchasi
-                      kiritilgan» konsepsiya va oilaviy dam olish uchun barcha
-                      sharoitlar bor: bolalar maydonchalari, bolalar
-                      animasiyasi, ham bolalar, ham o'smirlar uchun ko'ngilochar
-                      mashg'ulotlar, enaga xizmatlari, alohida bolalar taomlari
-                      va h.k."Rossiya Federatsiyasining xalqaro shartnomalari
-                      toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
-                      Rossiya Tashqi ishlar vazirligining manfaatdor federal
-                      ijroiya organlari bilan kelishilgan Rossiya
-                      Federatsiyasining Jahon sayyohlik tashkiloti tarkibidan
-                      chiqishi toʻgʻrisidagi taklifini qabul qilish; ", deyiladi
-                      hujjatda.Maʼlumot uchun 27 aprel kuni Rossiya BMT
-                      huzuridagi Jahon Sayyohlik tashkiloti faoliyati
-                      siyosiylashgani sababli tashkilot tarkibidan chiqish
-                      niyati borligini maʼlum qilgan edi. Oʻsha kuni JST Bosh
-                      Assambleyasi navbatdan tashqari yigʻilishida “Ukrainada
-                      davom etayotgan harbiy hujum munosabati bilan” Rossiyaning
-                      aʼzoligini toʻxtatishga qaror qildi. Rossiya TIV rasmiy
-                      vakili Mariya Zaxarova bu qarorni “siyosiy
-                      ikkiyuzlamachilik namunasi” deb atadi va Gʻarb davlatlari
-                      bu tashkilotdan oʻz manfaatlari yoʻlida, jumladan, Rossiya
-                      Federatsiyasini kamsitish maqsadida foydalanishini
-                      taʼkidladi. Eslatib oʻtamiz, Rossiya SSSRning huquqiy
-                      vorisi sifatida 1991 yildan beri JSTda ishtirok etib
-                      kelayotgan edi.
-                    </p>
+                    <p>{t("urope-info")}</p>
                   </div>
                   <div className="blog_post_link">
-                    <Link to="/">Ba'tafsil</Link>
+                    <Link to="/">{t("in_detail")} </Link>
                   </div>
                 </div>
 
@@ -205,38 +130,13 @@ const News = () => {
                     </ul>
                   </div>
                   <div className="blog_post_title">
-                    <Link to="/">
-                      Rossiya Jahon sayyohlik tashkilotidan chiqishini eʼlon
-                      qildi
-                    </Link>
+                    <Link to="/">{t("rus-news")}</Link>
                   </div>
                   <div className="blog_post_text">
-                    <p>
-                      {" "}
-                      "Rossiya Federatsiyasining xalqaro shartnomalari
-                      toʻgʻrisida"gi federal qonunning 36-moddasiga muvofiq
-                      Rossiya Tashqi ishlar vazirligining manfaatdor federal
-                      ijroiya organlari bilan kelishilgan Rossiya
-                      Federatsiyasining Jahon sayyohlik tashkiloti tarkibidan
-                      chiqishi toʻgʻrisidagi taklifini qabul qilish; ", deyiladi
-                      hujjatda.Maʼlumot uchun 27 aprel kuni Rossiya BMT
-                      huzuridagi Jahon Sayyohlik tashkiloti faoliyati
-                      siyosiylashgani sababli tashkilot tarkibidan chiqish
-                      niyati borligini maʼlum qilgan edi. Oʻsha kuni JST Bosh
-                      Assambleyasi navbatdan tashqari yigʻilishida “Ukrainada
-                      davom etayotgan harbiy hujum munosabati bilan” Rossiyaning
-                      aʼzoligini toʻxtatishga qaror qildi. Rossiya TIV rasmiy
-                      vakili Mariya Zaxarova bu qarorni “siyosiy
-                      ikkiyuzlamachilik namunasi” deb atadi va Gʻarb davlatlari
-                      bu tashkilotdan oʻz manfaatlari yoʻlida, jumladan, Rossiya
-                      Federatsiyasini kamsitish maqsadida foydalanishini
-                      taʼkidladi. Eslatib oʻtamiz, Rossiya SSSRning huquqiy
-                      vorisi sifatida 1991 yildan beri JSTda ishtirok etib
-                      kelayotgan edi.
-                    </p>
+                    <p>{t("rus-info")}</p>
                   </div>
                   <div className="blog_post_link">
-                    <Link to="/">Ba'tafsil</Link>
+                    <Link to="/">{t("in_detail")} </Link>
                   </div>
                 </div>
               </div>
@@ -317,7 +217,7 @@ const News = () => {
               </div>
 
               <div className="sidebar_categories">
-                <div className="sidebar_title">Yo'nalishlar</div>
+                <div className="sidebar_title"> {t("directions")}</div>
                 <div className="sidebar_list">
                   <ul>
                     <li>
@@ -346,7 +246,7 @@ const News = () => {
               </div>
 
               <div className="sidebar_latest_posts">
-                <div className="sidebar_title">Eng yaxshi sifatni tanlang!</div>
+                <div className="sidebar_title">{t("good quality")} </div>
                 <div className="latest_posts_container">
                   <ul>
                     <li className="latest_post clearfix">

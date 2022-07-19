@@ -123,19 +123,19 @@ function Footer() {
                 <div className="footer_content footer_tags">
                   <ul className="tags_list clearfix">
                     <li className="tag_item">
-                      <Link to="/">asosiy</Link>
+                      <Link to="/">{t("main")} </Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">biz haqimizda</Link>
+                      <Link to="/">{t("about")} </Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">barcha turlar</Link>
+                      <Link to="/">{t("all types")}</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">yangiliklar</Link>
+                      <Link to="/">{t("news")}</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">a'loqa</Link>
+                      <Link to="/">{t("contact")}</Link>
                     </li>
                     <li className="tag_item">
                       <Link to="/">{t("lifestyle and sports")} </Link>

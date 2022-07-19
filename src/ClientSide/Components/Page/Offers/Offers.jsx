@@ -9,6 +9,7 @@ import about_background from "../../../assets/Images/about_background.jpg";
 import Footer from "../../Footer/Footer";
 import Search from "../../Search/Search";
 import "./Offers.css";
+import { t } from "i18next";
 
 const Offers = () => {
   return (
@@ -20,7 +21,7 @@ const Offers = () => {
           style={{ backgroundImage: `url(${about_background})` }}
         ></div>
         <div className="offers_content-header">
-          <div className="offers_title-birnchi">Barcha turlar</div>
+          <div className="offers_title-birnchi">{t("all types")} </div>
         </div>
       </div>
 
@@ -89,7 +90,8 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <a href="/">
-                            Ba'tafsil<span></span>
+                            {t("in_detail")}
+                            <span></span>
                             <span></span>
                             <span></span>
                           </a>
@@ -162,7 +164,8 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            Ba'tafsil<span></span>
+                            {t("in_detail")}
+                            <span></span>
                             <span></span>
                             <span></span>
                           </Link>
@@ -236,7 +239,8 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            Ba'tafsil<span></span>
+                            {t("in_detail")}
+                            <span></span>
                             <span></span>
                             <span></span>
                           </Link>
@@ -310,7 +314,8 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            Ba'tafsil<span></span>
+                            {t("in_detail")}
+                            <span></span>
                             <span></span>
                             <span></span>
                           </Link>
@@ -384,7 +389,8 @@ const Offers = () => {
                         </div>
                         <div className="button book_button">
                           <Link to="/">
-                            Ba'tafsil<span></span>
+                            {t("in_detail")}
+                            <span></span>
                             <span></span>
                             <span></span>
                           </Link>

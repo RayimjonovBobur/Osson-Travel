@@ -43,19 +43,19 @@ const Header = () => {
                 <div className="main_nav_container ml-auto">
                   <ul className="main_nav_list">
                     <li className="main_nav_item">
-                      <Link to="/"> {t("Asosiy")}</Link>
+                      <Link to="/"> {t("main")}</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/about">Biz haqimizda</Link>
+                      <Link to="/about">{t("about")} </Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/offers">Barcha turlar</Link>
+                      <Link to="/offers">{t("all types")}</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/news">Yangiliklar</Link>
+                      <Link to="/news">{t("news")}</Link>
                     </li>
                     <li className="main_nav_item">
-                      <Link to="/contact">A'loqa</Link>
+                      <Link to="/contact">{t("contact")}</Link>
                     </li>
                     <li className="nav-item dropdown main_nav_item">
                       <span
@@ -156,19 +156,19 @@ const Header = () => {
           </div>
           <ul>
             <li className="menu_item">
-              <a href="index.html">Asosiy</a>
+              <a href="index.html">{t("main")} </a>
             </li>
             <li className="menu_item">
-              <a href="/">Biz haqimizda</a>
+              <a href="/">{t("about")}</a>
             </li>
             <li className="menu_item">
-              <Link to="/offers">Barcha turlar</Link>
+              <Link to="/offers">{t("all types")} </Link>
             </li>
             <li className="menu_item">
-              <Link to="/news">Yangiliklar</Link>
+              <Link to="/news">{t("news")} </Link>
             </li>
             <li className="menu_item">
-              <a href="contact.html">A'loqa</a>
+              <a href="contact.html">{t("contact")} </a>
             </li>
           </ul>
         </div>

@@ -8,8 +8,10 @@ import placeholder from "../../../assets/Images/placeholder.svg";
 import phone_call from "../../../assets/Images/phone-call.svg";
 import message from "../../../assets/Images/message.svg";
 import planet_earth from "../../../assets/Images/planet-earth.svg";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <div className="super_container">
       <div className="contact">
@@ -20,7 +22,7 @@ const Contact = () => {
         ></div>
         <div className="contact_content">
           <div className="contact_title">
-            <h1>Biz bilan bog'lanish</h1>
+            <h1>{t("contact us")} </h1>
           </div>
         </div>
       </div>
@@ -40,23 +42,11 @@ const Contact = () => {
                   <div className="logoa">
                     <a href="#">
                       <img src={logo} alt="" />
-                      travelix
+                      Osson-Travel
                     </a>
                   </div>
                 </div>
-                <p className="about_text">
-                  Bugungi kunda{" "}
-                  <span className="contact-text">OSSon-TOUR </span> 13 ta
-                  yo‘nalish bo‘ylab operatorlik faoliyatini yuritadi, shu
-                  jumladan Avstriya, Benilyuks, Isroil, Italiya, BAA, Fransiya,
-                  Chexiya va boshqa davlatlar bor. Biz ekskursiya,
-                  davolash-sog‘lomlashtirish turlari, plyajda dam olish, ko‘l va
-                  tog‘larda hordiq chiqarish, voqeaviy va ziyorat turlarining
-                  butun doirasida xizmat ko‘rsatamiz. Alohida e’tibor yuqori
-                  shinamlikdagi qo‘shma turlarni rivojlantirishga qaratilgan,
-                  assortimentda 100 dan ortiq dastur, turda 2 tadan 5 tagacha
-                  turlar mavjud.
-                </p>
+                <p className="about_text">{t("contact-info")}</p>
                 <ul className="about_social_list">
                   <li className="about_social_item">
                     <a href="/">
@@ -97,7 +87,7 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="contact_info_text">
-                      Farg'ona shahar 24-uy
+                      {t("footer-address")}
                     </div>
                   </li>
                   <li className="contact_info_item d-flex flex-row">

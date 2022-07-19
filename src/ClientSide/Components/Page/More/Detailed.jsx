@@ -188,8 +188,8 @@ const Detailed = () => {
                   {NewData.name}, {NewData.capital}
                 </h1>
                 <h3>
-                  BAAga sayohatlar 2021-2022 | BAAda dam olish kunlari | AOE
-                  mehmonxonalari
+                  Hayotingizning har bir daqiqasini qiziqarli va unutilmas
+                  o'tkazishga odatlaning!
                 </h3>
               </div>
             </div>

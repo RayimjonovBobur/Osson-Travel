@@ -5,6 +5,7 @@ import island from "../../assets/Images/island.png";
 import departure from "../../assets/Images/departure.png";
 import suitcase from "../../assets/Images/suitcase.png";
 import cruise from "../../assets/Images/cruise.png";
+import { t } from "i18next";
 
 const Search = () => {
   return (
@@ -17,23 +18,23 @@ const Search = () => {
                 <div className="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
                   <div className="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
                     <img src={suitcase} alt="" />
-                    <span>Mehmonxona</span>
+                    <span>{t("hotel")} </span>
                   </div>
                   <div className="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
                     <img src={bus} alt="" />
-                    Avtomabil
+                    {t("car")}
                   </div>
                   <div className="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
                     <img src={departure} alt="" />
-                    samalyot
+                    {t("airplane")}
                   </div>
                   <div className="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
                     <img src={island} alt="" />
-                    sohil
+                    {t("beach")}
                   </div>
                   <div className="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
                     <img src={cruise} alt="" />
-                    kema
+                    {t("boat")}
                   </div>
 
                 </div>

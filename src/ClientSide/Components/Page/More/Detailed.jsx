@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Detailed.scss";
 import dubai from "../../../assets/Images/dubai.jpg";
 import { DetaileDate } from "./DetailedData";
 import { Ri24HoursFill } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";
-import travel from "../../../assets/Images/TRAVELSYSTEM.png";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Istanbul from "../../../assets/Images/istanbul.jpg";
 import kappadokiya from "../../../assets/Images/kappadokija.jpg";
@@ -17,6 +16,11 @@ import item4 from "../../../assets/Images/item4.jpg";
 import Footer from "../../Footer/Footer";
 import Modal from "react-modal";
 import { Close } from "../../../assets/Icons";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import i18n from "i18next";
+import AboutPlace from "./AboutPlace";
+import InputMask from "react-input-mask";
 
 const customStyles = {
   content: {
@@ -32,10 +36,23 @@ const customStyles = {
 };
 
 const Detailed = () => {
+  const challage = i18n.language;
+  let { id } = useParams();
+  const [item, setItem] = useState([]);
+  const [itemData, setItemData] = useState([]);
+  const [name, setName] = useState([]);
+  const [surName, setSurName] = useState([]);
+  const [email, setEmail] = useState([]);
+  const [phone, setPhone] = useState([]);
+  const NewData = {};
+
   const [activeTab, setActiveTab] = useState(0);
   const [openDate, setOpenDate] = useState(true);
   const [openDate2, setOpenDate2] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  const [isReady, setIsReady] = useState(null);
+
   let subtitle;
 
   const handleLink = (i) => {
@@ -56,6 +73,106 @@ const Detailed = () => {
     setIsOpen(false);
   }
 
+  useEffect(() => {
+    axios
+      .get(`https://ossontravel.pythonanywhere.com/api/places/${id}/ `)
+      .then((res) => {
+        setItemData(res.data.images);
+        setItem(res.data);
+        setIsReady(true);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
+
+  if (challage === "uz") {
+    NewData.name = item.name_uz;
+    NewData.capital = item.capital_uz;
+    NewData.duration = item.duration_uz;
+    NewData.leaving_days = item.leaving_days_uz;
+    NewData.coming_back_days = item.coming_back_days_uz;
+    NewData.included = item.included_uz;
+    NewData.not_include = item.not_include_uz;
+    NewData.daily_plans = item.daily_plans_uz;
+    NewData.short_decription = item.short_decription_uz;
+    NewData.price1_desc = item.price1_desc_uz;
+    NewData.price2_desc = item.price2_desc_uz;
+    NewData.price3_desc = item.price3_desc_uz;
+  } else if (challage === "ru") {
+    NewData.name = item.name_ru;
+    NewData.capital = item.capital_ru;
+    NewData.duration = item.duration_ru;
+    NewData.leaving_days = item.leaving_days_ru;
+    NewData.coming_back_days = item.coming_back_days_ru;
+    NewData.included = item.included_ru;
+    NewData.not_include = item.not_include_ru;
+    NewData.daily_plans = item.daily_plans_ru;
+    NewData.short_decription = item.short_decription_ru;
+    NewData.short_decription = item.short_decription_ru;
+    NewData.price1_desc = item.price1_desc_ru;
+    NewData.price2_desc = item.price2_desc_ru;
+    NewData.price3_desc = item.price3_desc_ru;
+  } else if (challage === "en") {
+    NewData.name = item.name_en;
+    NewData.capital = item.capital_en;
+    NewData.duration = item.duration_en;
+    NewData.leaving_days = item.leaving_days_en;
+    NewData.coming_back_days = item.coming_back_days_en;
+    NewData.included = item.included_en;
+    NewData.not_include = item.not_include_en;
+    NewData.daily_plans = item.daily_plans_en;
+    NewData.short_decription = item.short_decription_en;
+    NewData.short_decription = item.short_decription_en;
+    NewData.price1_desc = item.price1_desc_en;
+    NewData.price2_desc = item.price2_desc_en;
+    NewData.price3_desc = item.price3_desc_en;
+  }
+
+  const PathPayme = (e) => {
+    e.preventDefault();
+    const axios = require("axios");
+    const data = JSON.stringify({
+      amount: item.price1,
+      customer_full_name: `${name} ${surName}`,
+      customer_passport: "AA1112233",
+      customer_phone_number: phone,
+      place: item.id,
+    });
+
+    const config = {
+      method: "post",
+      url: "https://ossontravel.pythonanywhere.com/api/order/new/",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+
+    const paymentCheckoutUrl = `https://ossontravel.pythonanywhere.com/api/payment/click-url/`;
+    function getCheckoutUrl(data) {
+      axios
+        .post(paymentCheckoutUrl, data)
+        .then((response) => window.location.assign(response.data.click_url));
+    }
+
+    axios(config).then(
+      (response) => {
+        if (response.status === 201) {
+          const data = {
+            order_id: response.data.id,
+            return_url: `https://ossontravel.uz/detailed/${item.id}`,
+          };
+          getCheckoutUrl(data);
+        }
+        console.log(JSON.stringify(response.data));
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  };
+
   return (
     <>
       <div className="super_container">
@@ -67,7 +184,9 @@ const Detailed = () => {
           >
             <div className="detailed_content-header">
               <div className="detailed_title-birnchi">
-                <h1>BAAda All inslusive</h1>
+                <h1>
+                  {NewData.name}, {NewData.capital}
+                </h1>
                 <h3>
                   BAAga sayohatlar 2021-2022 | BAAda dam olish kunlari | AOE
                   mehmonxonalari
@@ -105,7 +224,7 @@ const Detailed = () => {
                             </div>
                             <div className="mx-4">
                               <div className="tours-tabs__info__item__title">
-                                8 kun 7 kecha
+                                {NewData.duration}
                               </div>
                               <div className="tours-tabs__info__item__description">
                                 Kunlar soni
@@ -160,13 +279,17 @@ const Detailed = () => {
                               <td style={{ width: "184px" }}>
                                 <strong>JO‘NAB KETISH</strong>
                               </td>
-                              <td style={{ width: "660px" }}>Seshanba, Juma</td>
+                              <td style={{ width: "660px" }}>
+                                {NewData.leaving_days}
+                              </td>
                             </tr>
                             <tr>
                               <td style={{ width: "184px" }}>
                                 <strong>QAYTIB KELISH</strong>
                               </td>
-                              <td style={{ width: "660px" }}>Seshanba, Juma</td>
+                              <td style={{ width: "660px" }}>
+                                {NewData.coming_back_days}
+                              </td>
                             </tr>{" "}
                             <tr>
                               <td style={{ width: "184px" }}>
@@ -189,10 +312,15 @@ const Detailed = () => {
                           <strong>&nbsp;</strong>
                         </p>
                         <p>
-                          <strong>Sayohat narxiga kiritilgan:</strong>
+                          <strong>NARXGA KIRITILGAN:</strong>
                         </p>
-                        <ul className="included-ul-content">
-                          <li>
+                        <div
+                          className="included-ul-content"
+                          dangerouslySetInnerHTML={{
+                            __html: NewData.included,
+                          }}
+                        >
+                          {/* <li>
                             <img src={travel} alt="" />{" "}
                             aeroport-mehmonxona-aeroport guruh bo‘lib transferi
                           </li>
@@ -203,14 +331,19 @@ const Detailed = () => {
                           <li>
                             <img src={travel} alt="" /> guruh bo‘lib piyoda
                             sayohat
-                          </li>
-                        </ul>
+                          </li> */}
+                        </div>
                         <p>&nbsp;</p>
                         <h5>
                           <strong>Sayohat narxiga kiritilmagan:</strong>
                         </h5>
-                        <ul className="extra">
-                          <li>
+                        <ul
+                          className="extra"
+                          dangerouslySetInnerHTML={{
+                            __html: NewData.not_include,
+                          }}
+                        >
+                          {/* <li>
                             <img src={travel} alt="" />
                             Aviaparvoz (Kattalar{" "}
                             <strong>4.770.000 so‘mdan boshlab</strong>; Bolalar{" "}
@@ -231,7 +364,7 @@ const Detailed = () => {
                           <li>
                             <img src={travel} alt="" />
                             Shaxsiy xarajatlar
-                          </li>
+                          </li> */}
                         </ul>
                         <p>
                           <strong>
@@ -271,8 +404,13 @@ const Detailed = () => {
                             </div>
                             <div className="timeline__item__content padding-left">
                               <h3 className="timeline__item__title">1-kun</h3>
-                              <div className="timeline__item__description">
-                                <p>
+                              <div
+                                className="timeline__item__description"
+                                dangerouslySetInnerHTML={{
+                                  __html: NewData.daily_plans,
+                                }}
+                              >
+                                {/* <p>
                                   Istanbulga uchib kelish. Aeroportdan
                                   mehmonxonaga transfer.
                                 </p>
@@ -290,7 +428,7 @@ const Detailed = () => {
                                   Tungi Bosfor bo‘ylab kema sayohati (shou
                                   dastur, kechki ovqat, spirtli/spirtsiz
                                   ichimliklar, mehmonxonadan/ga transfer)
-                                </p>
+                                </p> */}
                               </div>
                             </div>
                           </div>{" "}
@@ -366,69 +504,70 @@ const Detailed = () => {
                     </div>
                   </TabPanel>
                   <TabPanel>
-                    <div className="tours-tabs__content padding-all">
-                      <p>
-                        <strong>ISTANBUL</strong> – sirli va muhtasham,
-                        sershovqin va ertaknamo go‘zal Istanbul – bu Yevropa va
-                        Osiyo, an’anaviy Sharq va zamonaviy G‘arb o‘rtasidagi
-                        ko‘prik. O‘zining boy tarixi davomida u nomini bir necha
-                        marta o‘zgartirishga va Rim, Vizantiya, Usmonlilar va
-                        Lotin imperiyalarining poytaxti bo‘lishga ulgurdi.
-                      </p>
-                      <p>
-                        <img
-                          src={Istanbul}
-                          alt=""
-                          className="size-full wp-image-2463 aligncenter"
-                          width="800"
-                          height="450"
-                        />
-                      </p>
-                      <p>
-                        <strong>KAPPADOKIYA</strong> – siz geografik xaritadan
-                        topa olmaydigan sirli joy. Antik davrga borib taqaluvchi
-                        nom va ushbu provinsiyani o‘rab olgan sir-u sinoat
-                        tarixning ajralmas qismi hisoblanadi. Million yillar
-                        avval vulqondan chiqqan lava va tabiiy jarayonlar
-                        tufayli bu yerda noyob, o‘zga sayyoranikiga o‘xshash,
-                        minglab tosh qo‘ziqorinlar va turli xil rang hamda
-                        o‘lchamdagi haykallardan iborat manzara yuzaga keldi.
-                        Mahalliy aholi orasida keng tarqalgan rivoyatga ko‘ra,
-                        bu yerda farishtalar yashaydi, deb hisoblanadi.
-                        Kappadokiyadagi har bir yil – bu osmon ostidagi noyob,
-                        o‘ziga xos muzey.
-                      </p>
-                      <p>
-                        <img
-                          src={kappadokiya}
-                          alt=""
-                          className="size-full wp-image-2791 aligncenter"
-                        />
-                      </p>
-                      <p>
-                        Kappadokiyaga borganda beixtiyor boshqa sayyoraga tushib
-                        qolgandek fikr uyg‘onadi – ko‘z o‘ngingizda namoyon
-                        bo‘luvchi landshaftlar shu qadar betakror va hech
-                        narsaga o‘xshamaydi. Bu yerda uchini qor qoplagan
-                        vulqonlar, baland bo‘lmagan, alohida turgan tog‘lar,
-                        qoya massivlari va farovon vodiylar bor.
-                      </p>
-                    </div>
+                    {isReady ? (
+                      <div className="tours-tabs__content padding-all">
+                        {/* {item.map((data, i) => (
+                          <AboutPlace item={data} challage={challage} key={i} />
+                        ))} */}
+                        <div>
+                          <p>
+                            <strong>ISTANBUL</strong> – sirli va muhtasham,
+                            sershovqin va ertaknamo go‘zal Istanbul – bu Yevropa
+                            va Osiyo, an’anaviy Sharq va zamonaviy G‘arb
+                            o‘rtasidagi ko‘prik. O‘zining boy tarixi davomida u
+                            nomini bir necha marta o‘zgartirishga va Rim,
+                            Vizantiya, Usmonlilar va Lotin imperiyalarining
+                            poytaxti bo‘lishga ulgurdi.
+                          </p>
+                          <p>
+                            <img
+                              src={Istanbul}
+                              alt=""
+                              className="size-full wp-image-2463 aligncenter"
+                              width="800"
+                              height="450"
+                            />
+                          </p>
+                        </div>
+                        <p>
+                          <strong>KAPPADOKIYA</strong> – siz geografik xaritadan
+                          topa olmaydigan sirli joy. Antik davrga borib
+                          taqaluvchi nom va ushbu provinsiyani o‘rab olgan sir-u
+                          sinoat tarixning ajralmas qismi hisoblanadi. Million
+                          yillar avval vulqondan chiqqan lava va tabiiy
+                          jarayonlar tufayli bu yerda noyob, o‘zga sayyoranikiga
+                          o‘xshash, minglab tosh qo‘ziqorinlar va turli xil rang
+                          hamda o‘lchamdagi haykallardan iborat manzara yuzaga
+                          keldi. Mahalliy aholi orasida keng tarqalgan rivoyatga
+                          ko‘ra, bu yerda farishtalar yashaydi, deb hisoblanadi.
+                          Kappadokiyadagi har bir yil – bu osmon ostidagi noyob,
+                          o‘ziga xos muzey.
+                        </p>
+                        <p>
+                          <img
+                            src={kappadokiya}
+                            alt=""
+                            className="size-full wp-image-2791 aligncenter"
+                          />
+                        </p>
+                        <p>
+                          Kappadokiyaga borganda beixtiyor boshqa sayyoraga
+                          tushib qolgandek fikr uyg‘onadi – ko‘z o‘ngingizda
+                          namoyon bo‘luvchi landshaftlar shu qadar betakror va
+                          hech narsaga o‘xshamaydi. Bu yerda uchini qor qoplagan
+                          vulqonlar, baland bo‘lmagan, alohida turgan tog‘lar,
+                          qoya massivlari va farovon vodiylar bor.
+                        </p>
+                      </div>
+                    ) : (
+                      ""
+                    )}
                   </TabPanel>
                   <TabPanel>
                     <div className="tours-tabs__content padding-all">
-                      <p>
-                        1 KISHI UCHUN NARX (2 KISHILIK GURUH): 17 000 000
-                        so‘mdan boshlab
-                      </p>
-                      <p>
-                        1 KISHI UCHUN NARX (4 KISHILIK GURUH): 8 500 000 so‘mdan
-                        boshlab
-                      </p>
-                      <p>
-                        1 KISHI UCHUN NARX (6 KISHILIK GURUH): 6 500 000 so‘mdan
-                        boshlab
-                      </p>
+                      <p>{NewData.price1_desc}</p>
+                      <p>{NewData.price2_desc}</p>
+                      <p>{NewData.price3_desc}</p>
                     </div>
                   </TabPanel>
                   <TabPanel>
@@ -506,7 +645,7 @@ const Detailed = () => {
                     <div className="price-decoration block-after-indent mt-3">
                       <div className="price-description-content text-center">
                         <span className="woocommerce-Price-amount amount">
-                          1 687 000 so'mdan
+                          {item.price1} so'mdan
                         </span>
                       </div>
                       <div className="price-decoration__label">
@@ -529,7 +668,7 @@ const Detailed = () => {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <div className="modal-contain p-1">
+          <form className="modal-contain p-1" onSubmit={(e) => PathPayme(e)}>
             <div className="form-contact__fields-short">
               <div className="d-flex">
                 <h6 className="text-center">HOZIROQ BUYURTMA BERING !</h6>{" "}
@@ -543,6 +682,8 @@ const Detailed = () => {
                     type="text"
                     className="modal-form-input"
                     placeholder="Ism"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </span>
               </div>{" "}
@@ -552,6 +693,8 @@ const Detailed = () => {
                     type="text"
                     className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-validation-item"
                     placeholder="Familya"
+                    value={surName}
+                    onChange={(e) => setSurName(e.target.value)}
                   />
                 </span>
               </div>
@@ -560,19 +703,19 @@ const Detailed = () => {
               <div className="wpcf7-form-control-wrap your-mail">
                 <input
                   type="email"
-                  className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
                   placeholder="Sizning Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>{" "}
             <div className="form-contact__fields-short">
               <div className="wpcf7-form-control-wrap your-mail">
-                <input
-                  type="number"
-                  className="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-validation-item"
+                <InputMask
+                  mask={"+\\9\\9\\8\\ 99 999 99 99"}
                   placeholder="Telefon raqami"
-                  // data-role="input, input-mask"
-                  data-mask-pattern="+380 (__) ___-____"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                 />
               </div>
             </div>
@@ -586,7 +729,7 @@ const Detailed = () => {
                 />
               </span>
             </p>
-          </div>
+          </form>
         </Modal>
       </div>
       <Footer />

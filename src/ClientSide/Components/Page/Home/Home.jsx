@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import home_slider from "../../../assets/Images/home_slider.jpg";
@@ -7,9 +7,6 @@ import intro_2 from "../../../assets/Images/intro_2.jpg";
 import intro_3 from "../../../assets/Images/intro_3.jpg";
 import cta from "../../../assets/Images/cta.jpg";
 import offer_1 from "../../../assets/Images/offer_1.jpg";
-import offer_2 from "../../../assets/Images/offer_2.jpg";
-import offer_3 from "../../../assets/Images/offer_3.jpg";
-import offer_4 from "../../../assets/Images/offer_4.jpg";
 import post from "../../../assets/Images/post.png";
 import compass from "../../../assets/Images/compass.png";
 import bicycle from "../../../assets/Images/bicycle.png";
@@ -23,15 +20,28 @@ import trend_6 from "../../../assets/Images/trend_6.png";
 import trend_7 from "../../../assets/Images/trend_7.png";
 import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
-import contact from "../../../assets/Images/contact.png";
 import Footer from "../../Footer/Footer";
 import { useSelector } from "react-redux";
+import axios from "axios";
+import offer_2 from "../../../assets/Images/offer_2.jpg";
+import offer_3 from "../../../assets/Images/offer_3.jpg";
+import offer_4 from "../../../assets/Images/offer_4.jpg";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const { t } = useTranslation();
+  const [place, setPlaces] = useState([]);
   const { challageData } = useSelector((state) => state?.users_reducer);
-  console.log(challageData);
+  useEffect(() => {
+    axios
+      .get(`https://ossontravel.pythonanywhere.com/api/places/shuffle?count=3`)
+      .then((res) => {
+        setPlaces(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div className="super-container">
       <div className="home">
@@ -54,8 +64,7 @@ const Home = () => {
                   <div className="button home_slider_button">
                     <div className="button_bcg"></div>
                     <Link to="/">
-                      {t("in detail")}
-                      <span></span>
+                      {t("in_detail")}
                       <span></span>
                       <span></span>
                     </Link>
@@ -163,110 +172,48 @@ const Home = () => {
           <div className="row">
             <div className="col-lg-10 offset-lg-1">
               <div className="intro_text text-center">
-                <p>{t("visiting friends")} </p>
+                <p>{t("visiting friends")}</p>
               </div>
             </div>
           </div>
+
           <div className="row intro_items">
-            <div className="col-lg-4 intro_col">
-              <div className="intro_item">
-                <div className="intro_item_overlay"></div>
-                <div
-                  className="intro_item_background"
-                  style={{ backgroundImage: `url(${intro_1})` }}
-                ></div>
-                <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div className="intro_date">Iyun 5 - Iyun 15</div>
-                  <div className="button intro_button">
-                    <div className="button_bcg"></div>
-                    <Link to="/detailed">
-                      {t("in detail")}
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </Link>
-                  </div>
-                  <div className="intro_center text-center">
-                    <h1>Turkiya</h1>
-                    <div className="intro_price">Narxi $1150</div>
-                    <div className="rating rating_4">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
+            {place.map((item, i) => (
+              <div className="col-lg-4 intro_col">
+                <div className="intro_item">
+                  <div className="intro_item_overlay"></div>
+                  <div
+                    className="intro_item_background"
+                    style={{ backgroundImage: `url(${intro_1})` }}
+                  ></div>
+                  <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
+                    <div className="intro_date">Iyun 5 - Iyun 15</div>
+                    <div className="button intro_button">
+                      <div className="button_bcg"></div>
+                      <Link to={`/detailed/${item.id}`}>
+                        {t("in_detail")}
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </Link>
+                    </div>
+                    <div className="intro_center text-center">
+                      <h1>{item.name}</h1>
+                      <div className="intro_price">
+                        {t("cost")} ${item.price1}
+                      </div>
+                      <div className="rating rating_4">
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                        <i className="fa fa-star"></i>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="col-lg-4 intro_col">
-              <div className="intro_item">
-                <div className="intro_item_overlay"></div>
-                <div
-                  className="intro_item_background"
-                  style={{ backgroundImage: `url(${intro_2})` }}
-                ></div>
-                <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div className="intro_date">Iyun 25 - Iyul 5</div>
-                  <div className="button intro_button">
-                    <div className="button_bcg"></div>
-                    <Link to="/detailed">
-                      {t("in detail")}
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </Link>
-                  </div>
-                  <div className="intro_center text-center">
-                    <h1>Gretsiya</h1>
-                    <div className="intro_price">Narxi $1050</div>
-                    <div className="rating rating_4">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 intro_col">
-              <div className="intro_item">
-                <div className="intro_item_overlay"></div>
-
-                <div
-                  className="intro_item_background"
-                  style={{ backgroundImage: `url(${intro_3})` }}
-                ></div>
-                <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                  <div className="intro_date">Avgust 7- Avgust 17</div>
-                  <div className="button intro_button">
-                    <div className="button_bcg"></div>
-                    <Link to="/detailed">
-                      {t("in detail")}
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </Link>
-                  </div>
-                  <div className="intro_center text-center">
-                    <h1>Dubay</h1>
-                    <div className="intro_price">Narxi $1450</div>
-                    <div className="rating rating_4">
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                      <i className="fa fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -295,7 +242,7 @@ const Home = () => {
                     <div className="button cta_button">
                       <div className="button_bcg"></div>
                       <Link to="/">
-                        {t("in detail")}
+                        {t("in_detail")}
                         <span></span>
                         <span></span>
                         <span></span>
@@ -381,325 +328,61 @@ const Home = () => {
             </div>
           </div>
           <div className="row offers_items">
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_1})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/">Istanbul,Turkiya</Link>
+            {place.map((item, i) => (
+              <div className="col-lg-6 offers_col" key={i}>
+                <div className="offers_item">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="offers_image_container">
+                        <div
+                          className="offers_image_background"
+                          style={{ backgroundImage: `url(${offer_1})` }}
+                        ></div>
+                        <div className="offer_name">
+                          <Link to="/">
+                            {item.name}, {item.capital}
+                          </Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        1700$<span>10-kunga</span>
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Istanbulda amalga oshiriladigan eng mashhur tadbirlardan
-                        ba'zilari ajoyib Ayasofyani ziyorat qilish, Katta bozor
-                        va ziravorlar bozorida xarid qilish, Istanbuldagi Moviy
-                        masjidga borish va Galata minorasidan bahramand
-                        bo'lishdir. Galata minorasi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_2})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/">Venetsiya,Italiya </Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        1500$<span>8-kunga</span>
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Venetsiya, shubhasiz, dunyodagi eng o'ziga xos shaharlar
-                        qatorida. Albatta, u Evropada kashf qilinadigan eng
-                        yaxshi shaharlar qatoriga kiradi! Venetsiya
-                        topografiyasi boshqa hech kimga o'xshamaydi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
+                    <div className="col-lg-6">
+                      <div className="offers_content">
+                        <div className="offers_price">
+                          ${item.price1}
+                          <span>10-kunga</span>
+                        </div>
+                        <div className="rating_r rating_r_4 offers_rating">
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                          <i></i>
+                        </div>
+                        <p className="offers_text">
+                          {item.short_decription_uz}
+                        </p>
+                        <div className="offers_icons">
+                          <ul className="offers_icons_list">
+                            <li className="offers_icons_item">
+                              <img src={post} alt="" />
+                            </li>
+                            <li className="offers_icons_item">
+                              <img src={compass} alt="" />
+                            </li>
+                            <li className="offers_icons_item">
+                              <img src={bicycle} alt="" />
+                            </li>
+                            <li className="offers_icons_item">
+                              <img src={sailboat} alt="" />
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_3})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/"> Vena, Avstriya</Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        1930$<span>10-kunga</span>
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Dunyoga mashhur opera teatridan tortib, Xofburg
-                        saroyigacha, Vena kafelari sahnasining yorqinligi va
-                        ulug'vorligigacha, Vena qayerda bo'lmasin kuch, boylik
-                        va go'zallik ramzi hisoblanadi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_4})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/">Parij,Fransiya</Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        1450$<span>11-kunga</span>
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Dunyodagi eng ko'p tashrif buyuriladigan shaharlar
-                        ro'yxatida Parij butun dunyo bo'ylab Evropaning ko'plab
-                        chelaklar ro'yxatini, shuningdek, sayohatlar ro'yxatini
-                        birinchi o'rinda turadi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_4})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/">Dubai, BAA</Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        2140$<span>7-kunga</span>.
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Birlashgan Arab Amirliklarining eng yirik shahri, shu
-                        nomdagi amirlikning ma’muriy markazi. Fors ko‘rfazi
-                        qirg‘og‘ida joylashgan va dunyodagi eng issiq
-                        shaharlardan biri hisoblanadi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>{" "}
-            <div className="col-lg-6 offers_col">
-              <div className="offers_item">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="offers_image_container">
-                      <div
-                        className="offers_image_background"
-                        style={{ backgroundImage: `url(${offer_4})` }}
-                      ></div>
-                      <div className="offer_name">
-                        <Link to="/">Singapur</Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div className="offers_content">
-                      <div className="offers_price">
-                        2030$<span>10-kunga</span>
-                      </div>
-                      <div className="rating_r rating_r_4 offers_rating">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                      </div>
-                      <p className="offers_text">
-                        Ushbu shaharda-Futuristik binolar, top-toza ko‘chalar,
-                        noyob transport tizimi, har jabhada yuqori
-                        texnologiyalar – Singapur boshqa Osiyo megapolislariga
-                        mutlaqo o‘xshamaydi.
-                      </p>
-                      <div className="offers_icons">
-                        <ul className="offers_icons_list">
-                          <li className="offers_icons_item">
-                            <img src={post} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={compass} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={bicycle} alt="" />
-                          </li>
-                          <li className="offers_icons_item">
-                            <img src={sailboat} alt="" />
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -721,7 +404,7 @@ const Home = () => {
                   <div className="trending_title">
                     <Link to="/">{t("the legend of georgia")}</Link>
                   </div>
-                  <div className="trending_price">Narxi 650$</div>
+                  <div className="trending_price">{t("cost")} 650$</div>
                   <div className="trending_location">Gruzin,Tbilis</div>
                 </div>
               </div>
@@ -736,7 +419,7 @@ const Home = () => {
                   <div className="trending_title">
                     <Link to="/">{t("red sea")}</Link>
                   </div>
-                  <div className="trending_price">Narxi 1040$</div>
+                  <div className="trending_price">{t("cost")} 1040$</div>
                   <div className="trending_location"> Misr,Texron</div>
                 </div>
               </div>
@@ -749,9 +432,9 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">{t("hospitable azerbaijan")}</Link>
+                    <Link to="/">{t("hospitable azerbaijan")} </Link>
                   </div>
-                  <div className="trending_price">Narxi 1000$</div>
+                  <div className="trending_price">{t("cost")} 1000$</div>
                   <div className="trending_location">Ozarbayjon,Boku</div>
                 </div>
               </div>
@@ -766,7 +449,7 @@ const Home = () => {
                   <div className="trending_title">
                     <Link to="/">{t("ancient russia")}</Link>
                   </div>
-                  <div className="trending_price">Narxi 1200$</div>
+                  <div className="trending_price">{t("cost")} 1200$</div>
                   <div className="trending_location">Rossiya,Moskva</div>
                 </div>
               </div>
@@ -779,9 +462,9 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">{t("")}</Link>
+                    <Link to="/">{t("Czech mountain resort")} </Link>
                   </div>
-                  <div className="trending_price">Narxi 1300$</div>
+                  <div className="trending_price">{t("cost")} 1300$</div>
                   <div className="trending_location">CHexiya, Praga</div>
                 </div>
               </div>
@@ -794,9 +477,9 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Shveysariya tog'lari</Link>
+                    <Link to="/">{t("swiss mountains")} </Link>
                   </div>
-                  <div className="trending_price">Narxi 2010$</div>
+                  <div className="trending_price">{t("cost")} 2010$</div>
                   <div className="trending_location">Shveysariya, Bern</div>
                 </div>
               </div>
@@ -809,9 +492,9 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Buyuk Xitoy</Link>
+                    <Link to="/">{t("great china")}</Link>
                   </div>
-                  <div className="trending_price">Narxi 1300$</div>
+                  <div className="trending_price">{t("cost")} 1300$</div>
                   <div className="trending_location">Xitoy,Pekin</div>
                 </div>
               </div>
@@ -827,9 +510,9 @@ const Home = () => {
                 </div>
                 <div className="trending_content">
                   <div className="trending_title">
-                    <Link to="/">Niderlandiya</Link>
+                    <Link to="/">{t("netherlands")} </Link>
                   </div>
-                  <div className="trending_price">Narxi 1300$</div>
+                  <div className="trending_price">{t("cost")} 1300$</div>
                   <div className="trending_location">
                     Niderlandiya,Amsterdam
                   </div>

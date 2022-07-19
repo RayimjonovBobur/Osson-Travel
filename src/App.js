@@ -3,25 +3,25 @@ import "./App.css";
 import Header from "./ClientSide/Components/Header/Header";
 import { Main } from "./ClientSide/Components/Page/Main";
 import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
+import { initReactI18next, useTranslation } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import { useDispatch } from "react-redux";
 import { setChallage } from "./Redux/stored_reducer";
 
 i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
+  .use(initReactI18next)
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    supportedLngs: ["uz", "en", "ru"],
+    supportedLngs: ["uz", "ru", "en"],
     fallbackLng: "",
     detection: {
       order: ["path", "cookie", "localStorage", "htmlTag"],
       caches: ["cookie"],
     },
     backend: {
-      loadPath: `/assets/locales/{{lng}}/translation.json`,
+      loadPath: `/locales/{{lng}}/translation.json`,
     },
     react: { useSuspense: false },
   });
@@ -29,7 +29,7 @@ i18n
 function App() {
   const dispatch = useDispatch();
   const challage = i18n.language;
-
+  const { t } = useTranslation();
   dispatch(setChallage(challage));
 
   return (

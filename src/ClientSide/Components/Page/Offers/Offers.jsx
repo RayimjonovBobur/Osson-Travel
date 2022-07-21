@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import offer_1 from "../../../assets/Images/offer_1.jpg";
 import offer_5 from "../../../assets/Images/offer_5.jpg";
@@ -9,8 +9,37 @@ import about_background from "../../../assets/Images/about_background.jpg";
 import Footer from "../../Footer/Footer";
 import Search from "../../Search/Search";
 import "./Offers.css";
+import i18n from "i18next";
+import axios from "axios";
+import Cards from "./Cards";
 
 const Offers = () => {
+  const [item, setItems] = useState([]);
+  const challage = i18n.language;
+  const NewData = {};
+
+  useEffect(() => {
+    axios
+      .get(`https://ossontravel.pythonanywhere.com/api/places/shuffle?count=3`)
+      .then((res) => {
+        setItems(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  if (challage === "uz") {
+    NewData.name = item.name_uz;
+    NewData.capital = item.capital_uz;
+  } else if (challage === "ru") {
+    NewData.name = item.name_ru;
+    NewData.capital = item.capital_ru;
+  } else if (challage === "en") {
+    NewData.name = item.name_en;
+    NewData.capital = item.capital_en;
+  }
+
   return (
     <div className="super_container">
       <div className="offers-con">
@@ -35,375 +64,9 @@ const Offers = () => {
 
             <div className="col-lg-12">
               <div className="offers_grid">
-                <div className="offers_item rating_4">
-                  <div className="row">
-                    <div className="col-lg-1 temp_col"></div>
-                    <div className="col-lg-3 col-1680-4">
-                      <div className="offers_image_container">
-                        <div
-                          className="offers_image_background"
-                          style={{ backgroundImage: `url(${offer_1})` }}
-                        ></div>
-                        <div className="offer_name">
-                          <a href="single_listing.html">Turkiya ,Istambul</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-8">
-                      <div className="offers_content">
-                        <div className="offers_price">
-                          1200$<span>10-kunga</span>
-                        </div>
-                        <div
-                          className="rating_r rating_r_4 offers_rating"
-                          data-rating="4"
-                        >
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                        </div>
-                        <p className="offers_text info">
-                          Istanbulda amalga oshiriladigan eng mashhur
-                          tadbirlardan ba'zilari ajoyib Ayasofyani ziyorat
-                          qilish, Katta bozor va ziravorlar bozorida xarid
-                          qilish, Istanbuldagi Moviy masjidga borish va Galata
-                          minorasidan bahramand bo'lishdir. Galata minorasi.
-                        </p>
-                        <div className="offers_icons">
-                          <ul className="offers_icons_list">
-                            <li className="offers_icons_item">
-                              <img src="images/post.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/compass.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/bicycle.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/sailboat.png" alt="" />
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="button book_button">
-                          <a href="/">
-                            Ba'tafsil<span></span>
-                            <span></span>
-                            <span></span>
-                          </a>
-                        </div>
-                        <div className="offer_reviews">
-                          <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">kun</div>
-                            <div className="offer_reviews_subtitle">
-                              davomida
-                            </div>
-                          </div>
-                          <div className="offer_reviews_rating text-center">
-                            10
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="offers_item rating_3">
-                  <div className="row">
-                    <div className="col-lg-1 temp_col"></div>
-                    <div className="col-lg-3 col-1680-4">
-                      <div className="offers_image_container">
-                        <div
-                          className="offers_image_background"
-                          style={{ backgroundImage: `url(${offer_5})` }}
-                        ></div>
-                        <div className="offer_name">
-                          <a href="single_listing.html">Venetsiya,italiya</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-8">
-                      <div className="offers_content">
-                        <div className="offers_price">
-                          2700$<span>7-kunga</span>
-                        </div>
-                        <div
-                          className="rating_r rating_r_3 offers_rating"
-                          data-rating="3"
-                        >
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                        </div>
-                        <p className="offers_text info">
-                          Venetsiya, shubhasiz, dunyodagi eng o'ziga xos
-                          shaharlar qatorida. Albatta, u Evropada kashf
-                          qilinadigan eng yaxshi shaharlar qatoriga kiradi!
-                          Venetsiya topografiyasi boshqa hech kimga o'xshamaydi.
-                        </p>
-                        <div className="offers_icons">
-                          <ul className="offers_icons_list">
-                            <li className="offers_icons_item">
-                              <img src="images/post.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/compass.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/bicycle.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/sailboat.png" alt="" />
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="button book_button">
-                          <Link to="/">
-                            Ba'tafsil<span></span>
-                            <span></span>
-                            <span></span>
-                          </Link>
-                        </div>
-                        <div className="offer_reviews">
-                          <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">kun</div>
-                            <div className="offer_reviews_subtitle">
-                              davomida
-                            </div>
-                          </div>
-                          <div className="offer_reviews_rating text-center">
-                            7
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="offers_item rating_5">
-                  <div className="row">
-                    <div className="col-lg-1 temp_col"></div>
-                    <div className="col-lg-3 col-1680-4">
-                      <div className="offers_image_container">
-                        <div
-                          className="offers_image_background"
-                          style={{ backgroundImage: `url(${offer_6})` }}
-                        ></div>
-                        <div className="offer_name">
-                          <a href="single_listing.html">Madrid,Ispaniya</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-8">
-                      <div className="offers_content">
-                        <div className="offers_price">
-                          1300$<span>7-kunga</span>
-                        </div>
-                        <div
-                          className="rating_r rating_r_5 offers_rating"
-                          data-rating="5"
-                        >
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                        </div>
-                        <p className="offers_text info">
-                          Dunyoga mashhur opera teatridan tortib, Xofburg
-                          saroyigacha, Vena kafelari sahnasining yorqinligi va
-                          ulug'vorligigacha, Vena qayerda bo'lmasin kuch, boylik
-                          va go'zallik ramzi hisoblanadi.
-                        </p>
-                        <div className="offers_icons">
-                          <ul className="offers_icons_list">
-                            <li className="offers_icons_item">
-                              <img src="images/post.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/compass.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/bicycle.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/sailboat.png" alt="" />
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="button book_button">
-                          <Link to="/">
-                            Ba'tafsil<span></span>
-                            <span></span>
-                            <span></span>
-                          </Link>
-                        </div>
-                        <div className="offer_reviews">
-                          <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">kun</div>
-                            <div className="offer_reviews_subtitle">
-                              davomida
-                            </div>
-                          </div>
-                          <div className="offer_reviews_rating text-center">
-                            10
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="offers_item rating_4">
-                  <div className="row">
-                    <div className="col-lg-1 temp_col"></div>
-                    <div className="col-lg-3 col-1680-4">
-                      <div className="offers_image_container">
-                        <div
-                          className="offers_image_background"
-                          style={{ backgroundImage: `url(${offer_7})` }}
-                        ></div>
-                        <div className="offer_name">
-                          <a href="single_listing.html">Dubay,BAA</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-8">
-                      <div className="offers_content">
-                        <div className="offers_price">
-                          2700$<span>10-kunga</span>
-                        </div>
-                        <div
-                          className="rating_r rating_r_4 offers_rating"
-                          data-rating="4"
-                        >
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                        </div>
-                        <p className="offers_text info">
-                          Birlashgan Arab Amirliklarining eng yirik shahri, shu
-                          nomdagi amirlikning ma’muriy markazi. Fors ko‘rfazi
-                          qirg‘og‘ida joylashgan va dunyodagi eng issiq
-                          shaharlardan biri hisoblanadi.
-                        </p>
-                        <div className="offers_icons">
-                          <ul className="offers_icons_list">
-                            <li className="offers_icons_item">
-                              <img src="images/post.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/compass.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/bicycle.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/sailboat.png" alt="" />
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="button book_button">
-                          <Link to="/">
-                            Ba'tafsil<span></span>
-                            <span></span>
-                            <span></span>
-                          </Link>
-                        </div>
-                        <div className="offer_reviews">
-                          <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">kun</div>
-                            <div className="offer_reviews_subtitle">
-                              davonida
-                            </div>
-                          </div>
-                          <div className="offer_reviews_rating text-center">
-                            10
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="offers_item rating_3">
-                  <div className="row">
-                    <div className="col-lg-1 temp_col"></div>
-                    <div className="col-lg-3 col-1680-4">
-                      <div className="offers_image_container">
-                        <div
-                          className="offers_image_background"
-                          style={{ backgroundImage: `url(${offer_8})` }}
-                        ></div>
-                        <div className="offer_name">
-                          <a href="single_listing.html">Vena,Avstriya</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-lg-8">
-                      <div className="offers_content">
-                        <div className="offers_price">
-                          1600$<span>8-kunga</span>
-                        </div>
-                        <div
-                          className="rating_r rating_r_3 offers_rating"
-                          data-rating="3"
-                        >
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                        </div>
-                        <p className="offers_text info">
-                          Dunyoga mashhur opera teatridan tortib, Xofburg
-                          saroyigacha, Vena kafelari sahnasining yorqinligi va
-                          ulug'vorligigacha, Vena qayerda bo'lmasin kuch, boylik
-                          va go'zallik ramzi hisoblanadi.
-                        </p>
-                        <div className="offers_icons">
-                          <ul className="offers_icons_list">
-                            <li className="offers_icons_item">
-                              <img src="images/post.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/compass.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/bicycle.png" alt="" />
-                            </li>
-                            <li className="offers_icons_item">
-                              <img src="images/sailboat.png" alt="" />
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="button book_button">
-                          <Link to="/">
-                            Ba'tafsil<span></span>
-                            <span></span>
-                            <span></span>
-                          </Link>
-                        </div>
-                        <div className="offer_reviews">
-                          <div className="offer_reviews_content">
-                            <div className="offer_reviews_title">kun</div>
-                            <div className="offer_reviews_subtitle">
-                              davomida
-                            </div>
-                          </div>
-                          <div className="offer_reviews_rating text-center">
-                            8
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {item.map((data) => (
+                  <Cards data={data} />
+                ))}
               </div>
             </div>
           </div>

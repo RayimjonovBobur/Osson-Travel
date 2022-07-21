@@ -1,55 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
 
-/******************************
-
-[Table of Contents]
-
-1. Fonts
-2. Body and some general stuff
-3. Header
-	3.1 Top Bar
-	3.2 Logo
-	3.3 Main Nav
-	3.4 Menu
-4. Home
-	4.1 Home Slider
-	4.2 Home Slider Nav
-	4.3 Home Slider Dots
-5. Search
-6. Section Title
-7. Intro
-8. CTA
-	8.1 CTA Slider
-9. Offers
-10. Testimonials
-	10.1 Testimonials Slider
-11. Trending
-12. Contact
-13. Footer
-	13.1 Footer - About
-	13.2 Footer - Blog
-	13.3 Footer - Tags
-	13.4 Footer - Contact Info
-14. Copyright
-
-
-******************************/
-
-/***********
-1. Fonts
-***********/
-/* 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
-@font-face {
-  font-family: "Beyond";
-  src: url("../fonts/beyond_the_mountains.otf") format("truetype"),
-    url("../fonts/beyond_the_mountains.ttf") format("opentype");
-} */
-
-/*********************************
-2. Body and some general stuff
-*********************************/
 
 * {
   margin: 0;
@@ -278,9 +228,7 @@ section {
   margin-right: 0px;
 }
 
-/*********************************
-3. Header
-*********************************/
+
 
 .header {
   position: fixed;
@@ -291,10 +239,6 @@ section {
 .header.scrolled {
   background: rgba(54, 19, 84, 0.85);
 }
-
-/*********************************
-3.1 Top Bar
-*********************************/
 
 .top_bar {
   width: 100%;
@@ -388,9 +332,6 @@ section {
   height: 100px;
 }
 
-/*********************************
-3.2 Logo
-*********************************/
 
 .logo_container {
   -webkit-transform: translateY(-6px);
@@ -423,10 +364,6 @@ section {
   -o-transform: translateY(2px);
   transform: translateY(2px);
 }
-
-/*********************************
-3.3 Main Nav
-*********************************/
 
 .main_nav_container {
   margin-right: 221px;
@@ -528,9 +465,6 @@ section {
   transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-/*********************************
-3.4 Menu
-*********************************/
 
 .hamburger {
   display: none;
@@ -659,18 +593,12 @@ section {
   background: #fa9e1c;
 }
 
-/*********************************
-4. Home
-*********************************/
 
 .home {
   width: 100%;
   height: 100vh;
 }
 
-/*********************************
-4.1 Home Slider
-*********************************/
 
 .home_slider_container {
   position: absolute;
@@ -733,9 +661,6 @@ section {
   animation-delay: 600ms;
 }
 
-/*********************************
-4.2 Home Slider Nav
-*********************************/
 
 .home_slider_nav {
   position: absolute;
@@ -762,10 +687,6 @@ section {
 .home_slider_next:hover .nav_path {
   fill: url(#home_grad_next);
 }
-
-/*********************************
-4.3 Home Slider Dots
-*********************************/
 
 .home_slider_dots {
   position: absolute;
@@ -818,9 +739,6 @@ section {
   border: solid 2px #ffffff;
 }
 
-/*********************************
-5. Search
-*********************************/
 
 .search {
   width: 100%;
@@ -899,7 +817,6 @@ section {
 .search_panel.active {
   display: flex !important;
 }
-/* Fade in tabs */
 @-webkit-keyframes fadeEffect {
   from {
     opacity: 0;
@@ -962,7 +879,6 @@ section {
   appearance: none;
   -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   -webkit-user-select: none;
-  /* background-image: url(../images/dropdown.png); */
   background-position: center right;
   background-repeat: no-repeat;
   border: solid 1px #ffffff;
@@ -1003,9 +919,7 @@ section {
   opacity: 0.8;
 }
 
-/*********************************
-6. Section Title
-*********************************/
+
 
 .section_title {
   font-size: 30px;
@@ -1015,9 +929,6 @@ section {
   text-transform: uppercase;
 }
 
-/*********************************
-7. Intro
-*********************************/
 
 .intro {
   width: 100%;
@@ -1170,9 +1081,7 @@ section {
   color: #ef910a;
 }
 
-/*********************************
-8. CTA
-*********************************/
+
 
 .cta {
   padding-top: 125px;
@@ -1191,9 +1100,6 @@ section {
   opacity: 0.27;
 }
 
-/*********************************
-8.1 CTA Slider
-*********************************/
 
 .cta_item {
   padding: 40px 50px;
@@ -1307,9 +1213,7 @@ section {
   fill: url(#cta_grad_next);
 }
 
-/*********************************
-9. Offers
-*********************************/
+
 
 .offers {
   width: 100%;
@@ -1414,9 +1318,6 @@ section {
   color: #fa9e1b;
 }
 
-/*********************************
-10. Testimonials
-*********************************/
 
 .testimonials {
   width: 100%;
@@ -1433,9 +1334,7 @@ section {
   background: linear-gradient(to right, #fa9e1b, #8d4fff);
 }
 
-/*********************************
-10.1 Testimonials Slider
-*********************************/
+
 
 .test_slider_container {
   width: 100%;
@@ -1544,9 +1443,7 @@ section {
   fill: url(#test_grad_next);
 }
 
-/*********************************
-11. Trending
-*********************************/
+
 
 .trending {
   width: 100%;
@@ -1601,9 +1498,7 @@ section {
   margin-top: 5px;
 }
 
-/*********************************
-12. Contact
-*********************************/
+
 
 .home_contact {
   width: 100%;
@@ -1723,9 +1618,6 @@ section {
   color: #ffffff !important;
 }
 
-/*********************************
-13. Footer
-*********************************/
 
 .footer {
   width: 100%;
@@ -1739,10 +1631,6 @@ section {
   color: #ffffff;
   text-transform: uppercase;
 }
-
-/*********************************
-13.1 Footer - About
-*********************************/
 
 .footer_about {
   padding-top: 67px;
@@ -1804,9 +1692,6 @@ section {
   color: #31124b;
 }
 
-/*********************************
-13.2 Footer - Blog
-*********************************/
 
 .footer_blog {
   margin-top: 39px;
@@ -1847,9 +1732,6 @@ section {
   margin-top: 7px;
 }
 
-/*********************************
-13.3 Footer - Tags
-*********************************/
 
 .footer_tags {
   margin-top: 40px;
@@ -1879,10 +1761,6 @@ section {
   padding-right: 25px;
 }
 
-/*********************************
-13.4 Footer - Contact Info
-*********************************/
-
 .contact_info_list {
   margin-top: 40px;
 }
@@ -1908,10 +1786,6 @@ section {
 .contact_info_item:hover .contact_info_text a {
   color: #fa9e1b;
 }
-
-/*********************************
-14. Copyright
-*********************************/
 
 .copyright {
   background: #1f0733;

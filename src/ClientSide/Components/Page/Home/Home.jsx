@@ -22,10 +22,8 @@ import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
 import Footer from "../../Footer/Footer";
 import { useSelector } from "react-redux";
-import axios from "axios";
-import offer_2 from "../../../assets/Images/offer_2.jpg";
-import offer_3 from "../../../assets/Images/offer_3.jpg";
-import offer_4 from "../../../assets/Images/offer_4.jpg";
+import axios from "axios"
+
 
 const Home = () => {
   const [place, setPlaces] = useState([]);

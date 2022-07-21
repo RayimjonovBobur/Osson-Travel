@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Header from "./ClientSide/Components/Header/Header";
 import { Main } from "./ClientSide/Components/Page/Main";
 import i18n from "i18next";
@@ -14,7 +14,7 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    supportedLngs: ["uz", "ru", "en"],
+    supportedLngs: ["uz", "en", "ru"],
     fallbackLng: "",
     detection: {
       order: ["path", "cookie", "localStorage", "htmlTag"],

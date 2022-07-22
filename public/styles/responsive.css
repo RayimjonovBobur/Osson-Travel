@@ -254,6 +254,10 @@
 @media only screen and (max-width: 575px) {
   .intro_title {
     font-size: 24px !important;
+    text-align: left !important;
+  }
+  .info-button {
+    margin-left: auto !important;
   }
   p {
     font-size: 13px;

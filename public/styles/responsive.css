@@ -247,9 +247,6 @@
   }
 }
 
-/************
-11. 575px
-************/
 
 @media only screen and (max-width: 575px) {
   .intro_title {
@@ -258,6 +255,10 @@
   }
   .info-button {
     margin-left: auto !important;
+  }
+  .offers_title-birnchi {
+    font-size: 25px !important;
+    margin-bottom: 105px;
   }
   p {
     font-size: 13px;

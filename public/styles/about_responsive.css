@@ -206,10 +206,10 @@
 
 @media only screen and (max-width: 575px) {
   p {
-    font-size: 13px;
+    font-size: 13px !important;
   }
   h1 {
-    font-size: 28px;
+    font-size: 28px !important;
   }
   .top_bar {
     display: none;
@@ -328,7 +328,7 @@
     font-size: 12px;
   }
   .add_content {
-    padding-left: 40px;
+    padding-left: 40px !important;
   }
   .footer_about_text {
     font-size: 13px;

@@ -111,7 +111,7 @@ const About = () => {
                     data-y="3527"
                     data-color="#31124b"
                   >
-                    <div className="stats_bar_perc">
+                    <div className="stats_bar_perc" >
                       <div>
                         <div className="stats_bar_value"></div>
                       </div>

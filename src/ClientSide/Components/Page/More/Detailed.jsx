@@ -435,7 +435,7 @@ const Detailed = () => {
                               </div>
                             </div>
                           </div>{" "}
-                          <div className="timeline__item">
+                        {/*  <div className="timeline__item">
                             <div className="timeline__item__icon-wrap">
                               <div className="timeline__item__icon">
                                 <div className="timeline__item__icon__text">
@@ -465,7 +465,7 @@ const Detailed = () => {
                               </div>
                             </div>
                           </div>{" "}
-                          <div className="timeline__item">
+                           <div className="timeline__item">
                             <div className="timeline__item__icon-wrap">
                               <div className="timeline__item__icon">
                                 <div className="timeline__item__icon__text">
@@ -501,7 +501,7 @@ const Detailed = () => {
                                 </p>
                               </div>
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       </div>
                     </div>

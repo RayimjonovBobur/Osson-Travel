@@ -29,7 +29,7 @@ const Cards = ({ data }) => {
             <div className="offers_image_container">
               <div
                 className="offers_image_background"
-                style={{ backgroundImage: `url(${offer_1})` }}
+                style={{ backgroundImage: `url(${data.main_picture})` }}
               ></div>
               <div className="offer_name">
                 <a href="single_listing.html">
@@ -53,9 +53,7 @@ const Cards = ({ data }) => {
                 <i></i>
                 <i></i>
               </div>
-              <p className="offers_text info">
-                {NewData.short_decription}
-              </p>
+              <p className="offers_text info">{NewData.short_decription}</p>
               <div className="offers_icons">
                 <ul className="offers_icons_list">
                   <li className="offers_icons_item">

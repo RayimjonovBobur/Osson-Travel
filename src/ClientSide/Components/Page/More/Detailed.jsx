@@ -192,10 +192,7 @@ const Detailed = () => {
                 <h1>
                   {NewData.name}, {NewData.capital}
                 </h1>
-                <h3>
-                  Hayotingizning har bir daqiqasini qiziqarli va unutilmas
-                  o'tkazishga odatlaning!
-                </h3>
+                <h3>{t("desct")}</h3>
               </div>
             </div>
           </div>

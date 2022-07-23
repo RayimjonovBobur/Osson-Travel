@@ -98,6 +98,7 @@ const Detailed = () => {
     NewData.price1_desc = item.price1_desc_uz;
     NewData.price2_desc = item.price2_desc_uz;
     NewData.price3_desc = item.price3_desc_uz;
+    NewData.full_decription = item.full_decription_uz;
   } else if (challage === "ru") {
     NewData.name = item.name_ru;
     NewData.capital = item.capital_ru;
@@ -112,6 +113,7 @@ const Detailed = () => {
     NewData.price1_desc = item.price1_desc_ru;
     NewData.price2_desc = item.price2_desc_ru;
     NewData.price3_desc = item.price3_desc_ru;
+    NewData.full_decription = item.full_decription_ru;
   } else if (challage === "en") {
     NewData.name = item.name_en;
     NewData.capital = item.capital_en;
@@ -126,6 +128,7 @@ const Detailed = () => {
     NewData.price1_desc = item.price1_desc_en;
     NewData.price2_desc = item.price2_desc_en;
     NewData.price3_desc = item.price3_desc_en;
+    NewData.full_decription = item.full_decription_en;
   }
 
   const PathPayme = (e) => {
@@ -435,7 +438,7 @@ const Detailed = () => {
                               </div>
                             </div>
                           </div>{" "}
-                        {/*  <div className="timeline__item">
+                          {/*  <div className="timeline__item">
                             <div className="timeline__item__icon-wrap">
                               <div className="timeline__item__icon">
                                 <div className="timeline__item__icon__text">
@@ -513,18 +516,10 @@ const Detailed = () => {
                           <AboutPlace item={data} challage={challage} key={i} />
                         ))} */}
                         <div>
-                          <p>
-                            <strong>ISTANBUL</strong> – sirli va muhtasham,
-                            sershovqin va ertaknamo go‘zal Istanbul – bu Yevropa
-                            va Osiyo, an’anaviy Sharq va zamonaviy G‘arb
-                            o‘rtasidagi ko‘prik. O‘zining boy tarixi davomida u
-                            nomini bir necha marta o‘zgartirishga va Rim,
-                            Vizantiya, Usmonlilar va Lotin imperiyalarining
-                            poytaxti bo‘lishga ulgurdi.
-                          </p>
+                          <p>{NewData.short_decription}</p>
                           <p>
                             <img
-                              src={Istanbul}
+                              src={item.picture4}
                               alt=""
                               className="size-full wp-image-2463 aligncenter"
                               width="800"
@@ -532,34 +527,17 @@ const Detailed = () => {
                             />
                           </p>
                         </div>
-                        <p>
-                          <strong>KAPPADOKIYA</strong> – siz geografik xaritadan
-                          topa olmaydigan sirli joy. Antik davrga borib
-                          taqaluvchi nom va ushbu provinsiyani o‘rab olgan sir-u
-                          sinoat tarixning ajralmas qismi hisoblanadi. Million
-                          yillar avval vulqondan chiqqan lava va tabiiy
-                          jarayonlar tufayli bu yerda noyob, o‘zga sayyoranikiga
-                          o‘xshash, minglab tosh qo‘ziqorinlar va turli xil rang
-                          hamda o‘lchamdagi haykallardan iborat manzara yuzaga
-                          keldi. Mahalliy aholi orasida keng tarqalgan rivoyatga
-                          ko‘ra, bu yerda farishtalar yashaydi, deb hisoblanadi.
-                          Kappadokiyadagi har bir yil – bu osmon ostidagi noyob,
-                          o‘ziga xos muzey.
-                        </p>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: NewData.full_decription,
+                          }}
+                        ></p>
                         <p>
                           <img
-                            src={kappadokiya}
+                            src={item.picture3}
                             alt=""
                             className="size-full wp-image-2791 aligncenter"
                           />
-                        </p>
-                        <p>
-                          Kappadokiyaga borganda beixtiyor boshqa sayyoraga
-                          tushib qolgandek fikr uyg‘onadi – ko‘z o‘ngingizda
-                          namoyon bo‘luvchi landshaftlar shu qadar betakror va
-                          hech narsaga o‘xshamaydi. Bu yerda uchini qor qoplagan
-                          vulqonlar, baland bo‘lmagan, alohida turgan tog‘lar,
-                          qoya massivlari va farovon vodiylar bor.
                         </p>
                       </div>
                     ) : (

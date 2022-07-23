@@ -17,11 +17,11 @@ const Header = () => {
     },
     {
       code: "en",
-      icon: rus,
+      icon: eng,
     },
     {
       code: "ru",
-      icon: eng,
+      icon: rus,
     },
   ];
   const { t } = useTranslation();

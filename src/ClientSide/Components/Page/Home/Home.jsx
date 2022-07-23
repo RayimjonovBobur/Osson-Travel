@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import home_slider from "../../../assets/Images/home_slider.jpg";
-import intro_1 from "../../../assets/Images/intro_1.jpg";
 import intro_2 from "../../../assets/Images/intro_2.jpg";
 import intro_3 from "../../../assets/Images/intro_3.jpg";
 import cta from "../../../assets/Images/cta.jpg";
@@ -22,8 +21,8 @@ import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
 import Footer from "../../Footer/Footer";
 import { useSelector } from "react-redux";
-import axios from "axios"
-
+import axios from "axios";
+import Card from "./Card";
 
 const Home = () => {
   const [place, setPlaces] = useState([]);
@@ -179,38 +178,7 @@ const Home = () => {
 
           <div className="row intro_items">
             {place.map((item, i) => (
-              <div className="col-lg-4 intro_col">
-                <div className="intro_item">
-                  <div className="intro_item_overlay"></div>
-                  <div
-                    className="intro_item_background"
-                    style={{ backgroundImage: `url(${intro_1})` }}
-                  ></div>
-                  <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                    <div className="intro_date">Iyun 5 - Iyun 15</div>
-                    <div className="button intro_button">
-                      <div className="button_bcg"></div>
-                      <Link to={`/detailed/${item.id}`}>
-                        Ba'tafsil
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </Link>
-                    </div>
-                    <div className="intro_center text-center">
-                      <h1>{item.name}</h1>
-                      <div className="intro_price">Narxi ${item.price1}</div>
-                      <div className="rating rating_4">
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Card item={item} i={i} />
             ))}
           </div>
         </div>

@@ -32,9 +32,6 @@
 .contact-text {
   color: red;
 }
-/*********************************
-5. Contact Form Section
-*********************************/
 
 .contact_form_section {
   padding-top: 105px;
@@ -143,10 +140,6 @@
   color: #ffffff !important;
 }
 
-/*********************************
-6. About
-*********************************/
-
 .about {
   padding-top: 55px;
   padding-bottom: 146px;
@@ -239,10 +232,6 @@
 .about_info .contact_info_text a {
   color: #2e2e2e;
 }
-
-/*********************************
-7. Travelix Map
-*********************************/
 
 .travelix_map {
   width: 100%;

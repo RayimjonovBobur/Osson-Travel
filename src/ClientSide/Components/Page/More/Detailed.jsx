@@ -19,7 +19,6 @@ import { Close } from "../../../assets/Icons";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import i18n from "i18next";
-import AboutPlace from "./AboutPlace";
 import InputMask from "react-input-mask";
 
 const customStyles = {
@@ -171,6 +170,10 @@ const Detailed = () => {
         console.log(error);
       }
     );
+  };
+
+  const Submit = (event) => {
+    // event.currentTarget.disabled = true;
   };
 
   return (
@@ -726,6 +729,7 @@ const Detailed = () => {
                   type="submit"
                   value="Buyurtma qilish"
                   className="modal-button"
+                  onClick={Submit()}
                 />
               </span>
             </p>

@@ -30,10 +30,6 @@
   text-transform: uppercase;
 }
 
-/*********************************
-6. Blog
-*********************************/
-
 .blog {
   padding-top: 108px;
   padding-bottom: 108px;
@@ -202,9 +198,6 @@
   border: solid 2px #fa9e1c;
 }
 
-/*********************************
-7. Sidebar
-*********************************/
 
 .sidebar_search {
   width: 100%;

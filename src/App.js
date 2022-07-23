@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Header from "./ClientSide/Components/Header/Header";
 import { Main } from "./ClientSide/Components/Page/Main";
 import i18n from "i18next";

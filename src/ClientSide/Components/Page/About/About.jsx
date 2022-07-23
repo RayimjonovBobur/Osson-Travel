@@ -90,9 +90,12 @@ const About = () => {
                     data-y="3527"
                     data-color="#31124b"
                   >
-                    <div className="stats_bar_perc">
+                    <div
+                      className="stats_bar_perc"
+                      style={{ width: "50%", left: "50%" }}
+                    >
                       <div>
-                        <div className="stats_bar_value"></div>
+                        <div className="stats_bar_value">115%</div>
                       </div>
                     </div>
                   </div>
@@ -123,9 +126,21 @@ const About = () => {
                     data-y="145"
                     data-color="#a95ce4"
                   >
-                    <div className="stats_bar_perc">
+                    <div
+                      className="stats_bar_perc"
+                      style={{
+                        width: "40%",
+                        right: "50%",
+                        background: " rgb(169, 92, 228)",
+                      }}
+                    >
                       <div>
-                        <div className="stats_bar_value"></div>
+                        <div
+                          className="stats_bar_value"
+                          style={{ right: 0, textAlign: "right" }}
+                        >
+                          -81
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -156,9 +171,21 @@ const About = () => {
                     data-y="17429"
                     data-color="#fa9e1b"
                   >
-                    <div className="stats_bar_perc">
+                    <div
+                      className="stats_bar_perc"
+                      style={{
+                        width: "50%",
+                        left: "50%",
+                        background: "rgb(250, 158, 27)",
+                      }}
+                    >
                       <div>
-                        <div className="stats_bar_value"></div>
+                        <div
+                          className="stats_bar_value"
+                          style={{ right: 0, textAlign: "left " }}
+                        >
+                          +367
+                        </div>
                       </div>
                     </div>
                   </div>

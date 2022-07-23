@@ -20,6 +20,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import i18n from "i18next";
 import InputMask from "react-input-mask";
+import { useTranslation } from "react-i18next";
 
 const customStyles = {
   content: {
@@ -35,6 +36,7 @@ const customStyles = {
 };
 
 const Detailed = () => {
+  const { t } = useTranslation();
   const challage = i18n.language;
   let { id } = useParams();
   const [item, setItem] = useState([]);
@@ -194,8 +196,8 @@ const Detailed = () => {
                   {NewData.name}, {NewData.capital}
                 </h1>
                 <h3>
-                  BAAga sayohatlar 2021-2022 | BAAda dam olish kunlari | AOE
-                  mehmonxonalari
+                  Hayotingizning har bir daqiqasini qiziqarli va unutilmas
+                  o'tkazishga odatlaning!
                 </h3>
               </div>
             </div>
@@ -271,7 +273,7 @@ const Detailed = () => {
                       </div>
                       <div className="tours-tabs__content padding-all">
                         <h2>
-                          <strong>Mazmunli sayohat</strong>
+                          <strong>{t("meaningful journey")}</strong>
                         </h2>
                         <p>
                           <span></span>
@@ -283,7 +285,7 @@ const Detailed = () => {
                           <tbody>
                             <tr>
                               <td style={{ width: "184px" }}>
-                                <strong>JO‘NAB KETISH</strong>
+                                <strong>{t("departure")}</strong>
                               </td>
                               <td style={{ width: "660px" }}>
                                 {NewData.leaving_days}
@@ -291,7 +293,7 @@ const Detailed = () => {
                             </tr>
                             <tr>
                               <td style={{ width: "184px" }}>
-                                <strong>QAYTIB KELISH</strong>
+                                <strong>{t("return")}</strong>
                               </td>
                               <td style={{ width: "660px" }}>
                                 {NewData.coming_back_days}
@@ -302,23 +304,17 @@ const Detailed = () => {
                                 <strong>VIZA</strong>
                               </td>
                               <td style={{ width: "660px" }}>
-                                Talab qilinmaydi, xorijga chiqish pasporti,
-                                uchib ketishdan 72 soat oldin qilingan PZR test
-                                zarur
+                                {t("viza-info")}
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                        <p>
-                          <strong>
-                            DASTUR BO‘YICHA QATNOVLAR: Dushanba / Juma
-                          </strong>
-                        </p>
+                        <p></p>
                         <p>
                           <strong>&nbsp;</strong>
                         </p>
                         <p>
-                          <strong>NARXGA KIRITILGAN:</strong>
+                          <strong>{t("price included")}</strong>
                         </p>
                         <div
                           className="included-ul-content"
@@ -341,7 +337,7 @@ const Detailed = () => {
                         </div>
                         <p>&nbsp;</p>
                         <h5>
-                          <strong>Sayohat narxiga kiritilmagan:</strong>
+                          <strong>{t("price not included")}</strong>
                         </h5>
                         <ul
                           className="extra"
@@ -373,25 +369,14 @@ const Detailed = () => {
                           </li> */}
                         </ul>
                         <p>
-                          <strong>
-                            P.S. Istalgan sayyohlar soni uchun individual
-                            hisob-kitob qilish imkoniyati bor.
-                          </strong>
+                          <strong>{t("calculation")}</strong>
                         </p>
                         <p>
-                          <strong>
-                            Narxlar taxminiy ko‘rsatilgan va to‘lov vaqtidagi
-                            kursga qarab o‘zgarishi mumkin.
-                          </strong>
+                          <strong>{t("payment rate")}</strong>
                         </p>
                         <p>&nbsp;</p>
                         <p>
-                          <strong>
-                            Sayyohlik firmasi dasturga o‘zgartirishlar va/yoki
-                            qo‘shimchalar kiritish, turlar ketma-ketligi va
-                            kunlarini o‘zgartirish huquqini o‘zida saqlab
-                            qoladi.
-                          </strong>
+                          <strong>{t("travel company")}</strong>
                         </p>
                       </div>
                     </div>{" "}
@@ -409,7 +394,7 @@ const Detailed = () => {
                               </div>
                             </div>
                             <div className="timeline__item__content padding-left">
-                              <h3 className="timeline__item__title">1-kun</h3>
+                              <h3 className="timeline__item__title"></h3>
                               <div
                                 className="timeline__item__description"
                                 dangerouslySetInnerHTML={{
@@ -620,7 +605,7 @@ const Detailed = () => {
                 <div className="order-container">
                   <div className="order-content">
                     <button className="btn-order" onClick={openModal}>
-                      BUYURTMA QILISH
+                      {t("order")}
                       <i className="order-icon"></i>
                     </button>
                     <div className="price-decoration block-after-indent mt-3">
@@ -652,7 +637,7 @@ const Detailed = () => {
           <form className="modal-contain p-1" onSubmit={(e) => PathPayme(e)}>
             <div className="form-contact__fields-short">
               <div className="d-flex">
-                <h6 className="text-center">HOZIROQ BUYURTMA BERING !</h6>{" "}
+                <h6 className="text-center">{t("order-modal")}</h6>{" "}
                 <span onClick={closeModal} className="close-btn">
                   <Close />
                 </span>
@@ -662,7 +647,7 @@ const Detailed = () => {
                   <input
                     type="text"
                     className="modal-form-input"
-                    placeholder="Ism"
+                    placeholder={t("name")}
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                   />
@@ -673,7 +658,7 @@ const Detailed = () => {
                   <input
                     type="text"
                     className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-validation-item"
-                    placeholder="Familya"
+                    placeholder={t("surname")}
                     value={surName}
                     onChange={(e) => setSurName(e.target.value)}
                   />
@@ -684,7 +669,7 @@ const Detailed = () => {
               <div className="wpcf7-form-control-wrap your-mail">
                 <input
                   type="email"
-                  placeholder="Sizning Email"
+                  placeholder={t("email")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -694,7 +679,7 @@ const Detailed = () => {
               <div className="wpcf7-form-control-wrap your-mail">
                 <InputMask
                   mask={"+\\9\\9\\8\\ 99 999 99 99"}
-                  placeholder="Telefon raqami"
+                  placeholder={t("phone")}
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -705,7 +690,7 @@ const Detailed = () => {
                 <i className="atbtn__icon fa fa-paper-plane"></i>
                 <input
                   type="submit"
-                  value="Buyurtma qilish"
+                  value={t("order")}
                   className="modal-button"
                   onClick={Submit()}
                 />

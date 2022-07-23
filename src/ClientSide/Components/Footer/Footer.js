@@ -8,6 +8,7 @@ import footer_blog_2 from "../../assets/Images/footer_blog_2.jpg";
 import footer_blog_3 from "../../assets/Images/footer_blog_3.jpg";
 import phone_call from "../../assets/Images/phone-call.svg";
 import planet_earth from "../../assets/Images/planet-earth.svg";
+import { t } from "i18next";
 
 function Footer() {
   return (
@@ -27,7 +28,7 @@ function Footer() {
                       </Link>
                     </div>
                     <p className="footer_about_text">
-                      MChJ kompaniyasi O‘zbekiston sayyohlik xizmatlari bozorida yangi hisoblanadi.
+                      {t("logo-text")}
                     </p>
                   </div>
 
@@ -66,7 +67,7 @@ function Footer() {
 
             <div className="col-lg-3 footer_column">
               <div className="footer_col">
-                <div className="footer_title">eng yaxshi shaharlar</div>
+                <div className="footer_title">{t("best cities")} </div>
                 <div className="footer_content footer_blog">
                   <div className="footer_blog_item clearfix">
                     <div className="footer_blog_image">
@@ -118,29 +119,29 @@ function Footer() {
 
             <div className="col-lg-3 footer_column">
               <div className="footer_col">
-                <div className="footer_title">Bo'limlar</div>
+                <div className="footer_title">{t("departments")} </div>
                 <div className="footer_content footer_tags">
                   <ul className="tags_list clearfix">
                     <li className="tag_item">
-                      <Link to="/">asosiy</Link>
+                      <Link to="/">{t("main")} </Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">biz haqimizda</Link>
+                      <Link to="/">{t("about")} </Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">barcha turlar</Link>
+                      <Link to="/">{t("all types")}</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">yangiliklar</Link>
+                      <Link to="/">{t("news")}</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">a'loqa</Link>
+                      <Link to="/">{t("contact")}</Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">turizim va sport</Link>
+                      <Link to="/">{t("lifestyle and sports")} </Link>
                     </li>
                     <li className="tag_item">
-                      <Link to="/">turizim qonunlari</Link>
+                      <Link to="/">{t("the laws of life")} </Link>
                     </li>
                   </ul>
                 </div>
@@ -149,7 +150,7 @@ function Footer() {
 
             <div className="col-lg-3 footer_column">
               <div className="footer_col">
-                <div className="footer_title">Manzil</div>
+                <div className="footer_title">{t("address")} </div>
                 <div className="footer_content footer_contact">
                   <ul className="contact_info_list">
                     <li className="contact_info_item d-flex flex-row">
@@ -160,7 +161,7 @@ function Footer() {
                       </div>
                       <div className="contact_info_text">
 
-                        Farg'ona shahar Turkiston 20-uy
+                        {t("footer-address")}
                       </div>
                     </li>
                     <li className="contact_info_item d-flex flex-row">
@@ -210,10 +211,10 @@ function Footer() {
             <div className="col-lg-3 order-lg-1 order-2  ">
               <div className="copyright_content d-flex flex-row align-items-center">
                 <div>
-                  "OSSON-TOUR" mas'uliyati cheklangan jamiyati <i className="fa fa-heart-o" aria-hidden="true"></i>{" "}
+                  {t("footer-info")} <i className="fa fa-heart-o" aria-hidden="true"></i>{" "}
                   {" "}
                   <a href="https://colorlib.com" target="_blank">
-                    Bosh sahifa
+                    {t("home")}
                   </a>
                 </div>
               </div>

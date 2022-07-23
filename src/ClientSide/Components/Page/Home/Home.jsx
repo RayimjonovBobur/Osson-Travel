@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import home_slider from "../../../assets/Images/home_slider.jpg";
-import intro_1 from "../../../assets/Images/intro_1.jpg";
 import intro_2 from "../../../assets/Images/intro_2.jpg";
 import intro_3 from "../../../assets/Images/intro_3.jpg";
 import cta from "../../../assets/Images/cta.jpg";
@@ -27,6 +26,7 @@ import offer_2 from "../../../assets/Images/offer_2.jpg";
 import offer_3 from "../../../assets/Images/offer_3.jpg";
 import offer_4 from "../../../assets/Images/offer_4.jpg";
 import { useTranslation } from "react-i18next";
+import Card from "./Card";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -179,40 +179,7 @@ const Home = () => {
 
           <div className="row intro_items">
             {place.map((item, i) => (
-              <div className="col-lg-4 intro_col">
-                <div className="intro_item">
-                  <div className="intro_item_overlay"></div>
-                  <div
-                    className="intro_item_background"
-                    style={{ backgroundImage: `url(${intro_1})` }}
-                  ></div>
-                  <div className="intro_item_content d-flex flex-column align-items-center justify-content-center">
-                    <div className="intro_date">Iyun 5 - Iyun 15</div>
-                    <div className="button intro_button">
-                      <div className="button_bcg"></div>
-                      <Link to={`/detailed/${item.id}`}>
-                        {t("in_detail")}
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </Link>
-                    </div>
-                    <div className="intro_center text-center">
-                      <h1>{item.name}</h1>
-                      <div className="intro_price">
-                        {t("cost")} ${item.price1}
-                      </div>
-                      <div className="rating rating_4">
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                        <i className="fa fa-star"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <Card item={item} i={i} />
             ))}
           </div>
         </div>

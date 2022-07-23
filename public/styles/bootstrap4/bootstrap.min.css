@@ -122,7 +122,7 @@ main,
 nav,
 section {
   display: block;
-  background-color: rgba(255, 255, 255, 0.567);
+  /* background-color: rgba(255, 255, 255, 0.567); */
 }
 body {
   margin: 0;

@@ -8,6 +8,7 @@ import stats_2 from "../../../assets/Images/stats_2.png";
 import stats_3 from "../../../assets/Images/stats_3.png";
 import stats_4 from "../../../assets/Images/stats_4.png";
 import intro from "../../../assets/Images/intro.png";
+import { t } from "i18next";
 
 const About = () => {
   return (
@@ -19,7 +20,7 @@ const About = () => {
           style={{ backgroundImage: `url(${about_background})` }}
         ></div>
         <div className="about_content-header">
-          <div className="about_title">Biz haqimizda</div>
+          <div className="about_title">{t("about")}</div>
         </div>
       </div>
 
@@ -33,27 +34,13 @@ const About = () => {
             </div>
             <div className="col-lg-5">
               <div className="intro_content">
-                <div className="intro_title">BIZDA ENG yaxshi turlar</div>
-                <p className="intro_text">
-                  “OSSON-TOUR” sayyohlik kompaniyasining axborot saytiga xush
-                  kelibsiz! “OSSON-TOUR” MChJ kompaniyasi O‘zbekiston sayyohlik
-                  xizmatlari bozorida yangi hisoblanadi. “OSSON-TOUR” –
-                  turoperatorlik va agentlik faoliyatini muvaffaqiyatli amalga
-                  oshirib kelayotgan kompaniya. Bugungi kunda “OSSON-TOUR” 13 ta
-                  yo‘nalish bo‘ylab operatorlik faoliyatini yuritadi, shu
-                  jumladan Avstriya, Benilyuks, Isroil, Italiya, BAA, Fransiya,
-                  Chexiya va boshqa davlatlar bor. Biz ekskursiya,
-                  davolash-sog‘lomlashtirish turlari, plyajda dam olish, ko‘l va
-                  tog‘larda hordiq chiqarish, voqeaviy va ziyorat turlarining
-                  butun doirasida xizmat ko‘rsatamiz. Alohida e’tibor yuqori
-                  shinamlikdagi qo‘shma turlarni rivojlantirishga qaratilgan,
-                  assortimentda 100 dan ortiq dastur, turda 2 tadan 5 tagacha
-                  turlar mavjud.
-                </p>
+                <div className="intro_title">{t("good types")} </div>
+                <p className="intro_text">{t("about-text")}</p>
                 <div className="button info-button">
                   <div className="button_bcg"></div>
                   <a href="/">
-                    Ba'tafsil<span></span>
+                    {t("in_detail")}
+                    <span></span>
                     <span></span>
                     <span></span>
                   </a>
@@ -68,20 +55,12 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col text-center">
-              <div className="section_title">Bizning mijozlar</div>
+              <div className="section_title">{t("our-customers")}</div>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-10 offset-lg-1 text-center">
-              <p className="stats_text">
-                Har bir mehmon bizning do'stimiz va hamkorimiz! Biz
-                mehmonlarimizga ularning talablari va ehtiyojlariga to'liq javob
-                beradigan yuqori sifatli turistik mahsulotni taklif etamiz.Biz
-                siz uchun istalgan murakkablikdagi turni xursandchilik bilan
-                tuzib beramiz. Siz shunchaki bizga +998 95 817 5555 raqamiga
-                qo‘ng‘iroq qilishingiz yoki talabnoma shaklini to‘ldirishingiz
-                lozim.
-              </p>
+              <p className="stats_text">{t("about-info")}</p>
             </div>
           </div>
           <div className="row">
@@ -102,7 +81,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">1642</div>
-                      <div className="stats_type">Mijozlar</div>
+                      <div className="stats_type">{t("customers")} </div>
                     </div>
                   </div>
                   <div
@@ -126,7 +105,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">3527</div>
-                      <div className="stats_type">Mijozlar</div>
+                      <div className="stats_type">{t("customers")}</div>
                     </div>
                   </div>
                 </div>
@@ -138,7 +117,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">768</div>
-                      <div className="stats_type">Mijozlar</div>
+                      <div className="stats_type">{t("customers")}</div>
                     </div>
                   </div>
                   <div
@@ -171,7 +150,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">145</div>
-                      <div className="stats_type">Mijozlar</div>
+                      <div className="stats_type">{t("customers")}</div>
                     </div>
                   </div>
                 </div>
@@ -183,7 +162,7 @@ const About = () => {
                     </div>
                     <div className="stats_last_content">
                       <div className="stats_number">3729</div>
-                      <div className="stats_type">Mijozlar</div>
+                      <div className="stats_type">{t("customers")}</div>
                     </div>
                   </div>
                   <div
@@ -216,7 +195,7 @@ const About = () => {
                     </div>
                     <div className="stats_new_content">
                       <div className="stats_number">17429</div>
-                      <div className="stats_type">Mijozlar</div>
+                      <div className="stats_type">{t("customers")}</div>
                     </div>
                   </div>
                 </div>
@@ -238,12 +217,13 @@ const About = () => {
                 <div className="add_content">
                   <h1 className="add_title">thailand</h1>
                   <div className="add_subtitle">
-                    Narx <span>2300$</span>
+                    {t("cost")} <span>2300$</span>
                   </div>
                   <div className="button add_button">
                     <div className="button_bcg"></div>
                     <a href="/">
-                      Ba'tafsil<span></span>
+                      {t("in_detail")}
+                      <span></span>
                       <span></span>
                       <span></span>
                     </a>

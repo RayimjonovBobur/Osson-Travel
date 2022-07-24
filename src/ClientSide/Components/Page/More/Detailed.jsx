@@ -400,96 +400,9 @@ const Detailed = () => {
                                 dangerouslySetInnerHTML={{
                                   __html: NewData.daily_plans,
                                 }}
-                              >
-                                {/* <p>
-                                  Istanbulga uchib kelish. Aeroportdan
-                                  mehmonxonaga transfer.
-                                </p>
-                                <p>Mehmonxonaga joylashish, bo‘sh vaqt.</p>
-                                <p>
-                                  Xohishga qarab qo‘shimcha to‘lov
-                                  evaziga:Xohishga qarab qo‘shimcha to‘lov
-                                  evaziga:
-                                </p>
-                                <p>
-                                  Bosforga ajoyib manzara ochiluvchi Galata
-                                  ko‘prigidagi baliq restoranida kechki ovqat.
-                                </p>
-                                <p>
-                                  Tungi Bosfor bo‘ylab kema sayohati (shou
-                                  dastur, kechki ovqat, spirtli/spirtsiz
-                                  ichimliklar, mehmonxonadan/ga transfer)
-                                </p> */}
-                              </div>
+                              ></div>
                             </div>
                           </div>{" "}
-                          {/*  <div className="timeline__item">
-                            <div className="timeline__item__icon-wrap">
-                              <div className="timeline__item__icon">
-                                <div className="timeline__item__icon__text">
-                                  2
-                                </div>
-                              </div>
-                            </div>
-                            <div className="timeline__item__content padding-left">
-                              <h3 className="timeline__item__title">2-kun</h3>
-                              <div className="timeline__item__description">
-                                <p>Mehmonxonada nonushta.</p>
-                                <p>
-                                  Bosfor panoramasi + Lolalar festivali guruh
-                                  bo‘lib ekskursiyasi
-                                </p>
-                                <p>14:30 Turning boshlanishi</p>
-                                <p>
-                                  Bosfor bo‘ylab kemada sayohat, Qizlar minorasi
-                                  (tashqaridan), Rumeli Hisor qal’asi
-                                  (tashqaridan), Bosfor orqali ko‘prik, Amirxon
-                                  parki (lolalar festivali)
-                                </p>
-                                <p>
-                                  18:00 Sayohatning yakunlanishi, mehmonxonaga
-                                  transfer.
-                                </p>
-                              </div>
-                            </div>
-                          </div>{" "}
-                           <div className="timeline__item">
-                            <div className="timeline__item__icon-wrap">
-                              <div className="timeline__item__icon">
-                                <div className="timeline__item__icon__text">
-                                  3
-                                </div>
-                              </div>
-                            </div>
-                            <div className="timeline__item__content padding-left">
-                              <h3 className="timeline__item__title">3-kun</h3>
-                              <div className="timeline__item__description">
-                                <p>Mehmonxonada nonushta.</p>
-                                <p>
-                                  Bo‘sh kun. Shopping va qo‘shimcha
-                                  ekskursiyalar uchun imkoniyat
-                                </p>
-                              </div>
-                            </div>
-                          </div>{" "}
-                          <div className="timeline__item">
-                            <div className="timeline__item__icon-wrap">
-                              <div className="timeline__item__icon">
-                                <div className="timeline__item__icon__text">
-                                  4
-                                </div>
-                              </div>
-                            </div>
-                            <div className="timeline__item__content padding-left">
-                              <h3 className="timeline__item__title">4-kun</h3>
-                              <div className="timeline__item__description">
-                                <p>
-                                  Mehmonxonada nonushta. Aeroportga transfer,
-                                  Istanbuldan uchib ketish
-                                </p>
-                              </div>
-                            </div>
-                          </div> */}
                         </div>
                       </div>
                     </div>

@@ -34,12 +34,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header />
       <Routes>
         {Main.map((page) => (
           <Route path={page?.path} element={page?.page} />
         ))}
-      </Routes>
+      </Routes> */}
+      <h1 style={{textAlign: "center"}}>Hello World. ☪</h1>
     </div>
   );
 }

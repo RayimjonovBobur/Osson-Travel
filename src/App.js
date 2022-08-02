@@ -29,7 +29,6 @@ i18n
 function App() {
   const dispatch = useDispatch();
   const challage = i18n.language;
-  const { t } = useTranslation();
   dispatch(setChallage(challage));
 
   return (
@@ -40,7 +39,6 @@ function App() {
           <Route path={page?.path} element={page?.page} />
         ))}
       </Routes>
-      {/* <h1 style={{textAlign: "center"}}>Hello World. ☪</h1> */}
     </div>
   );
 } 

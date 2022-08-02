@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Logo from "../../assets";
 import Logo from "../../assets/Images/trevel-logo.svg";
 import "./Header.css";
 import i18n from "i18next";

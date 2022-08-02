@@ -20,18 +20,13 @@ import trend_7 from "../../../assets/Images/trend_7.png";
 import trend_8 from "../../../assets/Images/trend_8.png";
 import Search from "../../Search/Search";
 import Footer from "../../Footer/Footer";
-import { useSelector } from "react-redux";
 import axios from "axios";
-import offer_2 from "../../../assets/Images/offer_2.jpg";
-import offer_3 from "../../../assets/Images/offer_3.jpg";
-import offer_4 from "../../../assets/Images/offer_4.jpg";
 import { useTranslation } from "react-i18next";
 import Card from "./Card";
 
 const Home = () => {
   const { t } = useTranslation();
   const [place, setPlaces] = useState([]);
-  const { challageData } = useSelector((state) => state?.users_reducer);
   useEffect(() => {
     axios
       .get(`https://ossontravel.pythonanywhere.com/api/places/shuffle?count=3`)

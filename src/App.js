@@ -29,7 +29,6 @@ i18n
 function App() {
   const dispatch = useDispatch();
   const challage = i18n.language;
-  const { t } = useTranslation();
   dispatch(setChallage(challage));
 
   return (

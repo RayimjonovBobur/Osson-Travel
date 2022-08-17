@@ -250,7 +250,7 @@ const Detailed = () => {
                             <div className="tours-tabs__info__item__icon">
                               <Ri24HoursFill />
                             </div>
-                            <div className="mx-4">
+                            <div className="mx-4 bir-balo">
                               <div className="tours-tabs__info__item__title">
                                 {NewData.duration}
                               </div>
@@ -265,7 +265,7 @@ const Detailed = () => {
                             <div className="tours-tabs__info__item__icon">
                               <IoManSharp />
                             </div>
-                            <div className="mx-4">
+                            <div className="mx-4 bir-balo">
                               <div className="tours-tabs__info__item__title">
                                 0+{" "}
                               </div>
@@ -280,7 +280,7 @@ const Detailed = () => {
                             <div className="tours-tabs__info__item__icon">
                               <GoCalendar />
                             </div>
-                            <div className="mx-4">
+                            <div className="mx-4 bir-balo">
                               <div className="tours-tabs__info__item__title">
                                 Aprel – Oktyabr
                               </div>

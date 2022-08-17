@@ -243,6 +243,54 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
+  .detailed-content {
+    margin-top: -118px !important;
+  }
+  .detailed_title-birnchi {
+    h1 {
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 19px;
+      width: 300px;
+    }
+  }
+  .nav-tabs {
+    margin-left: 47px !important;
+    display: block;
+    li {
+      margin-bottom: 15px !important;
+      background-color: #346a89 !important;
+      margin-right: 50rem !important;
+      button {
+        width: 300px;
+      }
+    }
+  }
+  .tours-tabs__info {
+    display: block !important;
+    div {
+      display: block !important;
+
+      .bir-balo {
+        margin-left: 48px !important;
+        margin-top: -39px;
+      }
+    }
+  }
+  .tours-tabs__content {
+    width: 40%;
+    padding-left: 10px !important;
+    padding-right: 50px;
+  }
+  .detailed-content {
+    .order-content {
+      margin-left: auto !important;
+      .price-decoration {
+        margin-left: 8%;
+      }
+    }
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

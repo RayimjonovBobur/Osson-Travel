@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Detailed.scss";
 import dubai from "../../../assets/Images/dubai.jpg";
-import { DetaileDate } from "./DetailedData";
 import { Ri24HoursFill } from "react-icons/ri";
 import { GoCalendar } from "react-icons/go";
 import { IoManSharp } from "react-icons/io5";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import Istanbul from "../../../assets/Images/istanbul.jpg";
-import kappadokiya from "../../../assets/Images/kappadokija.jpg";
+import visa from "../../../assets/Images/visa.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import item1 from "../../../assets/Images/item1.jpg";
 import item2 from "../../../assets/Images/item2.jpg";
@@ -51,6 +49,7 @@ const Detailed = () => {
   const [openDate, setOpenDate] = useState(true);
   const [openDate2, setOpenDate2] = useState(false);
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen2, setIsOpen2] = React.useState(false);
 
   const [isReady, setIsReady] = useState(null);
 
@@ -72,6 +71,19 @@ const Detailed = () => {
 
   function closeModal() {
     setIsOpen(false);
+  }
+
+  // Modal 2
+  function openModal2() {
+    setIsOpen2(true);
+  }
+
+  function afterOpenModal2() {
+    subtitle.style.color = "#f00";
+  }
+
+  function closeModal2() {
+    setIsOpen2(false);
   }
 
   useEffect(() => {
@@ -180,6 +192,14 @@ const Detailed = () => {
   const Submit = (event) => {
     // event.currentTarget.disabled = true;
   };
+
+  const DetaileDate = [
+    { headerTitle: `${t("desc")}` },
+    { headerTitle: `${t("programs")}` },
+    { headerTitle: `${t("rest")}` },
+    { headerTitle: `${t("price")}` },
+    { headerTitle: `${t("foto")}` },
+  ];
 
   return (
     <>
@@ -517,10 +537,21 @@ const Detailed = () => {
               <aside className="col-md-3">
                 <div className="order-container">
                   <div className="order-content">
-                    <button className="btn-order" onClick={openModal}>
-                      {t("order")}
-                      <i className="order-icon"></i>
-                    </button>
+                    <div className="btn-bg">
+                      <button className="btn-order" onClick={openModal}>
+                        {t("order")}
+                        <i className="order-icon"></i>
+                      </button>{" "}
+                      <div className="d-flex mt-2">
+                        <button className="btn-order" onClick={openModal2}>
+                          <i class="fa-brands fa-cc-visa"></i>
+                          <span className="ml-3">
+                            VISA ORQALIK
+                            <i className="order-icon"></i>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
                     <div className="price-decoration block-after-indent mt-3">
                       <div className="price-description-content text-center">
                         <span className="woocommerce-Price-amount amount">
@@ -610,6 +641,27 @@ const Detailed = () => {
               </span>
             </p>
           </form>
+        </Modal>{" "}
+        <Modal
+          isOpen={modalIsOpen2}
+          onAfterOpen={afterOpenModal2}
+          onRequestClose={closeModal2}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <div className="modal-contain p-1">
+            <div className="form-contact__fields-short">
+              <div className="d-flex">
+                <h6 className="text-center">{t("order-modal")}</h6>{" "}
+                <span onClick={closeModal2} className="close-btn">
+                  <Close />
+                </span>
+              </div>
+              <div className="image mt-4  ">
+                <img src={visa} alt="" />
+              </div>
+            </div>
+          </div>
         </Modal>
       </div>
       <Footer />

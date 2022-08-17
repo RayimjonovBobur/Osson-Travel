@@ -30,10 +30,12 @@ body {
       transform: translateX(-50%);
     }
     .detailed_title-birnchi {
-      font-size: 72px;
+      // font-size: 72px  ;
       font-weight: 800;
       color: #ffffff;
       // text-transform: uppercase;
+      h1 {
+      }
     }
   }
 }

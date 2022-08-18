@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f31937c.css",
-    "main.js": "/static/js/main.49f50ab1.js",
+    "main.css": "/static/css/main.d7fecec1.css",
+    "main.js": "/static/js/main.a31ee95a.js",
     "static/media/home_slider.jpg": "/static/media/home_slider.6cdde11f6a3208320106.jpg",
     "static/media/intro.png": "/static/media/intro.f675e13e71eb0e0aa372.png",
     "static/media/dubai.jpg": "/static/media/dubai.809cb4218cc37ac5aa6e.jpg",
@@ -48,11 +48,11 @@
     "static/media/message.svg": "/static/media/message.f169d0e4146aa6ecfb0bf78acc7c3ca8.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.3f31937c.css.map": "/static/css/main.3f31937c.css.map",
-    "main.49f50ab1.js.map": "/static/js/main.49f50ab1.js.map"
+    "main.d7fecec1.css.map": "/static/css/main.d7fecec1.css.map",
+    "main.a31ee95a.js.map": "/static/js/main.a31ee95a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f31937c.css",
-    "static/js/main.49f50ab1.js"
+    "static/css/main.d7fecec1.css",
+    "static/js/main.a31ee95a.js"
   ]
 }

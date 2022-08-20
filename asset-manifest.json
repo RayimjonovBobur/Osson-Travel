@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d7fecec1.css",
-    "main.js": "/static/js/main.a31ee95a.js",
+    "main.css": "/static/css/main.c6738e3e.css",
+    "main.js": "/static/js/main.94e034c2.js",
     "static/media/home_slider.jpg": "/static/media/home_slider.6cdde11f6a3208320106.jpg",
     "static/media/intro.png": "/static/media/intro.f675e13e71eb0e0aa372.png",
     "static/media/dubai.jpg": "/static/media/dubai.809cb4218cc37ac5aa6e.jpg",
@@ -27,7 +27,7 @@
     "static/media/item2.jpg": "/static/media/item2.9593697a21a4f1b35f05.jpg",
     "static/media/add.jpg": "/static/media/add.0bb7b58f6e4989f262c8.jpg",
     "static/media/offer_8.jpg": "/static/media/offer_8.6c054829dc290cb1ee2f.jpg",
-    "static/media/visa.jpg": "/static/media/visa.61689d96d16e934da347.jpg",
+    "static/media/visa.jpg": "/static/media/visa.79d4a7599798103136fd.jpg",
     "static/media/gallery_5.jpg": "/static/media/gallery_5.73f700ffd90c03817438.jpg",
     "static/media/gallery_4.jpg": "/static/media/gallery_4.39b2fd6430e45d45f3f3.jpg",
     "static/media/gallery_2.jpg": "/static/media/gallery_2.59939ad0a70ca429c172.jpg",
@@ -48,11 +48,11 @@
     "static/media/message.svg": "/static/media/message.f169d0e4146aa6ecfb0bf78acc7c3ca8.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.c780682470504fffbd04.cjs",
-    "main.d7fecec1.css.map": "/static/css/main.d7fecec1.css.map",
-    "main.a31ee95a.js.map": "/static/js/main.a31ee95a.js.map"
+    "main.c6738e3e.css.map": "/static/css/main.c6738e3e.css.map",
+    "main.94e034c2.js.map": "/static/js/main.94e034c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7fecec1.css",
-    "static/js/main.a31ee95a.js"
+    "static/css/main.c6738e3e.css",
+    "static/js/main.94e034c2.js"
   ]
 }

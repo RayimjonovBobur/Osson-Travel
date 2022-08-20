@@ -134,10 +134,14 @@ const Contact = () => {
           <div className="map_container">
             <div id="map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1128218.9660308918!2d71.09381868941708!3d40.44570260203516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ba35e21e649803%3A0xcd6937bf69229b68!2sFarg&#39;ona%20Viloyati%2C%20O%60zbekiston!5e0!3m2!1suz!2s!4v1655277286860!5m2!1suz!2s"
-                width="1400"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5870.933422659863!2d71.77191011049226!3d40.38700433866853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1suz!2s!4v1660974407222!5m2!1suz!2s"
+                width="1150"
                 height="581"
-                style={{ border: "0" }}
+                style={{
+                  border: "0",
+                  marginLeft: "120px",
+                  marginRight: "120px",
+                }}
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"

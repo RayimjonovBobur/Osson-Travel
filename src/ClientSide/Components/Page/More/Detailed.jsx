@@ -610,7 +610,10 @@ const Detailed = () => {
               </div>
             </div>
             <div className="form-contact__fields-short">
-              <div className="wpcf7-form-control-wrap your-mail">
+              <div
+                className="wpcf7-form-control-wrap your-mail"
+                style={{ marginTop: "11px" }}
+              >
                 <input
                   type="email"
                   placeholder={t("email")}
